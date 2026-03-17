@@ -42,3 +42,14 @@
 2026-03-17 13:49:34, EXEC, v:1, k:ed@fuga, mode:FULL, rate:0, size:38
 2026-03-17 13:50:46, EXEC, v:1, k:ed@fuga, mode:FULL, rate:0, size:38
 2026-03-17 13:51:16, EXEC, v:1, k:ed@fuga, mode:FULL, rate:100, size:38
+2026-03-17 13:53:30, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-17 13:53:33, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-17 13:54:05, SELF, v:1, k:ed@fuga, self:1, rate:100, study:10, problem:1, debug:1, refactor:1
+2026-03-17 13:54:08, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-17 13:54:17, MOVE, v:1, k:ed@pedra, mode:DOWN
+2026-03-17 13:54:21, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-03-17 14:00:55, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:13
+2026-03-17 14:02:06, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:13
+2026-03-17 14:02:14, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:13
+2026-03-17 14:02:22, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:13
+2026-03-17 14:02:50, MOVE, v:1, k:ed@pedra, mode:BACK

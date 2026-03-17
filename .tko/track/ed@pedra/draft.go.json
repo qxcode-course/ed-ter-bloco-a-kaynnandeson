@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_14-00-55",
+            "content": "@@ -94,12 +94,8 @@\n t, n\n- * 2\n )%0A%0A \n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-03-17_14-02-06",
+            "content": "@@ -118,20 +118,16 @@\n 0; i %3C n\n- * 2\n ; i++ %7B%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-03-17_14-02-13",
+            "content": "@@ -180,17 +180,16 @@\n intf(%22%25d\n- \n %22, vetor\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-03-17_14-02-22",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n    vetor := make([]int, n * 2)\n\n    for i := 0; i < n * 2; i++ {\n        fmt.Scan(&vetor[i])\n        fmt.Printf(\"%d \", vetor[i])\n    }\n\n}\n",
+            "lines": "13"
+        }
+    ]
+}
