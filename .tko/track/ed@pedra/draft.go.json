@@ -17,8 +17,73 @@
         },
         {
             "label": "2026-03-17_14-02-22",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n    vetor := make([]int, n * 2)\n\n    for i := 0; i < n * 2; i++ {\n        fmt.Scan(&vetor[i])\n        fmt.Printf(\"%d \", vetor[i])\n    }\n\n}\n",
+            "content": "@@ -23,89 +23,8 @@\n mt%22%0A\n-%0Atype Jogador struct %7B%0A    indice int%0A    pedras %5B2%5Dint%0A    classificado bool%0A%7D%0A%0A\n func\n@@ -73,19 +73,16 @@\n    vetor\n-Jog\n  := make\n@@ -88,18 +88,18 @@\n e(%5B%5D\n-Jogador, n\n+int, n * 2\n )%0A%0A \n@@ -118,16 +118,20 @@\n 0; i %3C n\n+ * 2\n ; i++ %7B%0A\n@@ -157,67 +157,12 @@\n etor\n-Jog%5Bi%5D.pedras%5B0%5D)%0A        fmt.Scan(&vetorJog%5Bi%5D.pedras%5B1%5D)%0A\n+%5Bi%5D)\n %0A   \n@@ -185,18 +185,16 @@\n %22%25d \n-%25d\n %22, vetor\n Jog%5B\n@@ -193,46 +193,10 @@\n etor\n-Jog%5Bi%5D.pedras%5B0%5D, vetorJog%5Bi%5D.pedras%5B1\n+%5Bi\n %5D)%0A \n@@ -200,10 +200,11 @@\n )%0A    %7D%0A\n+%0A\n %7D%0A\n",
             "lines": "13"
+        },
+        {
+            "label": "2026-03-17_14-16-00",
+            "content": "@@ -318,17 +318,16 @@\n f(%22%25d %25d\n- \n %22, vetor\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-17_14-16-05",
+            "content": "@@ -323,10 +323,8 @@\n  %25d \n-%5Cn\n %22, v\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-17_14-16-15",
+            "content": "@@ -22,22 +22,8 @@\n fmt%22\n-%0Aimport %22math%22\n %0A%0Aty\n@@ -101,26 +101,8 @@\n ool%0A\n-    pontuacao int%0A\n %7D%0A%0Af\n@@ -214,39 +214,8 @@\n + %7B%0A\n-        vetorJog%5Bi%5D.indice = i%0A\n     \n@@ -292,24 +292,25 @@\n ras%5B1%5D)%0A\n+%0A\n         \n if (veto\n@@ -305,230 +305,30 @@\n     \n-if (vetorJog%5Bi%5D.pedras%5B0%5D %3C 10 %7C%7C vetorJog%5Bi%5D.pedras%5B1%5D %3C 10) %7B%0A            vetorJog%5Bi%5D.classificado = false;%0A        %7D else  %7B%0A            vetorJog%5Bi%5D.classificado = true;    %0A        %7D%0A        var temp int%0A        temp =\n+fmt.Printf(%22%25d %25d %5Cn%22,\n  vet\n@@ -345,18 +345,17 @@\n edras%5B0%5D\n- -\n+,\n  vetorJo\n@@ -372,465 +372,14 @@\n s%5B1%5D\n-%0A        if temp %3C 0 %7B%0A            vetorJog%5Bi%5D.pontuacao = (temp * -1)%0A        %7D else %7B%0A            vetorJog%5Bi%5D.pontuacao = temp%0A        %7D%0A    %7D%0A%0A    var maiorPont, maiorInd int%0A    maiorPont = vetorJog%5B0%5D.pontuacao%0A    maiorInd = vetorJog.indice%0A    for i := 0; i %3C n; i++ %7B%0A        if maiorPont %3C vetorJog%5Bi%5D.pontuacao %7B%0A            maiorPont = vetorJog%5Bi%5D.pontuacao%0A            maiorInd = vetorJog%5Bi%5D.indice%0A        %7D%0A    %7D%0A%0A    fmt.Printf(%22%25d%22, maiorInd)\n+)%0A    %7D\n %0A%7D%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-17_14-32-18",
+            "content": "@@ -18,16 +18,30 @@\n rt %22fmt%22\n+%0Aimport %22math%22\n %0A%0Atype J\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-17_14-32-26",
+            "content": "@@ -856,19 +856,16 @@\n vetorJog\n-%5B0%5D\n .indice%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-17_14-32-46",
+            "content": "@@ -910,36 +910,8 @@\n   if\n- vetorJog%5Bi%5D.classificado &&\n  mai\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-17_14-33-51",
+            "content": "@@ -799,83 +799,8 @@\n int%0A\n-    for i := 0; i %3C n; i++ %7B%0A        if vetorJog%5Bi%5D.classificado %7B%0A        \n     \n@@ -812,33 +812,33 @@\n Pont = vetorJog%5B\n-i\n+0\n %5D.pontuacao%0A    \n@@ -829,32 +829,24 @@\n %5D.pontuacao%0A\n-        \n     maiorInd\n@@ -849,33 +849,33 @@\n rInd = vetorJog%5B\n-i\n+0\n %5D.indice%0A       \n@@ -867,33 +867,16 @@\n .indice%0A\n-        %7D%0A    %7D%0A%0A\n     for \n@@ -906,16 +906,44 @@\n       if\n+ vetorJog%5Bi%5D.classificado &&\n  maiorPo\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-17_14-35-41",
+            "content": "@@ -1000,78 +1000,8 @@\n + %7B%0A\n-        if !vetorJog%5Bi%5D.classificado %7B%0A            continue%0A        %7D%0A\n     \n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-17_14-36-42",
+            "content": "@@ -1091,9 +1091,9 @@\n ont \n-%3E\n+%3C\n  vet\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-17_14-37-08",
+            "content": "@@ -794,31 +794,12 @@\n rInd\n-, nDes int%0A    nDes = 0\n+ int\n %0A   \n@@ -828,76 +828,8 @@\n + %7B%0A\n-        if !vetorJog%5Bi%5D.classificado %7B%0A            nDes++%0A        %7D%0A\n     \n@@ -1222,82 +1222,8 @@\n  %7D%0A%0A\n-    if nDes == n %7B%0A        fmt.Printf(%22sem ganhador%22)%0A    %7D else %7B   %0A    \n     \n@@ -1249,16 +1249,10 @@\n iorInd)%0A\n-    %7D%0A\n %7D%0A\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-17_14-39-27",
+            "content": "@@ -1360,10 +1360,8 @@\n ador\n-%5Cn\n %22)%0A \n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-03-17_14-39-39",
+            "content": "@@ -1399,18 +1399,16 @@\n intf(%22%25d\n-%5Cn\n %22, maior\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-03-17_14-39-50",
+            "content": "package main\nimport \"fmt\"\n\ntype Jogador struct {\n    indice int\n    pedras [2]int\n    classificado bool\n    pontuacao int\n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n    vetorJog := make([]Jogador, n)\n\n    for i := 0; i < n; i++ {\n        vetorJog[i].indice = i\n        fmt.Scan(&vetorJog[i].pedras[0])\n        fmt.Scan(&vetorJog[i].pedras[1])\n        if (vetorJog[i].pedras[0] < 10 || vetorJog[i].pedras[1] < 10) {\n            vetorJog[i].classificado = false;\n        } else  {\n            vetorJog[i].classificado = true;    \n        }\n        var temp int\n        temp = vetorJog[i].pedras[0] - vetorJog[i].pedras[1]\n        if temp < 0 {\n            vetorJog[i].pontuacao = (temp * -1)\n        } else {\n            vetorJog[i].pontuacao = temp\n        }\n    }\n\n    var maiorPont, maiorInd, nDes int\n    nDes = 0\n    for i := 0; i < n; i++ {\n        if !vetorJog[i].classificado {\n            nDes++\n        }\n        if vetorJog[i].classificado {\n            maiorPont = vetorJog[i].pontuacao\n            maiorInd = vetorJog[i].indice\n        }\n    }\n\n    for i := 0; i < n; i++ {\n        if !vetorJog[i].classificado {\n            continue\n        }\n        if maiorPont > vetorJog[i].pontuacao {\n            maiorPont = vetorJog[i].pontuacao\n            maiorInd = vetorJog[i].indice\n        }\n    }\n\n    if nDes == n {\n        fmt.Printf(\"sem ganhador\\n\")\n    } else {   \n        fmt.Printf(\"%d\\n\", maiorInd)\n    }\n}\n",
+            "lines": "61"
         }
     ]
 }

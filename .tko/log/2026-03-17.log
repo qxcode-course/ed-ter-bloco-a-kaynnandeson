@@ -53,3 +53,21 @@
 2026-03-17 14:02:14, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:13
 2026-03-17 14:02:22, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:13
 2026-03-17 14:02:50, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-03-17 14:04:53, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-03-17 14:04:55, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0
+2026-03-17 14:16:00, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:21
+2026-03-17 14:16:05, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:21
+2026-03-17 14:16:15, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:21
+2026-03-17 14:32:18, EXEC, v:1, k:ed@pedra, mode:FULL, size:46, fail:COMP
+2026-03-17 14:32:26, EXEC, v:1, k:ed@pedra, mode:FULL, size:45, fail:COMP
+2026-03-17 14:32:46, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:45
+2026-03-17 14:33:51, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:45
+2026-03-17 14:35:41, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:50
+2026-03-17 14:36:42, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:53
+2026-03-17 14:37:08, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:53
+2026-03-17 14:39:27, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:61
+2026-03-17 14:39:39, EXEC, v:1, k:ed@pedra, mode:FULL, rate:25, size:61
+2026-03-17 14:39:50, EXEC, v:1, k:ed@pedra, mode:FULL, rate:100, size:61
+2026-03-17 14:41:01, EXEC, v:1, k:ed@pedra, mode:FULL, rate:100
+2026-03-17 14:41:26, SELF, v:1, k:ed@pedra, self:1, rate:100, problem:1, code:1, debug:1, refactor:1
+2026-03-17 14:41:27, MOVE, v:1, k:ed@pedra, mode:BACK
