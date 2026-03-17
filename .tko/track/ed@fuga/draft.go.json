@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_13-39-15",
+            "content": "@@ -66,393 +66,7 @@\n     \n-if d == 1 %7B%0A        for i := f; i %3C 15; i++ %7B%0A            if i == p %7B%0A                fmt.Printf(%22N%22)%0A                break%0A            %7D%0A            if i == h %7B%0A                fmt.Printf(%22S%22)%0A            %7D%0A        %7D%0A%0A        // if (f %3C p && p %3C h) %7B%0A        //     fmt.Print(%22N%22)%0A        // %7D %0A        %0A        // if (p %3C f && f %3C h) %7B%0A        //     fmt.Print(%22S%22)%0A        // %7D%0A    %7D\n %0A%7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-03-17_13-44-07",
+            "content": "@@ -256,38 +256,16 @@\n tf(%22S%22)%0A\n-                break%0A\n         \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-17_13-44-29",
+            "content": "@@ -62,38 +62,8 @@\n t;%0A%0A\n-    fmt.Scan(&h, &p, &f, &d)%0A%0A\n     \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-17_13-46-03",
+            "content": "@@ -326,69 +326,8 @@\n   %7D%0A\n-            if i == 14 %7B%0A                i = 0%0A            %7D%0A\n     \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-17_13-47-05",
+            "content": "@@ -133,9 +133,9 @@\n  %3C 1\n-6\n+5\n ; i+\n@@ -343,17 +343,17 @@\n f i == 1\n-5\n+4\n  %7B%0A     \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-17_13-47-36",
+            "content": "@@ -371,10 +371,9 @@\n i = \n--1\n+0\n %0A   \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-17_13-48-12",
+            "content": "@@ -127,20 +127,19 @@\n = f; i %3C\n-=\n  1\n-5\n+6\n ; i++ %7B%0A\n@@ -398,86 +398,39 @@\n   %7D%0A\n-    %7D%0A    if d == -1 %7B%0A        for i := f; i %3E= 0; i-- %7B%0A            if i == p\n+%0A        // if (f %3C p && p %3C h)\n  %7B%0A \n@@ -428,35 +428,34 @@\n  %3C h) %7B%0A        \n-   \n+//\n      fmt.Printf(\n@@ -444,33 +444,32 @@\n //     fmt.Print\n-f\n (%22N%22)%0A          \n@@ -462,37 +462,29 @@\n N%22)%0A        \n-     \n-   break\n+// %7D \n %0A           \n@@ -484,35 +484,39 @@\n     \n+%0A\n     \n-%7D%0A\n     \n-        if i ==\n+// if (p %3C f && f %3C\n  h\n+)\n  %7B%0A \n@@ -514,35 +514,34 @@\n  %3C h) %7B%0A        \n-   \n+//\n      fmt.Printf(\n@@ -530,33 +530,32 @@\n //     fmt.Print\n-f\n (%22S%22)%0A          \n@@ -556,104 +556,10 @@\n     \n-    \n-    break%0A            %7D%0A            if i == 0 %7B%0A                i = 15%0A            %7D%0A       \n+//\n  %7D%0A \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-17_13-49-34",
+            "content": "@@ -685,9 +685,9 @@\n  = 1\n-6\n+5\n %0A   \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-17_13-50-46",
+            "content": "@@ -180,34 +180,33 @@\n        fmt.Print\n-ln\n+f\n (%22N%22)%0A          \n@@ -272,34 +272,33 @@\n        fmt.Print\n-ln\n+f\n (%22S%22)%0A          \n@@ -501,18 +501,17 @@\n mt.Print\n-ln\n+f\n (%22N%22)%0A  \n@@ -597,10 +597,9 @@\n rint\n-ln\n+f\n (%22S%22\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-17_13-51-16",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var h, p, f, d int;\n\n    fmt.Scan(&h, &p, &f, &d)\n\n    if d == 1 {\n        for i := f; i <= 15; i++ {\n            if i == p {\n                fmt.Println(\"N\")\n                break\n            }\n            if i == h {\n                fmt.Println(\"S\")\n                break\n            }\n            if i == 15 {\n                i = -1\n            }\n        }\n    }\n    if d == -1 {\n        for i := f; i >= 0; i-- {\n            if i == p {\n                fmt.Println(\"N\")\n                break\n            }\n            if i == h {\n                fmt.Println(\"S\")\n                break\n            }\n            if i == 0 {\n                i = 16\n            }\n        }\n    }\n}\n",
+            "lines": "38"
+        }
+    ]
+}

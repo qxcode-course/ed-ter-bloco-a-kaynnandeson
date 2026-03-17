@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_13-25-10",
+            "content": "@@ -41,86 +41,28 @@\n     \n-var a, b, c, area float%0A%0A    area = a * b / c%0A%0A    fmt.Printf(%22%25.2f%5Cn%22, area);%0A\n+fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-17_13-27-47",
+            "content": "@@ -64,10 +64,8 @@\n loat\n-64\n %0A%0A  \n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-03-17_13-28-13",
+            "content": "@@ -68,34 +68,8 @@\n 64%0A%0A\n-    fmt.Scan(%22&a &b &c%22)%0A%0A\n     \n@@ -79,15 +79,13 @@\n a = \n-(\n a * b\n-)\n  / c\n@@ -118,10 +118,11 @@\n  area);%0A\n+%0A\n %7D%0A\n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-03-17_13-28-53",
+            "content": "@@ -131,16 +131,18 @@\n rintf(%22%25\n+.2\n f%5Cn%22, ar\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-03-17_13-29-01",
+            "content": "@@ -84,13 +84,11 @@\n (%22&a\n-,\n  &b\n-,\n  &c%22\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-03-17_13-29-43",
+            "content": "@@ -76,17 +76,16 @@\n fmt.Scan\n-f\n (%22&a, &b\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-03-17_13-30-11",
+            "content": "@@ -76,17 +76,19 @@\n fmt.Scan\n-(\n+f(%22\n &a, &b, \n@@ -89,16 +89,17 @@\n , &b, &c\n+%22\n )%0A%0A    a\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-03-17_13-31-45",
+            "content": "@@ -23,23 +23,8 @@\n mt%22%0A\n-import %22math%22%0A%0A\n func\n@@ -58,11 +58,8 @@\n area\n-, p\n  flo\n@@ -98,71 +98,26 @@\n     \n-p = a  + b + c%0A    area = math.Sqrt(p*(p - a)*(p - b)*(p - c)) \n+area = (a * b) / c\n %0A%0A  \n@@ -135,10 +135,8 @@\n f(%22%25\n-.2\n f%5Cn%22\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-03-17_13-34-52",
+            "content": "@@ -120,18 +120,18 @@\n p = \n-(\n a\n+ \n  + b + c\n ) / \n@@ -130,13 +130,8 @@\n  + c\n-) / 2\n %0A   \n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-17_13-35-24",
+            "content": "package main\nimport \"fmt\"\nimport \"math\"\n\nfunc main() {\n    var a, b, c, area, p float64\n\n    fmt.Scan(&a, &b, &c)\n\n    p = (a + b + c) / 2\n    area = math.Sqrt(p*(p - a)*(p - b)*(p - c)) \n\n    fmt.Printf(\"%.2f\\n\", area);\n}\n",
+            "lines": "14"
+        }
+    ]
+}
