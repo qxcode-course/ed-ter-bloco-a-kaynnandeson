@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-18_13-22-08",
+            "content": "@@ -64,21 +64,16 @@\n can(&n)%0A\n-    %0A\n     veto\n@@ -157,258 +157,34 @@\n     \n-%7D%0A    %0A    var nCasais int = 0 %0A    for i := 0;i %3C n; i++  %7B%0A        var comp int = vetor%5Bi%5D;%0A        for j := i; j %3C n; j++ %7B%0A            if comp == (-vetor%5Bj%5D) && comp != 0 %7B%0A                nCasais++%0A                vetor%5Bi%5D = 0%0A            %7D%0A    \n+    fmt.Println(vetor%5Bi%5D)%0A\n     \n@@ -189,17 +189,16 @@\n   %7D%0A    \n-%7D\n %0A%0A    fm\n@@ -212,20 +212,15 @@\n ln(%22\n-%25d%22, nCasais\n+qxcode%22\n )%0A%7D%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-18_13-27-12",
+            "content": "@@ -437,16 +437,22 @@\n Println(\n+%22%25d%22, \n nCasais)\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-18_13-27-31",
+            "content": "@@ -394,30 +394,8 @@\n = 0%0A\n-                break%0A\n     \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-18_13-28-32",
+            "content": "@@ -410,16 +410,13 @@\n     \n-continue\n+break\n %0A   \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-18_13-28-43",
+            "content": "@@ -410,13 +410,16 @@\n     \n-break\n+continue\n %0A   \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-18_13-28-51",
+            "content": "@@ -365,45 +365,8 @@\n s++%0A\n-                fmt.Println(nCasais)%0A\n     \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-18_13-29-26",
+            "content": "@@ -393,24 +393,8 @@\n tln(\n-comp, vetor%5Bj%5D, \n nCas\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-18_13-30-02",
+            "content": "@@ -447,37 +447,8 @@\n = 0%0A\n-                vetor%5Bj%5D = 0%0A\n     \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-18_13-30-56",
+            "content": "@@ -361,16 +361,69 @@\n asais++%0A\n+                fmt.Println(comp, vetor%5Bj%5D, nCasais)%0A\n         \n@@ -468,24 +468,46 @@\n etor%5Bj%5D = 0%0A\n+                break%0A\n             \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-18_13-31-12",
+            "content": "@@ -423,30 +423,8 @@\n = 0%0A\n-                break%0A\n     \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-18_13-31-26",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n    \n    vetor := make([]int, n)\n    for i := 0; i < n; i++ {\n        fmt.Scan(&vetor[i])\n    }\n    \n    var nCasais int = 0 \n    for i := 0;i < n; i++  {\n        var comp int = vetor[i];\n        for j := i; j < n; j++ {\n            if comp == (-vetor[j]) && comp != 0 {\n                nCasais++\n                vetor[i] = 0\n                vetor[j] = 0\n                break\n            }\n        }\n    }\n\n    fmt.Println(nCasais)\n}\n",
+            "lines": "26"
+        }
+    ]
+}

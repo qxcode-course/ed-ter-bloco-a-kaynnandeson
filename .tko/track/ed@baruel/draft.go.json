@@ -1,0 +1,334 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-18_13-40-10",
+            "content": "@@ -187,38 +187,8 @@\n i%5D)%0A\n-        fmt.Println(vetor%5Bi%5D)%0A\n     \n@@ -421,11 +421,8 @@\n     \n- //\n  fmt\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-18_13-41-19",
+            "content": "@@ -173,17 +173,16 @@\n mt.Scan(\n-&\n vetor%5Bi%5D\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-18_13-41-37",
+            "content": "@@ -184,16 +184,46 @@\n tor%5Bi%5D)%0A\n+        fmt.Println(vetor%5Bi%5D)%0A\n     %7D%0A%0A \n@@ -444,24 +444,27 @@\n             \n+ //\n  fmt.Println\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-18_13-41-46",
+            "content": "@@ -256,275 +256,8 @@\n     \n- if vetor%5Bi%5D == vetor%5Bi + 1%5D %7B%0A            for j := i; j %3C baruel; j++ %7B%0A                if (vetor%5Bi%5D != vetor%5Bj%5D) %7B%0A                    i = j%0A                    break%0A                %7D%0A                fmt.Printf(%22%25d %22, vetor%5Bj%5D)%0A            %7D%0A        %7D%0A%0A%0A        //\n  var\n@@ -284,19 +284,16 @@\n %0A       \n- //\n  var ind\n@@ -312,19 +312,16 @@\n %0A       \n- //\n  for j :\n@@ -346,35 +346,32 @@\n l; j++ %7B%0A       \n- //\n      if comp == \n@@ -380,35 +380,32 @@\n tor%5Bj%5D %7B%0A       \n- //\n          rep++%0A \n@@ -402,35 +402,32 @@\n    rep++%0A       \n- //\n          fmt.Pri\n@@ -444,27 +444,24 @@\n %5Bj%5D)%0A       \n- //\n      %7D%0A     \n@@ -458,27 +458,24 @@\n    %7D%0A       \n- //\n      if comp\n@@ -501,18 +501,16 @@\n     \n-//\n         \n  ind\n@@ -505,17 +505,16 @@\n         \n- \n ind = j \n@@ -520,27 +520,24 @@\n  + 1%0A       \n- //\n      %7D %0A    \n@@ -539,19 +539,16 @@\n %0A       \n- //\n      bre\n@@ -557,19 +557,16 @@\n %0A       \n- //\n  %7D%0A     \n@@ -571,11 +571,8 @@\n     \n- //\n  i =\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-18_13-45-54",
+            "content": "@@ -365,24 +365,50 @@\n vetor%5Bj%5D) %7B%0A\n+                    i = j%0A\n             \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-18_13-46-07",
+            "content": "@@ -340,19 +340,16 @@\n         \n- //\n  if (vet\n@@ -380,27 +380,24 @@\n             \n- //\n      break%0A \n@@ -406,27 +406,24 @@\n             \n- //\n  %7D%0A         \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-18_13-46-22",
+            "content": "@@ -284,27 +284,8 @@\n + 1%5D\n- && i != baruel - 1\n  %7B%0A \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-18_13-47-00",
+            "content": "@@ -259,27 +259,8 @@\n   if\n- i != baruel - 1 &&\n  vet\n@@ -280,16 +280,35 @@\n r%5Bi + 1%5D\n+ && i != baruel - 1\n  %7B%0A     \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-18_13-47-58",
+            "content": "@@ -355,24 +355,27 @@\n             \n+ //\n  if (vetor%5Bi\n@@ -402,24 +402,27 @@\n             \n+ //\n      break%0A \n@@ -427,32 +427,35 @@\n %0A               \n+ //\n  %7D%0A             \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-18_13-48-40",
+            "content": "@@ -392,34 +392,8 @@\n ) %7B%0A\n-                    i = j%0A\n     \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-18_13-48-53",
+            "content": "@@ -417,11 +417,8 @@\n  = j\n- -1\n %0A   \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-18_13-49-02",
+            "content": "@@ -414,16 +414,18 @@\n   i = j \n+-1\n %0A       \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-18_13-49-12",
+            "content": "@@ -241,12 +241,8 @@\n ruel\n- - 1\n ; i+\n@@ -255,16 +255,35 @@\n       if\n+ i != baruel - 1 &&\n  vetor%5Bi\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-18_13-50-09",
+            "content": "@@ -321,20 +321,16 @@\n %3C baruel\n- - 1\n ; j++ %7B%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-18_13-50-21",
+            "content": "@@ -313,32 +313,36 @@\n := i; j %3C baruel\n+ - 1\n ; j++ %7B%0A        \n@@ -891,24 +891,45 @@\n  ind%0A    %7D%0A%0A\n+    fmt.Println(rep)%0A\n     fmt.Prin\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-18_13-50-45",
+            "content": "@@ -187,24 +187,44 @@\n %5Bi%5D)%0A    %7D%0A%0A\n+    var rep int = 0%0A\n     for i :=\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-18_13-50-53",
+            "content": "@@ -281,36 +281,32 @@\n       for j := i\n- + 1\n ; j %3C baruel; j+\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-18_13-51-22",
+            "content": "@@ -403,19 +403,16 @@\n         \n- //\n  break%0A \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-18_13-51-34",
+            "content": "@@ -372,27 +372,24 @@\n             \n- //\n  i = j %0A    \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-18_13-52-13",
+            "content": "@@ -376,16 +376,19 @@\n         \n+ //\n  i = j %0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-18_13-52-17",
+            "content": "@@ -399,24 +399,27 @@\n             \n+ //\n  break%0A     \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-18_13-52-27",
+            "content": "@@ -496,16 +496,415 @@\n       %7D%0A\n-    %7D\n+%0A%0A        // var comp int = vetor%5Bi%5D%0A        // var ind int = i + 1%0A        // for j := i + 1; j %3C baruel; j++ %7B%0A        //     if comp == vetor%5Bj%5D %7B%0A        //         rep++%0A        //         fmt.Println(vetor%5Bj%5D)%0A        //     %7D%0A        //     if comp != vetor%5Bj%5D %7B%0A        //         ind = j + 1%0A        //     %7D %0A        //     break%0A        // %7D%0A        // i = ind%0A    %7D%0A%0A    fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-18_13-53-24",
+            "content": "@@ -209,32 +209,36 @@\n := 0; i %3C baruel\n+ - 1\n ; i++ %7B%0A        \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-18_13-53-43",
+            "content": "@@ -221,12 +221,8 @@\n ruel\n- - 1\n ; i+\n@@ -285,16 +285,20 @@\n r j := i\n+ + 1\n ; j %3C ba\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-18_13-54-02",
+            "content": "@@ -320,32 +320,33 @@\n              if \n+(\n vetor%5Bi%5D != veto\n@@ -349,16 +349,17 @@\n vetor%5Bj%5D\n+)\n  %7B%0A     \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-18_13-54-45",
+            "content": "@@ -426,58 +426,8 @@\n   %7D%0A\n-                if vetor%5Bj%5D == vetor%5Bj + 1%5D %7B%0A    \n     \n@@ -466,34 +466,16 @@\n tor%5Bj%5D)%0A\n-                %7D%0A\n         \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-18_13-55-17",
+            "content": "@@ -305,24 +305,137 @@\n ruel; j++ %7B%0A\n+                if vetor%5Bi%5D != vetor%5Bj%5D %7B%0A                    i = j %0A                    break%0A                %7D%0A\n             \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-18_13-55-39",
+            "content": "@@ -301,20 +301,16 @@\n %3C baruel\n- - 1\n ; j++ %7B%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-18_13-55-52",
+            "content": "@@ -429,30 +429,8 @@\n   %7D%0A\n-                break%0A\n     \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-18_13-56-38",
+            "content": "@@ -278,19 +278,16 @@\n         \n- //\n  for j :\n@@ -317,32 +317,36 @@\n + %7B%0A            \n+    \n if vetor%5Bj%5D == v\n@@ -351,32 +351,36 @@\n  vetor%5Bj + 1%5D %7B%0A\n+    \n                 \n@@ -415,24 +415,28 @@\n             \n+    \n %7D%0A          \n@@ -436,19 +436,16 @@\n         \n- //\n      bre\n@@ -462,11 +462,8 @@\n     \n- //\n  %7D%0A \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-18_13-58-54",
+            "content": "@@ -329,33 +329,33 @@\n        if vetor%5B\n-i\n+j\n %5D == vetor%5Bi + 1\n@@ -341,33 +341,33 @@\n tor%5Bj%5D == vetor%5B\n-i\n+j\n  + 1%5D %7B%0A        \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-18_13-59-03",
+            "content": "@@ -394,25 +394,25 @@\n %25d %22, vetor%5B\n-i\n+j\n %5D)%0A         \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-18_13-59-09",
+            "content": "@@ -327,19 +327,16 @@\n         \n- //\n  if veto\n@@ -405,35 +405,32 @@\n %5Bi%5D)%0A           \n- //\n  %7D%0A            /\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-18_13-59-28",
+            "content": "@@ -199,43 +199,108 @@\n     \n-var count int = 1%0A   \n+for i := 0; i %3C baruel - 1; i++ %7B%0A        if vetor%5Bi%5D == vetor%5Bi + 1%5D %7B%0A            //\n  for \n-i\n+j\n  := \n-0; i\n+i; j\n  %3C b\n@@ -302,33 +302,33 @@\n j %3C baruel - 1; \n-i\n+j\n ++ %7B%0A        if \n@@ -315,32 +315,39 @@\n 1; j++ %7B%0A       \n+     //\n  if vetor%5Bi%5D == \n@@ -369,24 +369,28 @@\n             \n+    \n fmt.Printf(%22\n@@ -417,16 +417,16 @@\n     \n-%7D else %7B\n+    // %7D\n %0A   \n@@ -438,60 +438,52 @@\n     \n-count++%0A        %7D%0A    %7D%0A%0A    fmt.Println(%22%5Cn%22, count)\n+//     break%0A            // %7D%0A        %7D%0A    %7D\n %0A%7D%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-18_14-02-18",
+            "content": "@@ -400,15 +400,14 @@\n rint\n-f\n+ln\n (%22%5Cn\n-%25d\n %22, c\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-18_14-02-38",
+            "content": "@@ -315,16 +315,17 @@\n intf(%22%25d\n+ \n %22, vetor\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-18_14-03-01",
+            "content": "@@ -314,11 +314,15 @@\n rint\n-ln(\n+f(%22%25d%22,\n  vet\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-18_14-03-19",
+            "content": "@@ -314,16 +314,11 @@\n rint\n-f(%22%25d %22,\n+ln(\n  vet\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-18_14-03-26",
+            "content": "@@ -99,21 +99,16 @@\n    vetor\n-Total\n  := make\n@@ -115,20 +115,21 @@\n (%5B%5Dint, \n-tota\n+barue\n l)%0A    f\n@@ -124,33 +124,32 @@\n aruel)%0A    for i\n- \n := 0; i %3C total;\n@@ -142,20 +142,21 @@\n  0; i %3C \n-tota\n+barue\n l; i++ %7B\n@@ -168,189 +168,56 @@\n     \n-vetorTotal%5Bi%5D = i + 1%0A        fmt.Printf(%22%25d%22, vetorTotal%5Bi%5D)%0A    %7D%0A%0A    vetorBaruel := make(%5B%5Dint, baruel)%0A    for i:= 0; i %3C baruel; i++ %7B%0A        fmt.Scan(&vetorBaruel%5Bi%5D)%0A    %7D%0A\n+fmt.Scan(&vetor%5Bi%5D)%0A    %7D%0A%0A    var count int = 1\n %0A   \n@@ -267,22 +267,16 @@\n if vetor\n-Baruel\n %5Bi%5D == v\n@@ -279,22 +279,16 @@\n == vetor\n-Baruel\n %5Bi + 1%5D \n@@ -328,14 +328,8 @@\n etor\n-Baruel\n %5Bi%5D)\n@@ -339,16 +339,52 @@\n       %7D \n+else %7B%0A            count++%0A        %7D\n %0A    %7D%0A%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-18_14-06-49",
+            "content": "@@ -500,11 +500,42 @@\n %7D %0A    %7D\n+%0A%0A    fmt.Printf(%22%5Cn%25d%22, count)\n %0A%7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-18_14-06-58",
+            "content": "@@ -347,154 +347,8 @@\n i%5D)%0A\n-        for j := 0; j %3C total; j++ %7B%0A            if (vetorBaruel%5Bi%5D == vetorTotal%5Bj%5D) %7B%0A                vetorTotal%5Bj%5D = 0%0A            %7D%0A        %7D%0A\n     \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-18_14-08-47",
+            "content": "@@ -216,10 +216,8 @@\n (%22%25d\n-%5Cn\n %22, v\n@@ -634,65 +634,8 @@\n i%5D)%0A\n-            %0A            fmt.Printf(%22%25d%22, vetorTotal%5Bi%5D)%0A\n     \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-18_14-09-04",
+            "content": "@@ -204,32 +204,34 @@\n   fmt.Printf(%22%25d\n+%5Cn\n %22, vetorTotal%5Bi%5D\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-18_14-09-12",
+            "content": "@@ -469,56 +469,8 @@\n = 0%0A\n-                fmt.Printf(%22%25d%22, vetorTotal%5Bi%5D)%0A\n     \n@@ -643,16 +643,60 @@\n        %0A\n+            fmt.Printf(%22%25d%22, vetorTotal%5Bi%5D)%0A\n         \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-18_14-09-38",
+            "content": "@@ -509,17 +509,17 @@\n orTotal%5B\n-j\n+i\n %5D)%0A     \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-18_14-09-46",
+            "content": "@@ -190,16 +190,56 @@\n = i + 1%0A\n+        fmt.Printf(%22%25d%22, vetorTotal%5Bi%5D)%0A\n     %7D%0A%0A \n@@ -465,16 +465,64 @@\n %5Bj%5D = 0%0A\n+                fmt.Printf(%22%25d%22, vetorTotal%5Bj%5D)%0A\n         \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-18_14-10-12",
+            "content": "@@ -602,75 +602,23 @@\n     \n-%7D else if (i == baruel - 2) %7B%0A            fmt.Printf(%22N%22)%0A        %7D\n+    %0A        %7D \n %0A   \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-18_14-11-15",
+            "content": "@@ -498,34 +498,8 @@\n + %7B%0A\n-        var count int = 0%0A\n     \n@@ -602,52 +602,35 @@\n     \n-    count++%0A        %7D %0A        if count == 0\n+%7D else if (i == baruel - 2)\n  %7B%0A \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-18_14-13-00",
+            "content": "@@ -661,27 +661,8 @@\n   if\n- i == baruel - 2 &&\n  cou\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-18_14-13-39",
+            "content": "@@ -637,20 +637,10 @@\n ount\n- = count + 1\n+++\n %0A   \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-18_14-14-03",
+            "content": "@@ -650,39 +650,8 @@\n + 1%0A\n-            fmt.Println(count)%0A\n     \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-18_14-14-20",
+            "content": "@@ -460,30 +460,8 @@\n  %7D%0A%0A\n-    var count int = 0%0A\n     \n@@ -486,32 +486,58 @@\n ruel - 1; i++ %7B%0A\n+        var count int = 0%0A\n         if vetor\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-18_14-14-33",
+            "content": "@@ -629,18 +629,59 @@\n    count\n-++\n+ = count + 1%0A            fmt.Println(count)\n %0A       \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-18_14-14-46",
+            "content": "@@ -653,16 +653,35 @@\n       if\n+ i == baruel - 2 &&\n  count =\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-18_14-15-00",
+            "content": "@@ -469,19 +469,16 @@\n ar count\n-Rep\n  int = 0\n@@ -629,19 +629,16 @@\n    count\n-Rep\n ++%0A     \n@@ -663,11 +663,8 @@\n ount\n-Rep\n  == \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-18_14-15-25",
+            "content": "@@ -723,227 +723,7 @@\n    %7D\n-%0A%0A    var countCard int = 0%0A    for i := 0; i %3C baruel; i++ %7B%0A        if vetorTotal%5Bi%5D != 0 %7B%0A            fmt.Printf(%22%25d %22, vetorTotal%5Bi%5D)%0A        %7D%0A        if countCard == 0 %7B%0A            fmt.Printf(%22N%22)%0A        %7D%0A    %7D\n %0A%7D%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-18_14-18-04",
+            "content": "@@ -759,36 +759,37 @@\n for i := 0; i %3C \n-tota\n+barue\n l; i++ %7B%0A       \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-18_14-18-20",
+            "content": "@@ -649,26 +649,24 @@\n      %7D %0A    \n-%7D%0A\n     if count\n@@ -676,32 +676,36 @@\n  == 0 %7B%0A        \n+    \n fmt.Printf(%22N%22)%0A\n@@ -700,24 +700,34 @@\n Printf(%22N%22)%0A\n+        %7D%0A\n     %7D%0A%0A    v\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-18_14-21-51",
+            "content": "@@ -849,32 +849,8 @@\n i%5D)%0A\n-            countCard++%0A\n     \n@@ -855,26 +855,24 @@\n       %7D%0A    \n-%7D%0A\n     if count\n@@ -875,32 +875,36 @@\n ountCard == 0 %7B%0A\n+    \n         fmt.Prin\n@@ -907,20 +907,30 @@\n Printf(%22N%22)%0A\n+        %7D%0A\n     %7D%0A%7D%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-18_14-22-53",
+            "content": "@@ -713,27 +713,8 @@\n  %7D%0A%0A\n-    fmt.Println()%0A%0A\n     \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-18_14-23-09",
+            "content": "@@ -485,34 +485,8 @@\n = 0%0A\n-    var first bool = true%0A\n     \n@@ -573,36 +573,8 @@\n %5D %7B%0A\n-            if !first %7B%0A    \n     \n@@ -594,91 +594,32 @@\n rint\n+f\n (%22\n- %22)%0A            %7D%0A            fmt.Print(vetorBaruel%5Bi%5D)%0A            first = false\n+%25d %22, vetorBaruel%5Bi%5D)\n %0A   \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-18_14-25-40",
+            "content": "@@ -958,16 +958,17 @@\n intf(%22%25d\n+ \n %22, vetor\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-18_14-25-51",
+            "content": "@@ -1070,28 +1070,10 @@\n )%0A    %7D%0A\n-    fmt.Println()%0A\n %7D%0A\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-18_14-26-10",
+            "content": "@@ -871,25 +871,8 @@\n = 0%0A\n-    first = true%0A\n     \n@@ -936,36 +936,8 @@\n 0 %7B%0A\n-            if !first %7B%0A    \n     \n@@ -957,50 +957,16 @@\n rint\n+f\n (%22\n- %22)%0A            %7D%0A            fmt.Print(\n+%25d%22, \n veto\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-18_14-26-50",
+            "content": "@@ -1059,34 +1059,8 @@\n i%5D)%0A\n-            first = false%0A\n     \n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-18_14-27-37",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var total, baruel int\n    fmt.Scan(&total, &baruel)\n\n    vetorTotal := make([]int, total)\n    for i := 0; i < total; i++ {\n        vetorTotal[i] = i + 1\n    }\n\n    vetorBaruel := make([]int, baruel)\n    for i:= 0; i < baruel; i++ {\n        fmt.Scan(&vetorBaruel[i])\n        for j := 0; j < total; j++ {\n            if (vetorBaruel[i] == vetorTotal[j]) {\n                vetorTotal[j] = 0\n            }\n        }\n    }\n\n    var countRep int = 0\n    var first bool = true\n    for i := 0; i < baruel - 1; i++ {\n        if vetorBaruel[i] == vetorBaruel[i + 1] {\n            if !first {\n                fmt.Print(\" \")\n            }\n            fmt.Print(vetorBaruel[i])\n            first = false\n            countRep++\n        } \n    }\n    if countRep == 0 {\n        fmt.Printf(\"N\")\n    }\n\n    fmt.Println()\n\n    var countCard int = 0\n    first = true\n    for i := 0; i < total; i++ {\n        if vetorTotal[i] != 0 {\n            if !first {\n                fmt.Print(\" \")\n            }\n            fmt.Print(vetorTotal[i])\n            first = false\n            countCard++\n        }\n    }\n    if countCard == 0 {\n        fmt.Printf(\"N\")\n    }\n    fmt.Println()\n}\n",
+            "lines": "56"
+        }
+    ]
+}
