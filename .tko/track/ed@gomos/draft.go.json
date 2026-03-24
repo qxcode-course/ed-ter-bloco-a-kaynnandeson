@@ -2,7 +2,22 @@
     "patches": [
         {
             "label": "2026-03-18_14-40-50",
-            "content": "package main\nimport \"fmt\"\n\ntype Pos struct {\n    x, y int\n}\n\nfunc main() {\n    var q int\n    var d byte\n    fmt.Scan(&q, &d)\n    \n    vetor := make([]Pos, q)\n    for i := 0; i < q; i++ {\n        fmt.Scan(&vetor[i].x, &vetor[i].y)\n    }\n\n    if d == 'L' {\n        for i := q - 1; i > 0; i-- {\n            vetor[i].x = vetor[i - 1].x\n            vetor[i].y = vetor[i - 1].y\n        }\n        vetor[0].x = vetor[0].x - 1\n    }\n    if d == 'D' {\n        for i := q - 1; i > 0; i-- {\n            vetor[i].x = vetor[i - 1].x\n            vetor[i].y = vetor[i - 1].y\n        }\n        vetor[0].x = vetor[0].x + 1\n    }\n    if d == 'U' {\n        for i := q - 1; i > 0; i-- {\n            vetor[i].x = vetor[i - 1].x\n            vetor[i].y = vetor[i - 1].y\n        }\n        vetor[0].y = vetor[0].y - 1\n    }\n    if d == 'D' {\n        for i := q - 1; i > 0; i-- {\n            vetor[i].x = vetor[i - 1].x\n            vetor[i].y = vetor[i - 1].y\n        }\n        vetor[0].y = vetor[0].y + 1\n    }\n\n    for i := 0; i < q; i++ {\n        fmt.Printf(\"%d %d\", vetor[i].x, vetor[i].y)\n        fmt.Println()\n    }\n}\n",
+            "content": "@@ -126,24 +126,8 @@\n     \n-fmt.Print(q, d)%0A\n %0A   \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-24_13-13-40",
+            "content": "@@ -96,14 +96,12 @@\n r d \n-string\n+byte\n %0A   \n@@ -262,11 +262,11 @@\n  == \n-%22L%22\n+'L'\n  %7B%0A \n@@ -449,11 +449,11 @@\n  == \n-%22R%22\n+'D'\n  %7B%0A \n@@ -636,11 +636,11 @@\n  == \n-%22U%22\n+'U'\n  %7B%0A \n@@ -823,11 +823,11 @@\n  == \n-%22D%22\n+'D'\n  %7B%0A \n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-24_13-15-51",
+            "content": "@@ -119,16 +119,36 @@\n (&q, &d)\n+%0A    fmt.Print(q, d)\n %0A%0A    ve\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-24_13-16-04",
+            "content": "package main\nimport \"fmt\"\n\ntype Pos struct {\n    x, y int\n}\n\nfunc main() {\n    var q int\n    var d string\n    fmt.Scan(&q, &d)\n\n    vetor := make([]Pos, q)\n    for i := 0; i < q; i++ {\n        fmt.Scan(&vetor[i].x, &vetor[i].y)\n    }\n\n    if d == \"L\" {\n        for i := q - 1; i > 0; i-- {\n            vetor[i].x = vetor[i - 1].x\n            vetor[i].y = vetor[i - 1].y\n        }\n        vetor[0].x = vetor[0].x - 1\n    }\n    if d == \"R\" {\n        for i := q - 1; i > 0; i-- {\n            vetor[i].x = vetor[i - 1].x\n            vetor[i].y = vetor[i - 1].y\n        }\n        vetor[0].x = vetor[0].x + 1\n    }\n    if d == \"U\" {\n        for i := q - 1; i > 0; i-- {\n            vetor[i].x = vetor[i - 1].x\n            vetor[i].y = vetor[i - 1].y\n        }\n        vetor[0].y = vetor[0].y - 1\n    }\n    if d == \"D\" {\n        for i := q - 1; i > 0; i-- {\n            vetor[i].x = vetor[i - 1].x\n            vetor[i].y = vetor[i - 1].y\n        }\n        vetor[0].y = vetor[0].y + 1\n    }\n\n    for i := 0; i < q; i++ {\n        fmt.Printf(\"%d %d\", vetor[i].x, vetor[i].y)\n        fmt.Println()\n    }\n}\n",
             "lines": "51"
         }
     ]

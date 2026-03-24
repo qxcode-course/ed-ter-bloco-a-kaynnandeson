@@ -327,8 +327,13 @@
         },
         {
             "label": "2026-03-18_14-27-37",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var total, baruel int\n    fmt.Scan(&total, &baruel)\n\n    vetorTotal := make([]int, total)\n    for i := 0; i < total; i++ {\n        vetorTotal[i] = i + 1\n    }\n\n    vetorBaruel := make([]int, baruel)\n    for i:= 0; i < baruel; i++ {\n        fmt.Scan(&vetorBaruel[i])\n        for j := 0; j < total; j++ {\n            if (vetorBaruel[i] == vetorTotal[j]) {\n                vetorTotal[j] = 0\n            }\n        }\n    }\n\n    var countRep int = 0\n    var first bool = true\n    for i := 0; i < baruel - 1; i++ {\n        if vetorBaruel[i] == vetorBaruel[i + 1] {\n            if !first {\n                fmt.Print(\" \")\n            }\n            fmt.Print(vetorBaruel[i])\n            first = false\n            countRep++\n        } \n    }\n    if countRep == 0 {\n        fmt.Printf(\"N\")\n    }\n\n    fmt.Println()\n\n    var countCard int = 0\n    first = true\n    for i := 0; i < total; i++ {\n        if vetorTotal[i] != 0 {\n            if !first {\n                fmt.Print(\" \")\n            }\n            fmt.Print(vetorTotal[i])\n            first = false\n            countCard++\n        }\n    }\n    if countCard == 0 {\n        fmt.Printf(\"N\")\n    }\n    fmt.Println()\n}\n",
+            "content": "@@ -813,32 +813,33 @@\n intf(%22N%22)%0A    %7D%0A\n+%0A\n     fmt.Println(\n",
             "lines": "56"
+        },
+        {
+            "label": "2026-03-24_13-20-15",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var total, baruel int\n    fmt.Scan(&total, &baruel)\n\n    vetorTotal := make([]int, total)\n    for i := 0; i < total; i++ {\n        vetorTotal[i] = i + 1\n    }\n\n    vetorBaruel := make([]int, baruel)\n    for i:= 0; i < baruel; i++ {\n        fmt.Scan(&vetorBaruel[i])\n        for j := 0; j < total; j++ {\n            if (vetorBaruel[i] == vetorTotal[j]) {\n                vetorTotal[j] = 0\n            }\n        }\n    }\n\n    var countRep int = 0\n    var first bool = true\n    for i := 0; i < baruel - 1; i++ {\n        if vetorBaruel[i] == vetorBaruel[i + 1] {\n            if !first {\n                fmt.Print(\" \")\n            }\n            fmt.Print(vetorBaruel[i])\n            first = false\n            countRep++\n        } \n    }\n    if countRep == 0 {\n        fmt.Printf(\"N\")\n    }\n    fmt.Println()\n\n    var countCard int = 0\n    first = true\n    for i := 0; i < total; i++ {\n        if vetorTotal[i] != 0 {\n            if !first {\n                fmt.Print(\" \")\n            }\n            fmt.Print(vetorTotal[i])\n            first = false\n            countCard++\n        }\n    }\n    if countCard == 0 {\n        fmt.Printf(\"N\")\n    }\n    fmt.Println()\n}\n",
+            "lines": "55"
         }
     ]
 }

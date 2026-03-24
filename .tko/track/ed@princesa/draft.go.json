@@ -1,0 +1,174 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-24_13-36-59",
+            "content": "@@ -71,128 +71,9 @@\n &n, \n-&e)%0A%0A    vetor := make(%5B%5Dint, n)%0A    for i := 0; i %3C n; i++ %7B%0A        vetor%5Bi%5D = i + 1;%0A        println(vetor%5Bi%5D)%0A    %7D%0A\n+)\n %0A   \n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-03-24_13-39-31",
+            "content": "@@ -159,29 +159,25 @@\n  1;%0A        \n-fmt.P\n+p\n rintln(vetor\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-24_13-39-58",
+            "content": "@@ -163,11 +163,8 @@\n     \n-%7D%0A%0A\n     \n@@ -176,194 +176,26 @@\n rint\n-f(%22%5B %22)%0A    for i := 0; i %3C n; i++ %7B%0A        fmt.Printf(%22%25d%22, vetor%5Bi%5D)%0A        if vetor%5Bi%5D == e %7B%0A            fmt.Printf(%22%3E%22)%0A        %7D%0A        fmt.Printf(%22 %22)%0A    %7D%0A    fmt.Printf(%22%5D%22)\n+ln(vetor%5Bi%5D)%0A    %7D\n %0A%0A  \n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-24_13-43-24",
+            "content": "@@ -361,11 +361,38 @@\n ntf(%22%5D%22)\n+%0A%0A    fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-24_13-43-33",
+            "content": "@@ -104,27 +104,8 @@\n  n)%0A\n-    countElem := 0%0A\n     \n@@ -159,36 +159,15 @@\n  1;%0A\n-        countElem++%0A\n     %7D%0A%0A\n-%0A\n     \n@@ -187,36 +187,8 @@\n  %22)%0A\n-    for countElem %3E 0 %7B%0A    \n     \n@@ -212,36 +212,32 @@\n ; i++ %7B%0A        \n-  \n-  \n fmt.Printf(%22%25d%22,\n@@ -255,20 +255,16 @@\n         \n-    \n if vetor\n@@ -278,36 +278,32 @@\n e %7B%0A            \n-   \n- \n fmt.Printf(%22%3E%22)%0A\n@@ -302,20 +302,16 @@\n tf(%22%3E%22)%0A\n-    \n         \n@@ -312,36 +312,32 @@\n       %7D%0A        \n-    \n fmt.Printf(%22 %22)%0A\n@@ -340,38 +340,8 @@\n  %22)%0A\n-        %7D%0A        countElem--%0A\n     \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-24_13-48-35",
+            "content": "@@ -211,51 +211,47 @@\n    f\n-or countElem %3E 0 %7B%0A        fmt.Printf(%22%5B %22)\n+mt.Printf(%22%5B %22)%0A    for countElem %3E 0 %7B\n %0A   \n@@ -446,48 +446,44 @@\n     \n-fmt.Printf(%22%5D%22)%0A        countElem--%0A    %7D\n+countElem--%0A    %7D%0A    fmt.Printf(%22%5D%22)\n %0A%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-24_13-48-49",
+            "content": "@@ -211,407 +211,85 @@\n    f\n-mt.Printf(%22%5B %22)%0A    for i := 0; i %3C n; i++ %7B%0A        fmt.Printf(%22%25d%22, vetor%5Bi%5D)%0A        if vetor%5Bi%5D == e %7B%0A            fmt.Printf(%22%3E%22)%0A        %7D%0A        fmt.Printf(%22 %22)%0A    %7D%0A    fmt.Printf(%22%5D%22)%0A        %0A    for countElem %3E 0 %7B%0A        fmt.Printf(%22%5B %22)%0A        for i := 0; i %3C n; i++ %7B%0A            if vetor%5Bi%5D == e %7B%0A                vetor%5Bi + 1%5D = 0%0A            %7D%0A            if vetor%5Bi%5D != 0 %7B%0A    \n+or countElem %3E 0 %7B%0A        fmt.Printf(%22%5B %22)%0A        for i := 0; i %3C n; i++ %7B%0A\n     \n@@ -323,30 +323,16 @@\n tor%5Bi%5D)%0A\n-            %7D%0A\n         \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-24_13-50-57",
+            "content": "@@ -561,195 +561,8 @@\n = 0%0A\n-                for j := i; i %3C n; j++ %7B%0A                    if vetor%5Bj%5D != 0 %7B%0A                        e = vetor%5Bi%5D%0A                        break%0A                    %7D%0A                %7D%0A\n     \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-24_13-52-58",
+            "content": "@@ -585,17 +585,17 @@\n j := i; \n-j\n+i\n  %3C n; j+\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-24_13-53-26",
+            "content": "@@ -583,20 +583,16 @@\n r j := i\n- + 1\n ; j %3C n;\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-24_13-53-36",
+            "content": "@@ -675,17 +675,17 @@\n = vetor%5B\n-j\n+i\n %5D%0A      \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-24_13-54-12",
+            "content": "@@ -583,16 +583,20 @@\n r j := i\n+ + 1\n ; j %3C n;\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-24_13-54-25",
+            "content": "@@ -583,20 +583,16 @@\n r j := i\n- + 1\n ; j %3C n;\n@@ -602,92 +602,8 @@\n + %7B%0A\n-                    if j == n %7B%0A                        j = 0%0A                    %7D%0A\n     \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-24_13-56-03",
+            "content": "@@ -583,16 +583,20 @@\n r j := i\n+ + 1\n ; j %3C n;\n@@ -636,12 +636,8 @@\n = n \n-- 1 \n %7B%0A  \n@@ -689,71 +689,8 @@\n    %7D\n- else %5B%0A                        j = j + 1%0A                    %5D\n %0A   \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-24_13-56-41",
+            "content": "@@ -100,16 +100,35 @@\n int, n)%0A\n+    countElem := 0%0A\n     for \n@@ -174,26 +174,43 @@\n  i + 1;%0A\n+        countElem++%0A\n     %7D%0A\n-    \n+%0A\n %0A    fmt\n@@ -410,22 +410,66 @@\n     \n+    \n %0A    \n-pos := 0%0A\n+for countElem %3E 0 %7B%0A        fmt.Printf(%22%5B %22)%0A    \n     \n@@ -493,32 +493,36 @@\n ; i++ %7B%0A        \n+    \n if vetor%5Bi%5D == e\n@@ -540,15 +540,28 @@\n     \n-pos = i\n+    vetor%5Bi + 1%5D = 0\n %0A   \n@@ -573,69 +573,222 @@\n     \n-break%0A        %7D%0A    %7D%0A%0A    countElem := n%0A    for countElem %3E\n+    for j := i; j %3C n; j++ %7B%0A                    if j == n - 1 %7B%0A                        j = 0%0A                    %7D else %5B%0A                        j = j + 1%0A                    %5D%0A                    if vetor%5Bj%5D !=\n  0 %7B\n@@ -800,58 +800,156 @@\n     \n-fmt.Printf(%22%5B %22)%0A        for i := 0; i %3C n; i++ %7B%0A\n+                e = vetor%5Bj%5D%0A                        break%0A                    %7D%0A                %7D%0A            %7D%0A            if vetor%5Bi%5D != 0 %7B%0A    \n     \n@@ -999,14 +999,33 @@\n     \n-if pos\n+%7D%0A            if vetor%5Bi%5D\n  == \n@@ -1139,33 +1139,8 @@\n %22%5D%22)\n-%0A%0A        fmt.Printf(%22%5D%22)\n %0A   \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-24_14-04-53",
+            "content": "@@ -764,24 +764,49 @@\n .Printf(%22%5D%22)\n+%0A%0A        fmt.Printf(%22%5D%22)\n %0A        cou\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-24_14-05-05",
+            "content": "@@ -654,16 +654,16 @@\n  if \n-i\n+pos\n  == \n-pos\n+e\n  %7B%0A \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-24_14-05-25",
+            "content": "@@ -772,36 +772,8 @@\n %22%5D%22)\n-%0A%0A        vetor%5Bpos + 1%5D = 0\n %0A   \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-24_14-06-21",
+            "content": "@@ -166,16 +166,221 @@\n  %7D%0A    %0A\n+    fmt.Printf(%22%5B %22)%0A    for i := 0; i %3C n; i++ %7B%0A        fmt.Printf(%22%25d%22, vetor%5Bi%5D)%0A        if vetor%5Bi%5D == e %7B%0A            fmt.Printf(%22%3E%22)%0A        %7D%0A        fmt.Printf(%22 %22)%0A    %7D%0A    fmt.Printf(%22%5D%22)%0A    %0A\n     pos \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-24_14-06-35",
+            "content": "@@ -395,44 +395,8 @@\n + %7B%0A\n-            if vetor%5Bi%5D != 0  %7B%0A    \n     \n@@ -430,30 +430,16 @@\n tor%5Bi%5D)%0A\n-            %7D%0A\n         \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-24_14-07-08",
+            "content": "@@ -646,192 +646,8 @@\n = 0%0A\n-        for %7B%0A            pos = pos + 1%0A            if pos == n %7B%0A                pos = 0%0A            %7D%0A            if vetor%5Bpos%5D != 0 %7B%0A                break%0A            %7D%0A        %7D%0A%0A\n     \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-24_14-09-19",
+            "content": "@@ -672,26 +672,22 @@\n     \n-if \n pos =\n-= n %7B%0A    \n+ pos + 1%0A\n     \n@@ -698,45 +698,22 @@\n     \n+if \n pos =\n- 0%0A                %7D else %7B%0A    \n+= n %7B%0A\n     \n@@ -722,39 +722,33 @@\n           pos = \n-pos + 1\n+0\n %0A            %7D%0A \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-24_14-10-00",
+            "content": "@@ -633,21 +633,15 @@\n tor%5B\n-(\n pos + 1\n-) %25 n\n %5D = \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-24_14-10-42",
+            "content": "@@ -614,24 +614,16 @@\n tf(%22%5D%22)%0A\n-        \n %0A       \n@@ -629,23 +629,29 @@\n   vetor%5B\n+(\n pos + 1\n+) %25 n\n %5D = 0%0A  \n@@ -678,27 +678,118 @@\n     \n+if \n pos =\n- (pos + 1) %25 n\n+= n %7B%0A                pos = 0%0A                %7D else %7B%0A                    pos = pos + 1%0A            %7D\n %0A   \n@@ -856,32 +856,33 @@\n     %7D%0A        %7D%0A\n+%0A\n         countEle\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-24_14-11-58",
+            "content": "@@ -627,80 +627,8 @@\n    %0A\n-        if pos == n - 1 %7B%0A            vetor%5B0%5D = 0%0A        %7D else %7B%0A    \n     \n@@ -650,26 +650,16 @@\n  1%5D = 0%0A\n-        %7D%0A\n         \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-24_14-13-03",
+            "content": "@@ -556,43 +556,8 @@\n   %7D%0A\n-            if vetor%5Bi%5D != 0 %7B%0A    \n     \n@@ -580,30 +580,16 @@\n tf(%22 %22)%0A\n-            %7D%0A\n         \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-24_14-14-29",
+            "content": "@@ -664,10 +664,8 @@\n f(%22%5D\n-%5Cn\n %22)%0A \n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-24_14-14-38",
+            "content": "@@ -686,67 +686,25 @@\n     \n-prox := pos%0A        for %7B%0A            prox = (prox + 1) %25 n\n+if pos == n - 1 %7B\n %0A   \n@@ -716,29 +716,20 @@\n     \n-if \n vetor%5B\n-prox\n+0\n %5D \n-!\n = 0\n- %7B\n %0A   \n@@ -737,46 +737,21 @@\n     \n-        break%0A            %7D\n+%7D else %7B\n %0A    \n-    %7D%0A\n     \n@@ -765,17 +765,29 @@\n or%5Bp\n-rox%5D = 0%0A\n+os + 1%5D = 0%0A        %7D\n %0A   \n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-24_14-21-46",
+            "content": "@@ -329,17 +329,17 @@\n tElem %3E \n-1\n+0\n  %7B%0A     \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-24_14-23-56",
+            "content": "@@ -329,17 +329,16 @@\n tElem %3E \n--\n 1 %7B%0A    \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-24_14-24-11",
+            "content": "@@ -328,19 +328,19 @@\n ntElem %3E\n-= 0\n+ -1\n  %7B%0A     \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-24_14-24-22",
+            "content": "@@ -328,18 +328,19 @@\n ntElem %3E\n- 1\n+= 0\n  %7B%0A     \n@@ -1003,286 +1003,6 @@\n   %7D%0A\n-    fmt.Printf(%22%5B %22)%0A    for i := 0; i %3C n; i++ %7B%0A        if vetor%5Bi%5D != 0  %7B%0A            fmt.Printf(%22%25d%22, vetor%5Bi%5D)%0A        %7D%0A        if i == pos %7B%0A            fmt.Printf(%22%3E%22)%0A        %7D%0A        if vetor%5Bi%5D != 0 %7B%0A            fmt.Printf(%22 %22)%0A        %7D%0A    %7D%0A    fmt.Printf(%22%5D%5Cn%22)%0A\n %7D%0A\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-24_14-26-06",
+            "content": "@@ -994,29 +994,24 @@\n lem--%0A    %7D%0A\n-    %0A\n     fmt.Prin\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-03-24_14-26-40",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var n, e int\n    fmt.Scan(&n, &e)\n\n    vetor := make([]int, n)\n    for i := 0; i < n; i++ {\n        vetor[i] = i + 1;\n    }\n    \n    pos := 0\n    for i := 0; i < n; i++ {\n        if vetor[i] == e {\n            pos = i\n            break\n        }\n    }\n\n    countElem := n\n    for countElem > 1 {\n        fmt.Printf(\"[ \")\n        for i := 0; i < n; i++ {\n            if vetor[i] != 0  {\n                fmt.Printf(\"%d\", vetor[i])\n            }\n            if i == pos {\n                fmt.Printf(\">\")\n            }\n            if vetor[i] != 0 {\n                fmt.Printf(\" \")\n            }\n        }\n        fmt.Printf(\"]\\n\")\n        \n        prox := pos\n        for {\n            prox = (prox + 1) % n\n            if vetor[prox] != 0 {\n                break\n            }\n        }\n        vetor[prox] = 0\n\n        for {\n            pos = (pos + 1) % n\n            if vetor[pos] != 0 {\n                break\n            }\n        }\n        countElem--\n    }\n    \n    fmt.Printf(\"[ \")\n    for i := 0; i < n; i++ {\n        if vetor[i] != 0  {\n            fmt.Printf(\"%d\", vetor[i])\n        }\n        if i == pos {\n            fmt.Printf(\">\")\n        }\n        if vetor[i] != 0 {\n            fmt.Printf(\" \")\n        }\n    }\n    fmt.Printf(\"]\\n\")\n}\n",
+            "lines": "67"
+        }
+    ]
+}
