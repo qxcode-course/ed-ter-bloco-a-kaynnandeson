@@ -1,0 +1,13 @@
+2026-04-07 13:21:17, MOVE, v:1, k:ed@queimada, mode:DOWN
+2026-04-07 13:21:25, MOVE, v:1, k:ed@queimada, mode:PICK
+2026-04-07 13:21:28, EXEC, v:1, k:ed@queimada, mode:FREE, size:38
+2026-04-07 13:24:44, EXEC, v:1, k:ed@queimada, mode:FULL, size:35, fail:COMP
+2026-04-07 13:24:47, EXEC, v:1, k:ed@queimada, mode:FULL, fail:COMP
+2026-04-07 13:28:13, EXEC, v:1, k:ed@queimada, mode:FULL, rate:100, size:49
+2026-04-07 13:28:24, SELF, v:1, k:ed@queimada, self:1, rate:100, guided:1
+2026-04-07 13:28:28, SELF, v:1, k:ed@queimada, self:1, rate:100, guided:1
+2026-04-07 13:28:28, EXEC, v:1, k:ed@queimada, mode:FULL, rate:100
+2026-04-07 13:28:33, MOVE, v:1, k:ed@queimada, mode:BACK
+2026-04-07 13:28:46, MOVE, v:1, k:ed@queimada, mode:PICK
+2026-04-07 13:29:01, SELF, v:1, k:ed@queimada, self:1, rate:100, study:30, guided:1
+2026-04-07 13:29:02, MOVE, v:1, k:ed@queimada, mode:BACK

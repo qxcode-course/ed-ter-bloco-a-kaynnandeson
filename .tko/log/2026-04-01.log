@@ -1,0 +1,9 @@
+2026-04-01 13:19:46, MOVE, v:1, k:ed@eh_primo, mode:DOWN
+2026-04-01 13:22:10, MOVE, v:1, k:ed@eh_primo, mode:PICK
+2026-04-01 13:22:12, EXEC, v:1, k:ed@eh_primo, mode:FREE, size:20
+2026-04-01 13:22:21, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:44
+2026-04-01 13:31:28, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:55, size:23
+2026-04-01 13:32:18, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:88, size:29
+2026-04-01 13:33:53, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:88, size:29
+2026-04-01 13:34:02, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:77, size:29
+2026-04-01 13:35:47, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:100, size:29
