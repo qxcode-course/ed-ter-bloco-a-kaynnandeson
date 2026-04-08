@@ -9,34 +9,35 @@ func ri(inf, sup int) float64 {
 	return float64(rand.Intn(sup-inf+1) + inf)
 }
 
-func arvere(pen *Pen, dist float64) {
-	if dist < 10 {
-		if ri(0, 50) == 0 {
-			pen.SetRGB(255, 0, 0)
-			pen.FillCircle(10)
-		}
+func circulo(pen *Pen, raio float64, nivel int) {
+	if nivel == 0 {
 		return
 	}
-	ang_dir := ri(10, 40)
-	ang_esq := ri(10, 40)
 
-	pen.SetLineWidth(dist / 5)
-	pen.SetRGB(0, 0, 0)
-	pen.Walk(dist)
-	pen.Right(ang_dir)
-	arvere(pen, dist*(ri(80, 85)/100))
-	pen.Left(ang_dir + ang_esq)
-	arvere(pen, dist*(ri(80, 85)/100))
-	pen.Right(ang_esq)
-	pen.SetRGB(0, 0, 0)
-	pen.Walk(-dist)
+	pen.DrawCircle(raio)
+	
+	for i := 0; i < 6; i++ {
+		pen.Right(60)
+
+		pen.Up()
+		pen.Walk(raio)
+		pen.Down()
+
+		pen.Right(90)
+
+		circulo(pen, raio*0.35, nivel-1)
+
+		pen.Left(90)
+		pen.Up()
+		pen.Walk(-raio)
+		pen.Down()
+	}
 }
 
 func main() {
-	pen := NewPen(600, 500)
-	pen.SetHeading(90)
-	pen.SetPosition(300, 500)
-	arvere(pen, 80)
+	pen := NewPen(1200, 1200)
+	pen.SetPosition(600, 600)
+	circulo(pen, 320, 5)
 	pen.SavePNG("tree.png")
 	fmt.Println("PNG file created successfully.")
 }
