@@ -76,3 +76,12 @@
 2026-04-08 13:45:40, MOVE, v:1, k:ed@mdc, mode:BACK
 2026-04-08 13:45:52, MOVE, v:1, k:ed@queimada, mode:PICK
 2026-04-08 13:45:53, MOVE, v:1, k:ed@queimada, mode:BACK
+2026-04-08 13:48:15, MOVE, v:1, k:ed@triangulo, mode:DOWN
+2026-04-08 13:55:36, MOVE, v:1, k:ed@triangulo, mode:PICK
+2026-04-08 13:55:39, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:100, size:59
+2026-04-08 13:55:53, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:59
+2026-04-08 13:56:05, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:100, size:59
+2026-04-08 13:56:26, SELF, v:1, k:ed@triangulo, self:1, rate:100, study:10
+2026-04-08 13:56:26, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:100
+2026-04-08 13:56:36, MOVE, v:1, k:ed@triangulo, mode:BACK
+2026-04-08 13:56:55, MOVE, v:1, k:ed@fractais_png, mode:PICK
