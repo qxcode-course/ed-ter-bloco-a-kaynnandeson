@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_14-36-46",
+            "content": "@@ -37,178 +37,6 @@\n ) %7B%0A\n-%09var n int%0A%0A%09vetN := make(%5B%5Dint, n)%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09fmt.Scan(&vetN%5Bi%5D)%0A%09%7D%0A%0A%09var m int%0A%09vetM := make(%5B%5Dint, m)%0A%09for i := 0; i %3C m; i++ %7B%0A%09%09fmt.Scan(&vetM%5Bi%5D)%0A%09%7D%0A\n %7D%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-04-14_14-40-31",
+            "content": "@@ -206,173 +206,8 @@\n i%5D)%0A\n-%09%09for j := 0; j %3C n; j++ %7B%0A%09%09%09if vetM%5Bi%5D == vetN%5Bj%5D %7B%0A%09%09%09%09vetN%5Bj%5D = 0%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09if vetN%5Bi%5D != 0 %7B%0A%09%09%09fmt.Print(vetN%5Bi%5D)%0A%09%09%7D%0A\n %09%7D%0A%7D\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-14_14-42-54",
+            "content": "@@ -317,24 +317,45 @@\n  %3C n; i++ %7B%0A\n+%09%09if vetN%5Bi%5D != 0 %7B%0A%09\n %09%09fmt.Print(\n@@ -365,15 +365,15 @@\n N%5Bi%5D)%0A%09%09\n-%09\n+%7D\n %0A%09%7D%0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-14_14-43-59",
+            "content": "@@ -337,14 +337,20 @@\n int(\n-%22aaa%22)\n+vetN%5Bi%5D)%0A%09%09%09\n %0A%09%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-14_14-44-19",
+            "content": "@@ -40,24 +40,25 @@\n %0A%09var n int%0A\n+%0A\n %09vetN := mak\n@@ -332,17 +332,16 @@\n mt.Print\n-f\n (%22aaa%22)%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-14_14-44-37",
+            "content": "@@ -298,26 +298,8 @@\n %09%7D%0A%0A\n-%09fmt.Print(%22aaa%22)%0A\n %09for\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-14_14-44-50",
+            "content": "@@ -48,22 +48,8 @@\n int%0A\n-%09fmt.Scan(&n)%0A\n %09vet\n@@ -118,17 +118,16 @@\n %5Bi%5D)%0A%09%7D%0A\n-%09\n %0A%09var m \n@@ -134,22 +134,8 @@\n int%0A\n-%09fmt.Scan(&m)%0A\n %09vet\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-14_14-45-22",
+            "content": "@@ -323,16 +323,34 @@\n %09%09%7D%0A%09%7D%0A%0A\n+%09fmt.Print(%22aaa%22)%0A\n %09for i :\n@@ -373,51 +373,25 @@\n %7B%0A%09%09\n-if vetN%5Bi%5D != 0 %7B%0A%09%09%09fmt.Print(vetN%5Bi%5D)%0A%09%09%7D\n+fmt.Printf(%22aaa%22)\n %0A%09%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-14_14-45-52",
+            "content": "@@ -393,13 +393,8 @@\n N%5Bi%5D\n-, %22 %22\n )%0A%09%09\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_14-46-01",
+            "content": "@@ -407,21 +407,6 @@\n %0A%09%7D%0A\n-%09fmt.Println()%0A\n %7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_14-46-13",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\tvetN := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&vetN[i])\n\t}\n\t\n\tvar m int\n\tfmt.Scan(&m)\n\tvetM := make([]int, m)\n\tfor i := 0; i < m; i++ {\n\t\tfmt.Scan(&vetM[i])\n\t\tfor j := 0; j < n; j++ {\n\t\t\tif vetM[i] == vetN[j] {\n\t\t\t\tvetN[j] = 0\n\t\t\t\tbreak\n\t\t\t}\n\t\t}\n\t}\n\n\tfor i := 0; i < n; i++ {\n\t\tif vetN[i] != 0 {\n\t\t\tfmt.Print(vetN[i], \" \")\n\t\t}\n\t}\n\tfmt.Println()\n}\n",
+            "lines": "30"
+        }
+    ]
+}

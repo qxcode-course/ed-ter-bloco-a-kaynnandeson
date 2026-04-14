@@ -1,0 +1,199 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_13-48-35",
+            "content": "@@ -41,280 +41,35 @@\n     \n-var total, baruel int%0A    fmt.Scan(&total, &baruel)%0A%0A    countRep := 0%0A    fig := make(%5B%5Dint, baruel)%0A    for i := 0; i %3C baruel; i++ %7B%0A        fmt.Scan(fig%5Bi%5D)%0A        if i %3E 0 && fig%5Bi%5D == fig%5Bi - 1%5D %7B%0A            countRep++%0A        %7D%0A    %7D    %0A%0A    fmt.Println(countRep\n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-14_13-53-35",
+            "content": "@@ -245,61 +245,8 @@\n %5D %7B%0A\n-            fmt.Print(fig%5Bi%5D, %22 %22, fig%5Bi - 1%5D, %22%5Cn%22)%0A\n     \n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-14_13-54-20",
+            "content": "@@ -78,16 +78,17 @@\n n(&total\n+,\n  &baruel\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-14_13-54-45",
+            "content": "@@ -78,17 +78,16 @@\n n(&total\n-,\n  &baruel\n@@ -201,36 +201,8 @@\n i%5D)%0A\n-        fmt.Println(fig%5Bi%5D)%0A\n     \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-14_13-55-24",
+            "content": "@@ -92,44 +92,8 @@\n uel)\n-%0A    fmt.Println(total, %22 %22, baruel)\n %0A%0A  \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-14_13-55-58",
+            "content": "@@ -129,19 +129,16 @@\n el)%0A%0A   \n- //\n  countRe\n@@ -269,19 +269,16 @@\n %0A       \n- //\n  if i %3E \n@@ -308,27 +308,24 @@\n 1%5D %7B%0A       \n- //\n      fmt.Pri\n@@ -365,19 +365,16 @@\n %0A       \n- //\n      cou\n@@ -392,11 +392,8 @@\n     \n- //\n  %7D%0A \n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-14_13-56-48",
+            "content": "@@ -420,19 +420,16 @@\n    %0A%0A   \n- //\n  fmt.Pri\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-14_13-56-59",
+            "content": "@@ -267,11 +267,8 @@\n g%5Bi%5D\n-, i\n )%0A  \n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-14_13-58-02",
+            "content": "@@ -129,16 +129,19 @@\n el)%0A%0A   \n+ //\n  countRe\n@@ -147,16 +147,16 @@\n ep := 0%0A\n-\n     fig \n@@ -229,17 +229,16 @@\n mt.Scan(\n-&\n fig%5Bi%5D)%0A\n@@ -244,16 +244,50 @@\n %0A       \n+ fmt.Println(fig%5Bi%5D, i)%0A        //\n  if i %3E \n@@ -317,24 +317,27 @@\n 1%5D %7B%0A       \n+ //\n      fmt.Pri\n@@ -373,24 +373,27 @@\n %5Cn%22)%0A       \n+ //\n      countRe\n@@ -403,16 +403,19 @@\n %0A       \n+ //\n  %7D%0A    %7D\n@@ -420,19 +420,22 @@\n  %7D    %0A%0A\n-\n    \n+ //\n  fmt.Pri\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-14_13-58-52",
+            "content": "@@ -293,11 +293,8 @@\n     \n- //\n  fmt\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-14_13-59-37",
+            "content": "@@ -130,19 +130,37 @@\n l)%0A%0A    \n-vet\n+countRep := 0%0A    fig\n  := make\n@@ -171,15 +171,15 @@\n nt, \n-tota\n+barue\n l)\n- \n %0A   \n@@ -195,20 +195,21 @@\n  0; i %3C \n-tota\n+barue\n l; i++ %7B\n@@ -221,30 +221,76 @@\n     \n-vet%5Bi%5D = i +\n+fmt.Scan(&fig%5Bi%5D)%0A        if i %3E 0 && fig%5Bi%5D == fig%5Bi -\n  1\n+%5D %7B\n %0A       \n  fmt\n@@ -281,24 +281,31 @@\n 1%5D %7B%0A       \n+     //\n  fmt.Print(v\n@@ -307,118 +307,107 @@\n int(\n-vet%5Bi%5D)%0A    %7D%0A%0A    fig := make(%5B%5Dint, baruel)%0A    for i := 0; i %3C baruel; i++ %7B\n+fig%5Bi%5D, %22 %22, fig%5Bi - 1%5D, %22%5Cn%22)%0A            countRep++%0A        %7D\n %0A   \n+ %7D\n     \n+%0A%0A   \n  fmt.\n-Scan(&fig%5Bi%5D)%0A    %7D\n+Println(countRep)\n %0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-14_14-03-22",
+            "content": "@@ -88,16 +88,52 @@\n &baruel)\n+%0A    fmt.Println(total, %22 %22, baruel)\n %0A%0A    ve\n@@ -341,152 +341,8 @@\n i%5D)%0A\n-        for j := 0; j %3C total; j++ %7B%0A            if fig%5Bi%5D == vet%5Bj%5D %7B%0A                vet%5Bj%5D = 0%0A                break%0A            %7D%0A        %7D%0A\n     \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-14_14-04-50",
+            "content": "@@ -454,114 +454,7 @@\n    %7D\n-%0A%0A    for i := 0; i %3C total; i++ %7B%0A        if (vet%5Bi%5D != 0) %7B%0A            fmt.Print(vet%5Bi%5D)%0A        %7D%0A    %7D\n %0A%7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-14_14-05-55",
+            "content": "@@ -177,16 +177,42 @@\n = i + 1%0A\n+        fmt.Print(vet%5Bi%5D)%0A\n     %7D%0A%0A \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_14-06-05",
+            "content": "@@ -430,27 +430,8 @@\n  %7D%0A%0A\n-    countZero := 0%0A\n     \n@@ -529,110 +529,8 @@\n    %7D\n- else %7B%0A            countZero++%0A        %7D%0A    %7D%0A    if (countZero == total) %7B%0A        fmt.Println(%22N%22)\n %0A   \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-14_14-07-21",
+            "content": "@@ -537,13 +537,8 @@\n t%5Bi%5D\n-, %22 %22\n )%0A  \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-14_14-07-41",
+            "content": "@@ -219,39 +219,8 @@\n el)%0A\n-    rep := make(%5B%5Dint, baruel)%0A\n     \n@@ -279,89 +279,8 @@\n i%5D)%0A\n-        if i %3E 0 && fig%5Bi%5D == fig%5Bi - 1%5D %7B%0A            rep%5Bi%5D = fig%5Bi%5D%0A        %7D%0A\n     \n@@ -430,115 +430,8 @@\n  %7D%0A%0A\n-%0A    for i := 0; i %3C baruel; i++ %7B%0A        if rep%5Bi%5D != 0 %7B%0A            fmt.Print(rep%5Bi%5D)%0A        %7D%0A    %7D%0A%0A\n     \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-14_14-11-08",
+            "content": "@@ -542,25 +542,8 @@\n  %7D%0A%0A\n-    vazio := true\n %0A   \n@@ -640,81 +640,9 @@\n     \n-    vazio = false%0A        %7D%0A    %7D%0A    if vazio %7B%0A        fmt.Println(%22N%22)\n+%7D\n %0A   \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-14_14-12-43",
+            "content": "@@ -643,21 +643,16 @@\n t(rep%5Bi%5D\n-, %22 %22\n )%0A      \n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-14_14-13-04",
+            "content": "@@ -724,16 +724,18 @@\n mt.Print\n+ln\n (%22N%22)%0A  \n@@ -743,26 +743,8 @@\n  %7D%0A%0A\n-    fmt.Println()%0A\n     \n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-14_14-13-33",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -33,17 +33,20 @@\n ain() %7B%0A\n-%09\n+    \n var tota\n@@ -59,17 +59,20 @@\n uel int%0A\n-%09\n+    \n fmt.Scan\n@@ -90,17 +90,20 @@\n aruel)%0A%0A\n-%09\n+    \n vet := m\n@@ -119,18 +119,22 @@\n , total)\n-%0A%09\n+ %0A    \n for i :=\n@@ -154,18 +154,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n vet%5Bi%5D =\n@@ -177,21 +177,27 @@\n = i + 1%0A\n-%09%7D%0A%0A%09\n+    %7D%0A%0A    \n fig := m\n@@ -215,17 +215,20 @@\n baruel)%0A\n-%09\n+    \n rep := m\n@@ -246,17 +246,20 @@\n baruel)%0A\n-%09\n+    \n for i :=\n@@ -280,18 +280,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n fmt.Scan\n@@ -306,18 +306,24 @@\n fig%5Bi%5D)%0A\n-%09%09\n+        \n if i %3E 0\n@@ -345,17 +345,28 @@\n ig%5Bi\n--\n+ - \n 1%5D %7B%0A\n-%09%09%09\n+            \n rep%5B\n@@ -377,22 +377,34 @@\n  fig%5Bi%5D%0A\n-%09%09%7D%0A%09%09\n+        %7D%0A        \n for j :=\n@@ -424,19 +424,28 @@\n ; j++ %7B%0A\n-%09%09%09\n+            \n if fig%5Bi\n@@ -462,47 +462,92 @@\n %5D %7B%0A\n-%09%09%09%09vet%5Bj%5D = 0%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09\n+                vet%5Bj%5D = 0%0A                break%0A            %7D%0A        %7D%0A    %7D%0A%0A    \n vazi\n@@ -556,17 +556,20 @@\n := true%0A\n-%09\n+    \n for i :=\n@@ -590,18 +590,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n if rep%5Bi\n@@ -619,68 +619,20 @@\n 0 %7B%0A\n-%09%09%09if i == baruel-2 %7B%0A%09%09%09%09fmt.Print(rep%5Bi%5D)%0A%09%09%09%7D else %7B%0A%09%09%09%09\n+            \n fmt.\n@@ -654,16 +654,20 @@\n  %22)%0A\n-%09%09%09%7D%0A%09%09%09\n+            \n vazi\n@@ -676,24 +676,36 @@\n = false%0A\n-%09%09%7D%0A%09%7D%0A%09\n+        %7D%0A    %7D%0A    \n if vazio\n@@ -707,18 +707,24 @@\n vazio %7B%0A\n-%09%09\n+        \n fmt.Prin\n@@ -734,13 +734,19 @@\n N%22)%0A\n-%09%7D%0A%0A%09\n+    %7D%0A%0A    \n fmt.\n@@ -755,18 +755,20 @@\n intln()%0A\n-%0A%09\n+    \n countZer\n@@ -774,17 +774,20 @@\n ro := 0%0A\n-%09\n+    \n for i :=\n@@ -811,13 +811,20 @@\n + %7B%0A\n-%09%09\n+        \n if \n+(\n vet%5B\n@@ -830,22 +830,32 @@\n %5Bi%5D != 0\n+)\n  %7B%0A\n-%09%09%09\n+            \n fmt.Prin\n@@ -869,18 +869,24 @@\n %5D, %22 %22)%0A\n-%09%09\n+        \n %7D else %7B\n@@ -890,34 +890,56 @@\n e %7B%0A\n-%09%09%09countZero++%0A%09%09%7D%0A%09%7D%0A%09\n+            countZero++%0A        %7D%0A    %7D%0A    \n if \n+(\n coun\n@@ -956,13 +956,20 @@\n otal\n+)\n  %7B%0A\n-%09%09\n+        \n fmt.\n@@ -985,9 +985,12 @@\n N%22)%0A\n-%09\n+    \n %7D%0A%7D%0A\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-14_14-16-56",
+            "content": "@@ -196,20 +196,35 @@\n el)%0A\n-    \n+%09\n rep := \n-0\n+make(%5B%5Dint, baruel)\n %0A%09fo\n@@ -251,24 +251,18 @@\n ; i++ %7B%0A\n-        \n+%09%09\n fmt.Scan\n@@ -310,25 +310,26 @@\n %5D %7B%0A\n-            rep++\n+%09%09%09rep%5Bi%5D = fig%5Bi%5D\n %0A%09%09%7D\n@@ -360,28 +360,19 @@\n ; j++ %7B%0A\n-            \n+%09%09%09\n if fig%5Bi\n@@ -385,32 +385,20 @@\n et%5Bj%5D %7B%0A\n-                \n+%09%09%09%09\n vet%5Bj%5D =\n@@ -427,241 +427,8 @@\n %09%7D%0A%0A\n-    vetRep := make(%5B%5Dint, rep)%0A    for i := 0; i %3C baruel; i++ %7B   %0A        for j := 0; j %3C rep; j++ %7B%0A            if i %3E 0 && fig%5Bi%5D == fig%5Bi-1%5D %7B%0A                vetRep%5Bj%5D = fig%5Bi%5D%0A                break%0A            %7D%0A        %7D%0A%09%7D%0A%0A\n %09vaz\n@@ -474,20 +474,17 @@\n  %7B%0A%09%09if \n-vetR\n+r\n ep%5Bi%5D !=\n@@ -520,28 +520,25 @@\n %09%09fmt.Print(\n-vetR\n+r\n ep%5Bi%5D)%0A%09%09%09%7D \n@@ -562,12 +562,9 @@\n int(\n-vetR\n+r\n ep%5Bi\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-04-14_14-22-41",
+            "content": "@@ -699,19 +699,22 @@\n  0; i %3C \n-rep\n+baruel\n ; i++ %7B%0A\n@@ -750,15 +750,16 @@\n  == \n-rep - 1\n+baruel-2\n  %7B%0A%09\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-04-14_14-23-11",
+            "content": "@@ -736,71 +736,57 @@\n 0 %7B%0A\n-            fmt.Print(vetRep%5Bi%5D)%0A%09%09%09// if i == rep - 1 %7B%0A%09%09%09// \n+%09%09%09if i == rep - 1 %7B%0A%09%09%09%09fmt.Print(vetRep%5Bi%5D)%0A%09%09%09\n %7D el\n@@ -793,19 +793,16 @@\n se %7B%0A%09%09%09\n-// \n %09fmt.Pri\n@@ -827,11 +827,8 @@\n %0A%09%09%09\n-// \n %7D%0A%09%09\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-04-14_14-23-47",
+            "content": "@@ -319,37 +319,8 @@\n p++%0A\n-            fmt.Println(rep)%0A\n %09%09%7D%0A\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-04-14_14-24-18",
+            "content": "@@ -315,16 +315,45 @@\n   rep++%0A\n+            fmt.Println(rep)%0A\n %09%09%7D%0A%09%09fo\n@@ -465,29 +465,8 @@\n %7D%0A%09%7D\n-%0A    fmt.Println(rep)\n %0A%0A  \n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-04-14_14-24-35",
+            "content": "@@ -502,27 +502,30 @@\n i := 0; i %3C \n-rep\n+baruel\n ; i++ %7B   %0A \n@@ -547,22 +547,19 @@\n  0; j %3C \n-baruel\n+rep\n ; j++ %7B%0A\n@@ -586,17 +586,17 @@\n  && fig%5B\n-j\n+i\n %5D == fig\n@@ -596,17 +596,17 @@\n  == fig%5B\n-j\n+i\n -1%5D %7B%0A  \n@@ -630,17 +630,17 @@\n Rep%5B\n-i\n+j\n %5D = fig%5B\n j%5D%0A \n@@ -635,17 +635,17 @@\n %5D = fig%5B\n-j\n+i\n %5D%0A      \n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-04-14_14-25-30",
+            "content": "@@ -573,17 +573,17 @@\n      if \n-j\n+i\n  %3E 0 && \n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-04-14_14-25-44",
+            "content": "@@ -432,16 +432,37 @@\n %7D%0A%09%09%7D%0A%09%7D\n+%0A    fmt.Println(rep)\n %0A%0A    ve\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-04-14_14-28-26",
+            "content": "@@ -196,35 +196,20 @@\n el)%0A\n-%09\n+    \n rep := \n-make(%5B%5Dint, baruel)\n+0\n %0A%09fo\n@@ -236,18 +236,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n fmt.Scan\n@@ -301,26 +301,25 @@\n %5D %7B%0A\n-%09%09%09rep%5Bi%5D = fig%5Bi%5D\n+            rep++\n %0A%09%09%7D\n@@ -350,19 +350,28 @@\n ; j++ %7B%0A\n-%09%09%09\n+            \n if fig%5Bi\n@@ -384,20 +384,32 @@\n et%5Bj%5D %7B%0A\n-%09%09%09%09\n+                \n vet%5Bj%5D =\n@@ -438,37 +438,94 @@\n %09%7D%0A%0A\n-%09vazio := true%0A%09\n+    vetRep := make(%5B%5Dint, rep)%0A    for i := 0; i %3C rep; i++ %7B   %0A        \n for \n-i\n+j\n  := 0; \n-i\n+j\n  %3C b\n@@ -535,59 +535,221 @@\n el; \n-i\n+j\n ++ %7B%0A\n-%09%09if r\n+            if j %3E 0 && fig%5Bj%5D == fig%5Bj-1%5D %7B%0A                vetR\n ep%5Bi%5D \n-!\n = \n-0 %7B%0A%09%09%09if i == baruel-2 %7B%0A%09%09%09%09\n+fig%5Bj%5D%0A                break%0A            %7D%0A        %7D%0A%09%7D%0A%0A%09vazio := true%0A%09for i := 0; i %3C rep; i++ %7B%0A%09%09if vetRep%5Bi%5D != 0 %7B%0A            \n fmt.\n@@ -750,25 +750,28 @@\n   fmt.Print(\n-r\n+vetR\n ep%5Bi%5D)%0A%09%09%09%7D \n@@ -768,16 +768,43 @@\n %5Bi%5D)%0A%09%09%09\n+// if i == rep - 1 %7B%0A%09%09%09// \n %7D else %7B\n@@ -807,16 +807,19 @@\n se %7B%0A%09%09%09\n+// \n %09fmt.Pri\n@@ -821,17 +821,20 @@\n t.Print(\n-r\n+vetR\n ep%5Bi%5D, %22\n@@ -836,24 +836,27 @@\n i%5D, %22 %22)%0A%09%09%09\n+// \n %7D%0A%09%09%09vazio =\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-04-14_14-30-41",
+            "content": "@@ -427,26 +427,8 @@\n %09%7D%0A%0A\n-    first := true%0A\n %09vaz\n@@ -498,13 +498,21 @@\n %09if \n-first\n+i == baruel-2\n  %7B%0A%09\n@@ -562,19 +562,19 @@\n int(\n-%22 %22, \n rep%5Bi%5D\n+, %22 %22\n )%0A%09%09\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-04-14_14-31-55",
+            "content": "@@ -544,18 +544,8 @@\n p%5Bi%5D\n-, %22caerai%22\n )%0A%09%09\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-14_14-32-19",
+            "content": "@@ -544,39 +544,19 @@\n p%5Bi%5D\n-)%0A                first = false\n+, %22caerai%22)\n %0A%09%09%09\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-14_14-32-38",
+            "content": "@@ -694,20 +694,22 @@\n )%0A%0A%09\n-vazi\n+countZer\n o \n+:\n = \n-true\n+0\n %0A%09fo\n@@ -784,56 +784,63 @@\n  %22)%0A\n-            vazio = false%0A        %7D%0A%09%7D%0A%09if vazio\n+%09%09%7D else %7B%0A%09%09%09countZero++%0A%09%09%7D%0A%09%7D%0A%09if countZero == total\n  %7B%0A%09\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-04-14_14-33-34",
+            "content": "@@ -423,17 +423,20 @@\n %09%09%7D%0A%09%7D%0A%0A\n-%09\n+    \n first :=\n@@ -542,20 +542,32 @@\n rep%5Bi%5D)%0A\n-%09%09%09%09\n+                \n first = \n@@ -693,22 +693,8 @@\n ()%0A%0A\n-%09first = true%0A\n %09vaz\n@@ -748,39 +748,24 @@\n t%5Bi%5D != 0 %7B%0A\n-%09%09%09if first %7B%0A%09\n %09%09%09fmt.Print\n@@ -775,57 +775,27 @@\n t%5Bi%5D\n-)%0A%09%09%09%7D else %7B%0A%09%09%09%09fmt.Print(%22 %22, vet%5Bi%5D)%0A%09%09%09%7D%0A%09%09%09\n+, %22 %22)%0A            \n vazi\n@@ -796,34 +796,40 @@\n   vazio = false%0A\n-%09%09\n+        \n %7D%0A%09%7D%0A%09if vazio %7B\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-14_14-34-31",
+            "content": "@@ -870,27 +870,29 @@\n io %7B%0A%09%09fmt.Print\n+ln\n (%22N%22)%0A%09%7D%0A%7D%0A\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-04-14_14-34-40",
+            "content": "@@ -791,38 +791,8 @@\n i%5D)%0A\n-                first = false%0A\n %09%09%09%7D\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-04-14_14-35-13",
+            "content": "@@ -921,24 +921,6 @@\n %0A%09%7D%0A\n-    fmt.Println()%0A\n %7D%0A\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-04-14_14-35-32",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar total, baruel int\n\tfmt.Scan(&total, &baruel)\n\n\tvet := make([]int, total)\n\tfor i := 0; i < total; i++ {\n\t\tvet[i] = i + 1\n\t}\n\n\tfig := make([]int, baruel)\n\trep := make([]int, baruel)\n\tfor i := 0; i < baruel; i++ {\n\t\tfmt.Scan(&fig[i])\n\t\tif i > 0 && fig[i] == fig[i-1] {\n\t\t\trep[i] = fig[i]\n\t\t}\n\t\tfor j := 0; j < total; j++ {\n\t\t\tif fig[i] == vet[j] {\n\t\t\t\tvet[j] = 0\n\t\t\t\tbreak\n\t\t\t}\n\t\t}\n\t}\n\n\tfirst := true\n\tvazio := true\n\tfor i := 0; i < baruel; i++ {\n\t\tif rep[i] != 0 {\n\t\t\tif first {\n\t\t\t\tfmt.Print(rep[i])\n\t\t\t\tfirst = false\n\t\t\t} else {\n\t\t\t\tfmt.Print(\" \", rep[i])\n\t\t\t}\n\t\t\tvazio = false\n\t\t}\n\t}\n\tif vazio {\n\t\tfmt.Print(\"N\")\n\t}\n\n\tfmt.Println()\n\n\tfirst = true\n\tvazio = true\n\tfor i := 0; i < total; i++ {\n\t\tif vet[i] != 0 {\n\t\t\tif first {\n\t\t\t\tfmt.Print(vet[i])\n                first = false\n\t\t\t} else {\n\t\t\t\tfmt.Print(\" \", vet[i])\n\t\t\t}\n\t\t\tvazio = false\n\t\t}\n\t}\n\tif vazio {\n\t\tfmt.Print(\"N\")\n\t}\n    fmt.Println()\n}\n",
+            "lines": "65"
+        }
+    ]
+}
