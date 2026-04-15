@@ -1,0 +1,36 @@
+package main
+
+import (
+	"fmt"
+)
+
+func desenhaTriangulo(pen *Pen, lado float64) {
+	for i := 0; i < 3; i++ {
+		pen.Walk(lado)
+		pen.Right(120)
+	}
+}
+
+func fractal(pen *Pen, raio float64, nivel int) {
+	if nivel == 0 {
+		return
+	}
+	
+	desenhaTriangulo(pen, raio)
+	
+	for i := 0; i < 3; i++ {
+		fractal(pen, raio*0.5, nivel-1)
+		pen.Up()
+		pen.Walk(raio)
+		pen.Down()
+		pen.Right(120)
+	}
+}
+
+func main() {
+	pen := NewPen(1000, 1000)
+	pen.SetPosition(100, 200)
+	fractal(pen, 800, 7)
+	pen.SavePNG("tree.png")
+	fmt.Println("PNG file created successfully.")
+}

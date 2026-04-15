@@ -22,8 +22,11 @@ sources:
   quests: null
   tasks: null
 expanded:
-- eval1@teste-1
+- ed@rec
 - ed@map_set
+- ed@sandbox
+- eval1@eval1
+- ed@basic
 flags:
   inbox: inbox
   panel: skills
@@ -31,4 +34,4 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: eval1@apagando
+selected: ed@fractais_png

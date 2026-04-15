@@ -2,42 +2,83 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
 )
 
-func ri(inf, sup int) float64 {
-	return float64(rand.Intn(sup-inf+1) + inf)
+func desenhaQuadrado(pen *Pen, lado float64) {
+	for i := 0; i < 4; i++ {
+		pen.Walk(lado)
+		pen.Right(90)
+	}
 }
 
-func circulo(pen *Pen, raio float64, nivel int) {
+// func fractal(pen *Pen, lado float64, nivel int) {
+// 	if nivel == 0 {
+// 		return
+// 	}
+
+// 	desenhaQuadrado(pen, lado)
+	
+// 	for i := 0; i < 4; i++ {
+// 		pen.Up()
+// 		pen.Walk(lado * 0.75)
+// 		pen.Down()
+		
+// 		fractal(pen, lado*0.5, nivel-1)
+
+// 		pen.Up()
+// 		pen.Walk(-lado * 0.75)
+// 		pen.Down()
+
+// 		pen.Right(90)
+// 	}
+// }
+
+func fractal(pen *Pen, lado float64, nivel int) {
 	if nivel == 0 {
 		return
 	}
 
-	pen.DrawCircle(raio)
-	
-	for i := 0; i < 6; i++ {
-		pen.Right(60)
+	desenhaQuadrado(pen, lado)
 
-		pen.Up()
-		pen.Walk(raio)
-		pen.Down()
+	passo := lado / 3
 
-		pen.Right(90)
+	// vai pro canto inferior esquerdo
+	pen.Up()
+	pen.Walk(-lado / 2)
+	pen.Right(90)
+	pen.Walk(lado / 2)
+	pen.Left(90)
 
-		circulo(pen, raio*0.35, nivel-1)
+	for i := 0; i < 3; i++ {
+		for j := 0; j < 3; j++ {
+
+			if !(i == 1 && j == 1) {
+				pen.Down()
+				fractal(pen, passo, nivel-1)
+				pen.Up()
+			}
+
+			pen.Walk(passo)
+		}
+
+		pen.Walk(-3 * passo)
 
 		pen.Left(90)
-		pen.Up()
-		pen.Walk(-raio)
-		pen.Down()
+		pen.Walk(passo)
+		pen.Right(90)
 	}
+
+	// 🔥 VOLTA PRO PONTO ORIGINAL (ESSENCIAL)
+	pen.Left(90)
+	pen.Walk(-lado / 2)
+	pen.Right(90)
+	pen.Walk(lado / 2)
 }
 
 func main() {
-	pen := NewPen(1200, 1200)
-	pen.SetPosition(600, 600)
-	circulo(pen, 320, 5)
+	pen := NewPen(1600, 1600)
+	pen.SetPosition(400, 400)
+	fractal(pen, 800, 2)
 	pen.SavePNG("tree.png")
 	fmt.Println("PNG file created successfully.")
 }
