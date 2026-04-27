@@ -74,7 +74,7 @@ func (v *Vector) At(index int) (int, error) {
 	return v.data[index], nil
 }
 
-func (v *Vector) Set(index int, value int) error {
+func (v *Vector) Set(index, value int) error {
 	if index < 0 || index > v.size {
 		return fmt.Errorf("index out of range")
 	}
@@ -91,11 +91,101 @@ func (v *Vector) Reserve(newCapacity int) {
 		return
 	}
 
+	newData := make([]int, newCapacity)
+
+	for i := 0; i < v.size; i++ {
+		newData[i] = v.data[i]
+	}
+
+	v.data = newData
 	v.capacity = newCapacity
 }
 
-func (v *Vector) PopBack() {
-	
+func (v *Vector) PopBack() error {
+	if v.size == 0 {
+		return fmt.Errorf("vector is empty")
+	}
+	v.size--
+	return nil
+}
+
+func (v *Vector) Insert(index, value int) error {
+	if index < 0 || index > v.size {
+		return fmt.Errorf("index out of range")
+	}
+
+	if v.size == v.capacity {
+		v.Reserve(v.capacity * 2)
+	}
+
+	for i := v.size; i > index; i-- {
+		v.data[i] = v.data[i - 1]
+	}
+
+	v.data[index] = value
+	v.size++
+	return nil
+}
+
+func (v *Vector) Erase(index int) error {
+	if index < 0 || index > v.size {
+		return fmt.Errorf("index out of range")
+	}	
+
+	for i := index; i < v.size - 1; i++ {
+		v.data[i] = v.data[i + 1]
+	}
+
+	v.size--
+	return nil
+}
+
+func (v *Vector) IndexOf(value int) int {
+	for i := 0; i < v.size; i++ {
+		if value == v.data[i] {
+			return i
+		}
+	}
+
+	return -1
+}
+
+func (v *Vector) Contains(value int) bool {
+	for i := 0; i < v.size; i++ {
+		if value == v.data[i] {
+			return true
+		}
+	}
+
+	return false
+}
+
+func (v *Vector) Slice(start, end int) []int {
+	if end == -1 || end > v.size {
+		end = v.size - 1
+	}
+
+	if end > v.size {
+		end = v.size
+	}
+
+	if start < 0 {
+		start = 0
+	}
+
+	if start > end {
+		start = end
+	}
+
+	result := make([]int, end - start)
+
+	j := 0
+	for i := start; i < end; i++ {
+		result[j] = v.data[i]
+		j++
+	}
+
+	return result
 }
 
 func main() {
@@ -137,29 +227,29 @@ func main() {
 				fmt.Println(err)
 			}
 		case "insert":
-			// index, _ := strconv.Atoi(parts[1])
-			// value, _ := strconv.Atoi(parts[2])
-			// err := v.Insert(index, value)
-			// if err != nil {
-			// 	fmt.Println(err)
-			// }
+			index, _ := strconv.Atoi(parts[1])
+			value, _ := strconv.Atoi(parts[2])
+			err := v.Insert(index, value)
+			if err != nil {
+				fmt.Println(err)
+			}
 		case "erase":
-			// index, _ := strconv.Atoi(parts[1])
-			// err := v.Erase(index)
-			// if err != nil {
-			// 	fmt.Println(err)
-			// }
+			index, _ := strconv.Atoi(parts[1])
+			err := v.Erase(index)
+			if err != nil {
+				fmt.Println(err)
+			}
 		case "indexOf":
-			// value, _ := strconv.Atoi(parts[1])
-			// index := v.IndexOf(value)
-			// fmt.Println(index)
+			value, _ := strconv.Atoi(parts[1])
+			index := v.IndexOf(value)
+			fmt.Println(index)
 		case "contains":
-			// value, _ := strconv.Atoi(parts[1])
-			// if v.Contains(value) {
-			// 	fmt.Println("true")
-			// } else {
-			// 	fmt.Println("false")
-			// }
+			value, _ := strconv.Atoi(parts[1])
+			if v.Contains(value) {
+				fmt.Println("true")
+			} else {
+				fmt.Println("false")
+			}
 		case "clear":
 			v.Clear()
 		case "capacity":
@@ -184,10 +274,11 @@ func main() {
 			newCapacity, _ := strconv.Atoi(parts[1])
 			v.Reserve(newCapacity)
 		case "slice":
-			// start, _ := strconv.Atoi(parts[1])
-			// end, _ := strconv.Atoi(parts[2])
-			// slice := v.Slice(start, end)
+			start, _ := strconv.Atoi(parts[1])
+			end, _ := strconv.Atoi(parts[2])
+			slice := v.Slice(start, end)
 			// fmt.Println(slice)
+			fmt.Println("[" + Join(slice, ", ") + "]")
 		default:
 			fmt.Println("fail: comando invalido")
 		}
