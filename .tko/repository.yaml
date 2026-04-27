@@ -22,16 +22,14 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@rec
-- ed@map_set
-- ed@sandbox
 - eval1@eval1
-- ed@basic
+- ed@vector
 flags:
-  inbox: inbox
+  inbox: all
   panel: skills
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@fractais_png
+selected: ed@vetbuild
+selected_index: 5
