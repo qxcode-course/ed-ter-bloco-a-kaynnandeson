@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-28_00-54-03",
+            "content": "@@ -138,17 +138,8 @@\n lue%0A\n-%09lo := 0%0A\n %09for\n@@ -201,12 +201,14 @@\n %0A%09%09%09\n-lo =\n+return\n  i%0A%09\n@@ -226,10 +226,9 @@\n urn \n-lo\n+0\n %0A%7D%0A%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-28_00-54-55",
+            "content": "@@ -67,374 +67,8 @@\n %0A)%0A%0A\n-func Contains(slice %5B%5Dint, value int) bool %7B%0A%09for i := 0; i %3C len(slice); i++ %7B%0A%09%09if slice%5Bi%5D == value %7B%0A%09%09%09return true%0A%09%09%7D%0A%09%7D%0A%0A%09return false%0A%7D%0A%0A%0Afunc lowerBound(slice %5B%5Dint, value int) int %7B%0A%09left, right := 0, len(slice)%0A%0A%09for left %3C right %7B%0A%09%09mid := (left + right) / 2%0A%0A%09%09if slice%5Bmid%5D %3C value %7B%0A%09%09%09left = mid + 1%0A%09%09%7D else %7B%0A%09%09%09right = mid%0A%09%09%7D%0A%09%7D%0A%0A%09return left%0A%7D%0A%0A\n func\n@@ -138,39 +138,8 @@\n lue%0A\n-%0A%09if Contains(slice, value) %7B%0A%09\n %09lo \n@@ -144,19 +144,16 @@\n o := 0%0A%09\n-%0A%09%09\n for i :=\n@@ -180,17 +180,16 @@\n i++ %7B%0A%09%09\n-%09\n if slice\n@@ -203,17 +203,16 @@\n value %7B%0A\n-%09\n %09%09%09lo = \n@@ -219,18 +219,14 @@\n i%0A%09%09\n-%09\n %7D%0A\n-%09\n %09%7D%0A\n-%09%0A%09\n+%0A\n %09ret\n@@ -236,45 +236,8 @@\n  lo%0A\n-%09%7D%0A%0A%09return lowerBound(slice, value)%0A\n %7D%0A%0Af\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-28_01-00-29",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc Contains(slice []int, value int) bool {\n\tfor i := 0; i < len(slice); i++ {\n\t\tif slice[i] == value {\n\t\t\treturn true\n\t\t}\n\t}\n\n\treturn false\n}\n\n\nfunc lowerBound(slice []int, value int) int {\n\tleft, right := 0, len(slice)\n\n\tfor left < right {\n\t\tmid := (left + right) / 2\n\n\t\tif slice[mid] < value {\n\t\t\tleft = mid + 1\n\t\t} else {\n\t\t\tright = mid\n\t\t}\n\t}\n\n\treturn left\n}\n\nfunc MagicSearch(slice []int, value int) int {\n\t// _, _ = slice, value\n\n\tif Contains(slice, value) {\n\t\tlo := 0\n\t\n\t\tfor i := 0; i < len(slice); i++ {\n\t\t\tif slice[i] == value {\n\t\t\t\tlo = i\n\t\t\t}\n\t\t}\n\t\n\t\treturn lo\n\t}\n\n\treturn lowerBound(slice, value)\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Fields(scanner.Text())\n\tslice := make([]int, 0, 1)\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tresult := MagicSearch(slice, value)\n\tfmt.Println(result)\n}\n",
+            "lines": "70"
+        }
+    ]
+}
