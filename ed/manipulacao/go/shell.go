@@ -9,23 +9,81 @@ import (
 )
 
 func getMen(vet []int) []int {
-	_ = vet
-	return nil
+	count := 0
+	for _, v := range vet {
+		if v > 0 {
+			count++
+		}
+	}
+
+	men := make([]int, count)
+	j := 0
+	for _, v := range vet {
+		if v > 0 {
+			men[j] = v
+			j++
+		}
+	}
+
+	return men
 }
 
 func getCalmWomen(vet []int) []int {
-	_ = vet
-	return nil
+	count := 0;
+	for _, v := range vet {
+		if v < 0 && v > -10 {
+			count++
+		}
+	}
+
+	c_women := make([]int, count)
+	j := 0
+	for _, v := range vet {
+		if v < 0 && v > -10 {
+			c_women[j] = v
+			j++
+		}
+	}
+
+	return c_women
 }
 
 func sortVet(vet []int) []int {
-	_ = vet
-	return nil
+	for i := 0; i < len(vet); i++ {
+		for j := i + 1; j < len(vet); j++ {
+			if vet[i] > vet[j] {
+				aux := vet[i]
+				vet[i] = vet[j]
+				vet[j] = aux
+			} 
+		}
+	}
+
+	return vet
+}
+
+func abs(value int) int {
+	if value == 0 {
+		return 0
+	}
+	if value > 0 {
+		return value
+	}
+	return value * -1
 }
 
 func sortStress(vet []int) []int {
-	_ = vet
-	return nil
+	for i := 0; i < len(vet); i++ {
+		for j := i; j < len(vet); j++ {
+			if abs(vet[i]) > abs(vet[j]) {
+				aux := vet[i]
+				vet[i] = vet[j]
+				vet[j] = aux
+			}
+		}
+	}
+
+	return vet
 }
 
 func reverse(vet []int) []int {

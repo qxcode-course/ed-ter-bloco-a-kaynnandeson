@@ -23,14 +23,15 @@ sources:
   tasks: null
 expanded:
 - eval1@eval1
+- ed@map_set
 - ed@list
 - ed@vector
 flags:
-  inbox: all
-  panel: help
-  show_panel: 'false'
+  inbox: inbox
+  panel: skills
+  show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@iterador
-selected_index: 10
+selected: ed@manipulacao
+selected_index: 3
