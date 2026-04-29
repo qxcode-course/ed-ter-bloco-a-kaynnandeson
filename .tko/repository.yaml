@@ -22,10 +22,8 @@ sources:
   quests: null
   tasks: null
 expanded:
-- eval1@eval1
 - ed@map_set
-- ed@list
-- ed@vector
+- ed@rec
 flags:
   inbox: inbox
   panel: skills
@@ -33,5 +31,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@manipulacao
-selected_index: 3
+selected: eval1@eval1
+selected_index: 22

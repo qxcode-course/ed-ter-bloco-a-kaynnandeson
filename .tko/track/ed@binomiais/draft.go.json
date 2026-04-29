@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-28_17-22-38",
+            "content": "@@ -23,58 +23,98 @@\n mt%22%0A\n-%0A\n func \n-comb(n, k int) int %7B%0A    if k == 0 %7C%7C \n+main() %7B%0A    var n, k int;%0A    fmt.Scan(&n, &k);%0A%0A    var result int;%0A    if (\n k == \n-n\n+0)\n  %7B%0A \n@@ -126,147 +126,98 @@\n   re\n-turn\n+sult =\n  1\n+;\n %0A    %7D\n-%0A%0A    return comb(n-1, k-1) + comb(n-1, k)%0A%7D%0A%0Afunc main() %7B%0A    var n, k int;%0A    fmt.Scan(&n, &k);%0A%0A    fmt.Println(comb(n, k))\n+ else if (k == n) %7B%0A        result = 1;%0A    %7D else %7B%0A        result = %0A    %7D\n %0A%7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-04-28_17-25-02",
+            "content": "package main\nimport \"fmt\"\n\nfunc comb(n, k int) int {\n    if k == 0 || k == n {\n        return 1\n    }\n\n    return comb(n-1, k-1) + comb(n-1, k)\n}\n\nfunc main() {\n    var n, k int;\n    fmt.Scan(&n, &k);\n\n    fmt.Println(comb(n, k))\n}\n",
+            "lines": "17"
+        }
+    ]
+}

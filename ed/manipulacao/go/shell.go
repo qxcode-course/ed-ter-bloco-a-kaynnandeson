@@ -87,18 +87,81 @@ func sortStress(vet []int) []int {
 }
 
 func reverse(vet []int) []int {
-	_ = vet
-	return nil
+	aux := make([]int, len(vet)) 
+	j := 0
+
+	for i := len(vet) - 1; i >= 0; i-- {
+		aux[j] = vet[i]
+		j++
+	}
+	
+	return aux
 }
 
 func unique(vet []int) []int {
-	_ = vet
-	return nil
+	if len(vet) == 0 {
+		return vet
+	}
+
+	for i := 0; i < len(vet); i++ {
+		for j := i + 1; j < len(vet); j++ {
+			if vet[i] == vet[j] {
+				vet[j] = 0
+			}
+		}
+	}
+
+	count := 0
+	for i := 0; i < len(vet); i++ {
+		if vet[i] != 0 {
+			count++
+		}
+	}
+
+	u_vet := make([]int, count)
+	j := 0
+	for i := 0; i < len(vet); i++ {
+		if vet[i] != 0 {
+			u_vet[j] = vet[i]
+			j++
+		}
+	}
+
+	return u_vet
 }
 
 func repeated(vet []int) []int {
-	_ = vet
-	return nil
+	count := 0
+	for i := 0; i < len(vet); i++ {
+		if i > 0 && vet[i] == vet[i - 1] {
+			continue
+		}
+		for j := i + 1; j < len(vet); j++ {
+			if vet[i] == vet[j] {
+				count++
+			}
+		}
+	}
+
+	if count == 0 {
+		return nil
+	}
+
+	r_vet := make([]int, count)
+	r := 0
+	for i := 0; i < len(vet); i++ {
+		if i > 0 && vet[i] == vet[i - 1] {
+			continue
+		}
+		for j := i + 1; j < len(vet); j++ {
+			if vet[i] == vet[j] {
+				r_vet[r] = vet[i]
+				r++
+			}
+		}
+	}
+
+	return sortVet(r_vet)
 }
 
 func main() {

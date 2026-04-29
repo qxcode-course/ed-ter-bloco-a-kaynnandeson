@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-28_16-35-30",
+            "content": "@@ -23,179 +23,53 @@\n mt%22%0A\n-%0A\n func \n-dividir(n int) %7B%0A    if (n == 0) %7B%0A        return %0A    %7D%0A%0A    dividir(n / 2)%0A    fmt.Println(n/2, n%252)%0A%7D%0A%0Afunc main() %7B%0A    var n int%0A    fmt.Scan(&n)%0A%0A    dividir(n\n+main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-28_16-40-41",
+            "content": "package main\nimport \"fmt\"\n\nfunc dividir(n int) {\n    if (n == 0) {\n        return \n    }\n\n    dividir(n / 2)\n    fmt.Println(n/2, n%2)\n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    dividir(n)\n}\n",
+            "lines": "18"
+        }
+    ]
+}

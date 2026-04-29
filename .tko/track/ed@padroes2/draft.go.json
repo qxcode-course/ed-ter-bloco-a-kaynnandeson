@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-28_17-30-51",
+            "content": "@@ -67,56 +67,7 @@\n (&n)\n-%0A%0A    result := n*n + n*2%0A    fmt.Println(result)\n %0A%7D%0A\n",
+            "lines": "6"
+        },
+        {
+            "label": "2026-04-28_17-33-07",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    result := n*n + n*2\n    fmt.Println(result)\n}\n",
+            "lines": "9"
+        }
+    ]
+}

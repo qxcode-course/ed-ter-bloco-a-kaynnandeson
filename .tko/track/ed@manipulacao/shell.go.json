@@ -112,8 +112,108 @@
         },
         {
             "label": "2026-04-28_12-24-17",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc getMen(vet []int) []int {\n\t// _ = vet\n\tcount := 0\n\tfor _, v := range vet {\n\t\tif v > 0 {\n\t\t\tcount++\n\t\t}\n\t}\n\n\tmen := make([]int, count)\n\tj := 0\n\tfor _, v := range vet {\n\t\tif v > 0 {\n\t\t\tmen[j] = v\n\t\t\tj++\n\t\t}\n\t}\n\n\treturn men\n}\n\nfunc getCalmWomen(vet []int) []int {\n\t// _ = vet\n\tcount := 0;\n\tfor _, v := range vet {\n\t\tif v < 0 && v > -10 {\n\t\t\tcount++\n\t\t}\n\t}\n\n\tc_women := make([]int, count)\n\tj := 0\n\tfor _, v := range vet {\n\t\tif v < 0 && v > -10 {\n\t\t\tc_women[j] = v\n\t\t\tj++\n\t\t}\n\t}\n\n\treturn c_women\n}\n\nfunc sortVet(vet []int) []int {\n\t// _ = vet\n\n\tfor i := 0; i < len(vet); i++ {\n\t\tfor j := i + 1; j < len(vet); j++ {\n\t\t\tif vet[i] > vet[j] {\n\t\t\t\taux := vet[i]\n\t\t\t\tvet[i] = vet[j]\n\t\t\t\tvet[j] = aux\n\t\t\t} \n\t\t}\n\t}\n\n\treturn vet\n}\n\nfunc abs(value int) int {\n\tif value == 0 {\n\t\treturn 0\n\t}\n\tif value > 0 {\n\t\treturn value\n\t}\n\treturn value * -1\n}\n\nfunc sortStress(vet []int) []int {\n\t// _ = vet\n\n\tfor i := 0; i < len(vet); i++ {\n\t\tfor j := i; j < len(vet); j++ {\n\t\t\tif abs(vet[i]) > abs(vet[j]) {\n\t\t\t\taux := vet[i]\n\t\t\t\tvet[i] = vet[j]\n\t\t\t\tvet[j] = aux\n\t\t\t}\n\t\t}\n\t}\n\n\treturn vet\n}\n\nfunc reverse(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc unique(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc repeated(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tfor {\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tfmt.Print(\"$\")\n\t\tline := scanner.Text()\n\t\targs := strings.Split(line, \" \")\n\t\tfmt.Println(line)\n\n\t\tswitch args[0] {\n\t\tcase \"get_men\":\n\t\t\tprintVec(getMen(str2vet(args[1])))\n\t\tcase \"get_calm_women\":\n\t\t\tprintVec(getCalmWomen(str2vet(args[1])))\n\t\tcase \"sort\":\n\t\t\tprintVec(sortVet(str2vet(args[1])))\n\t\tcase \"sort_stress\":\n\t\t\tprintVec(sortStress(str2vet(args[1])))\n\t\tcase \"reverse\":\n\t\t\tarray := str2vet(args[1])\n\t\t\tother := reverse(array)\n\t\t\tprintVec(array)\n\t\t\tprintVec(other)\n\t\tcase \"unique\":\n\t\t\tprintVec(unique(str2vet(args[1])))\n\t\tcase \"repeated\":\n\t\t\tprintVec(repeated(str2vet(args[1])))\n\t\tcase \"end\":\n\t\t\treturn\n\t\t}\n\t}\n}\n\nfunc printVec(vet []int) {\n\tfmt.Print(\"[\")\n\tfor i, val := range vet {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(val)\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc str2vet(s string) []int {\n\tif s == \"[]\" {\n\t\treturn nil\n\t}\n\ts = s[1 : len(s)-1]\n\tparts := strings.Split(s, \",\")\n\tvar vet []int\n\tfor _, part := range parts {\n\t\tn, _ := strconv.Atoi(part)\n\t\tvet = append(vet, n)\n\t}\n\treturn vet\n}\n\n",
+            "content": "@@ -86,32 +86,44 @@\n  %5B%5Dint) %5B%5Dint %7B%0A\n+%09// _ = vet%0A\n %09count := 0%0A%09for\n@@ -114,24 +114,24 @@\n %09count := 0%0A\n-\n %09for _, v :=\n@@ -329,16 +329,28 @@\n %5B%5Dint %7B%0A\n+%09// _ = vet%0A\n %09count :\n@@ -586,32 +586,45 @@\n  %5B%5Dint) %5B%5Dint %7B%0A\n+%09// _ = vet%0A%0A\n %09for i := 0; i %3C\n@@ -895,24 +895,24 @@\n lue * -1%0A%7D%0A%0A\n-\n func sortStr\n@@ -934,16 +934,29 @@\n %5B%5Dint %7B%0A\n+%09// _ = vet%0A%0A\n %09for i :\n",
             "lines": "170"
+        },
+        {
+            "label": "2026-04-28_13-21-38",
+            "content": "@@ -1118,113 +1118,15 @@\n  %7B%0A%09\n-aux := make(%5B%5Dint, len(vet)) %0A%09j := 0%0A%0A%09for i := len(vet) - 1; i %3E= 0; i-- %7B%0A%09%09aux%5Bj%5D = vet%5Bi%5D%0A%09%09j++%0A%09%7D%0A%09\n+_ = vet\n %0A%09re\n@@ -1130,19 +1130,19 @@\n %09return \n-aux\n+nil\n %0A%7D%0A%0Afunc\n",
+            "lines": "164"
+        },
+        {
+            "label": "2026-04-28_13-24-49",
+            "content": "@@ -1280,306 +1280,18 @@\n et%0A%09\n-if len(vet) == 0 %7B%0A%09%09return vet%0A%09%7D%0A%0A%09count := 1%0A%09for i := 1; i %3C len(vet); i++ %7B%0A%09%09if vet%5Bi%5D != vet%5Bi - 1%5D %7B%0A%09%09%09count++%0A%09%09%7D%0A%09%7D%0A%0A%09u_vet := make(%5B%5Dint, count)%0A%09j := 0%0A%09for i := 0; i %3C len(vet) - 1; i++ %7B%0A%09%09if i %3E 0 && vet%5Bi%5D == vet%5Bi + 1%5D %7B%0A%09%09%09continue%0A%09%09%7D%0A%09%09u_vet%5Bj%5D = vet%5Bi%5D%0A%09%09j++%0A%09%7D%0A%0A%09return u_vet\n+return nil\n %0A%7D%0A%0A\n",
+            "lines": "171"
+        },
+        {
+            "label": "2026-04-28_13-29-59",
+            "content": "@@ -1318,25 +1318,25 @@\n %0A%0A%09count := \n-0\n+1\n %0A%09for i := 1\n",
+            "lines": "192"
+        },
+        {
+            "label": "2026-04-28_13-30-15",
+            "content": "@@ -1500,33 +1500,33 @@\n vet%5Bi%5D == vet%5Bi \n--\n++\n  1%5D %7B%0A%09%09%09continu\n",
+            "lines": "192"
+        },
+        {
+            "label": "2026-04-28_13-30-45",
+            "content": "@@ -1322,17 +1322,17 @@\n ount := \n-1\n+0\n %0A%09for i \n",
+            "lines": "192"
+        },
+        {
+            "label": "2026-04-28_13-31-11",
+            "content": "@@ -1317,131 +1317,8 @@\n %7D%0A%0A%09\n-for i := 0; i %3C len(vet); i++ %7B%0A%09%09for j := 0; j %3C len(vet); j++ %7B%0A%09%09%09if vet%5Bi%5D == vet%5Bj%5D %7B%0A%09%09%09%09vet%5Bj%5D = 0%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09// \n coun\n@@ -1325,19 +1325,16 @@\n t := 1%0A%09\n-// \n for i :=\n@@ -1354,27 +1354,24 @@\n et); i++ %7B%0A%09\n-// \n %09if vet%5Bi%5D !\n@@ -1382,27 +1382,24 @@\n t%5Bi - 1%5D %7B%0A%09\n-// \n %09%09count++%0A%09/\n@@ -1401,25 +1401,16 @@\n ++%0A%09\n-// \n %09%7D%0A%09\n-// \n %7D%0A%0A%09\n-// \n u_ve\n@@ -1438,19 +1438,16 @@\n t)%0A%09\n-// \n j := 0%0A%09\n // f\n@@ -1442,19 +1442,16 @@\n j := 0%0A%09\n-// \n for i :=\n@@ -1479,19 +1479,16 @@\n  i++ %7B%0A%09\n-// \n %09if i %3E \n@@ -1516,19 +1516,16 @@\n - 1%5D %7B%0A%09\n-// \n %09%09contin\n@@ -1532,18 +1532,12 @@\n ue%0A%09\n-// \n %09%7D%0A%09\n-// \n %09u_v\n@@ -1556,20 +1556,14 @@\n i%5D%0A%09\n-// \n %09j++%0A%09\n-// \n %7D%0A%0A%09\n",
+            "lines": "192"
+        },
+        {
+            "label": "2026-04-28_13-33-19",
+            "content": "@@ -1726,32 +1726,34 @@\n %0A%09// %7D%0A%0A%09return \n+u_\n vet%0A%7D%0A%0Afunc repe\n",
+            "lines": "200"
+        },
+        {
+            "label": "2026-04-28_13-33-29",
+            "content": "@@ -1348,37 +1348,33 @@\n ++ %7B%0A%09%09for j := \n-i + 1\n+0\n ; j %3C len(vet); \n",
+            "lines": "200"
+        },
+        {
+            "label": "2026-04-28_13-33-40",
+            "content": "@@ -1437,16 +1437,19 @@\n %09%7D%0A%09%7D%0A%0A%09\n+// \n count :=\n@@ -1445,27 +1445,30 @@\n // count := \n-0\n+1\n %0A%09\n+// \n for i := 1; \n@@ -1480,32 +1480,35 @@\n en(vet); i++ %7B%0A%09\n+// \n %09if vet%5Bi%5D != 0 \n@@ -1505,21 +1505,33 @@\n t%5Bi%5D != \n-0\n+vet%5Bi - 1%5D\n  %7B%0A%09\n+// \n %09%09count+\n@@ -1533,24 +1533,33 @@\n ount++%0A%09\n+// \n %09%7D%0A%09\n+// \n %7D%0A%0A%09\n+// \n u_vet :=\n@@ -1575,32 +1575,35 @@\n nt, count)%0A%09\n+// \n j := 0%0A%09\n for i := 0; \n@@ -1586,24 +1586,27 @@\n %09// j := 0%0A%09\n+// \n for i := 0; \n@@ -1609,32 +1609,36 @@\n  0; i %3C len(vet)\n+ - 1\n ; i++ %7B%0A%09%09if vet\n@@ -1630,27 +1630,39 @@\n  i++ %7B%0A%09\n+// \n %09if\n+ i %3E 0 &&\n  vet%5Bi%5D \n != 0 %7B%0A%09\n@@ -1657,17 +1657,50 @@\n %5Bi%5D \n-!= 0 %7B%0A%09%09\n+== vet%5Bi - 1%5D %7B%0A%09// %09%09continue%0A%09// %09%7D%0A%09// \n %09u_v\n@@ -1715,27 +1715,28 @@\n vet%5Bi%5D%0A%09\n-%09\n+// \n %09j++%0A%09\n-%09%7D%0A%09\n+// \n %7D%0A%0A%09retu\n@@ -1738,18 +1738,16 @@\n %09return \n-u_\n vet%0A%7D%0A%0Af\n",
+            "lines": "200"
+        },
+        {
+            "label": "2026-04-28_13-35-26",
+            "content": "@@ -1450,33 +1450,33 @@\n  := 0%0A%09for i := \n-0\n+1\n ; i %3C len(vet); \n",
+            "lines": "199"
+        },
+        {
+            "label": "2026-04-28_13-36-02",
+            "content": "@@ -1262,24 +1262,33 @@\n nt) %5B%5Dint %7B%0A\n+%09_ = vet%0A\n %09if len(vet)\n@@ -1699,200 +1699,27 @@\n  %7B%0A%09\n-count := 0%0A%09for i:= 0; i %3C len(vet); i++ %7B%0A%09%09for j := i + 1; j %3C len(vet); j++ %7B%0A%09%09%09if vet%5Bi%5D == vet%5Bj%5D %7B%0A%09%09%09%09count++%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09r_vet := make(%5B%5Dint, count)%0A%09r_vet%5B0%5D = count%0A%0A%09return r_vet\n+_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "199"
+        },
+        {
+            "label": "2026-04-28_13-39-41",
+            "content": "@@ -1733,66 +1733,8 @@\n + %7B%0A\n-%09%09if vet%5Bi%5D %3E 0 && vet%5Bi%5D == vet%5Bi - 1%5D %7B%0A%09%09%09continue%0A%09%09%7D%0A\n %09%09fo\n",
+            "lines": "209"
+        },
+        {
+            "label": "2026-04-28_13-41-02",
+            "content": "@@ -1695,33 +1695,32 @@\n ount := 0%0A%09for i\n- \n := 0; i %3C len(ve\n@@ -1730,25 +1730,30 @@\n  i++ %7B%0A%09%09if \n-i\n+vet%5Bi%5D\n  %3E 0 && vet%5B\n",
+            "lines": "212"
+        },
+        {
+            "label": "2026-04-28_13-41-24",
+            "content": "@@ -1875,42 +1875,8 @@\n %09%7D%0A%0A\n-%09if count == 0 %7B%0A%09%09return nil%0A%09%7D%0A%0A\n %09r_v\n",
+            "lines": "212"
+        },
+        {
+            "label": "2026-04-28_13-41-52",
+            "content": "@@ -1881,17 +1881,17 @@\n f count \n-!\n+=\n = 0 %7B%0A%09%09\n@@ -1939,205 +1939,24 @@\n t)%0A%09\n-j := 0%0A%09for i := 0; i %3C len(vet); i++ %7B%0A%09%09if i %3E 0 && \n+r_\n vet%5B\n-i%5D == vet%5Bi - 1%5D %7B%0A%09%09%09continue%0A%09%09%7D%0A%09%09for j := i + 1; j %3C len(vet); j++ %7B%0A%09%09%09if vet%5Bi%5D == vet%5Bj%5D %7B%0A%09%09%09%09r_vet%5Bj%5D = vet%5Bi%5D%0A%09%09%09%09j++%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n+0%5D = count\n %0A%0A%09r\n",
+            "lines": "216"
+        },
+        {
+            "label": "2026-04-28_13-44-11",
+            "content": "@@ -1881,17 +1881,17 @@\n f count \n-=\n+!\n = 0 %7B%0A%09%09\n@@ -1934,16 +1934,24 @@\n  count)%0A\n+%09j := 0%0A\n %09for i :\n@@ -2113,16 +2113,24 @@\n  vet%5Bi%5D%0A\n+%09%09%09%09j++%0A\n %09%09%09%7D%0A%09%09%7D\n",
+            "lines": "227"
+        },
+        {
+            "label": "2026-04-28_13-46-10",
+            "content": "@@ -2050,20 +2050,16 @@\n len(vet)\n- - 1\n ; j++ %7B%0A\n",
+            "lines": "225"
+        },
+        {
+            "label": "2026-04-28_13-46-32",
+            "content": "@@ -1938,16 +1938,8 @@\n nt)%0A\n-%09r := 0%0A\n %09for\n@@ -2042,32 +2042,36 @@\n  1; j %3C len(vet)\n+ - 1\n ; j++ %7B%0A%09%09%09if ve\n@@ -2097,17 +2097,17 @@\n %09%09r_vet%5B\n-r\n+j\n %5D = vet%5B\n@@ -2113,16 +2113,8 @@\n %5Bi%5D%0A\n-%09%09%09%09r++%0A\n %09%09%09%7D\n",
+            "lines": "225"
+        },
+        {
+            "label": "2026-04-28_13-47-06",
+            "content": "@@ -2146,22 +2146,13 @@\n urn \n-sortVet(\n r_vet\n-)\n %0A%7D%0A%0A\n",
+            "lines": "227"
+        },
+        {
+            "label": "2026-04-28_13-47-34",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc getMen(vet []int) []int {\n\tcount := 0\n\tfor _, v := range vet {\n\t\tif v > 0 {\n\t\t\tcount++\n\t\t}\n\t}\n\n\tmen := make([]int, count)\n\tj := 0\n\tfor _, v := range vet {\n\t\tif v > 0 {\n\t\t\tmen[j] = v\n\t\t\tj++\n\t\t}\n\t}\n\n\treturn men\n}\n\nfunc getCalmWomen(vet []int) []int {\n\tcount := 0;\n\tfor _, v := range vet {\n\t\tif v < 0 && v > -10 {\n\t\t\tcount++\n\t\t}\n\t}\n\n\tc_women := make([]int, count)\n\tj := 0\n\tfor _, v := range vet {\n\t\tif v < 0 && v > -10 {\n\t\t\tc_women[j] = v\n\t\t\tj++\n\t\t}\n\t}\n\n\treturn c_women\n}\n\nfunc sortVet(vet []int) []int {\n\tfor i := 0; i < len(vet); i++ {\n\t\tfor j := i + 1; j < len(vet); j++ {\n\t\t\tif vet[i] > vet[j] {\n\t\t\t\taux := vet[i]\n\t\t\t\tvet[i] = vet[j]\n\t\t\t\tvet[j] = aux\n\t\t\t} \n\t\t}\n\t}\n\n\treturn vet\n}\n\nfunc abs(value int) int {\n\tif value == 0 {\n\t\treturn 0\n\t}\n\tif value > 0 {\n\t\treturn value\n\t}\n\treturn value * -1\n}\n\nfunc sortStress(vet []int) []int {\n\tfor i := 0; i < len(vet); i++ {\n\t\tfor j := i; j < len(vet); j++ {\n\t\t\tif abs(vet[i]) > abs(vet[j]) {\n\t\t\t\taux := vet[i]\n\t\t\t\tvet[i] = vet[j]\n\t\t\t\tvet[j] = aux\n\t\t\t}\n\t\t}\n\t}\n\n\treturn vet\n}\n\nfunc reverse(vet []int) []int {\n\taux := make([]int, len(vet)) \n\tj := 0\n\n\tfor i := len(vet) - 1; i >= 0; i-- {\n\t\taux[j] = vet[i]\n\t\tj++\n\t}\n\t\n\treturn aux\n}\n\nfunc unique(vet []int) []int {\n\tif len(vet) == 0 {\n\t\treturn vet\n\t}\n\n\tfor i := 0; i < len(vet); i++ {\n\t\tfor j := i + 1; j < len(vet); j++ {\n\t\t\tif vet[i] == vet[j] {\n\t\t\t\tvet[j] = 0\n\t\t\t}\n\t\t}\n\t}\n\n\tcount := 0\n\tfor i := 0; i < len(vet); i++ {\n\t\tif vet[i] != 0 {\n\t\t\tcount++\n\t\t}\n\t}\n\n\tu_vet := make([]int, count)\n\tj := 0\n\tfor i := 0; i < len(vet); i++ {\n\t\tif vet[i] != 0 {\n\t\t\tu_vet[j] = vet[i]\n\t\t\tj++\n\t\t}\n\t}\n\n\treturn u_vet\n}\n\nfunc repeated(vet []int) []int {\n\tcount := 0\n\tfor i := 0; i < len(vet); i++ {\n\t\tif i > 0 && vet[i] == vet[i - 1] {\n\t\t\tcontinue\n\t\t}\n\t\tfor j := i + 1; j < len(vet); j++ {\n\t\t\tif vet[i] == vet[j] {\n\t\t\t\tcount++\n\t\t\t}\n\t\t}\n\t}\n\n\tif count == 0 {\n\t\treturn nil\n\t}\n\n\tr_vet := make([]int, count)\n\tr := 0\n\tfor i := 0; i < len(vet); i++ {\n\t\tif i > 0 && vet[i] == vet[i - 1] {\n\t\t\tcontinue\n\t\t}\n\t\tfor j := i + 1; j < len(vet); j++ {\n\t\t\tif vet[i] == vet[j] {\n\t\t\t\tr_vet[r] = vet[i]\n\t\t\t\tr++\n\t\t\t}\n\t\t}\n\t}\n\n\treturn sortVet(r_vet)\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tfor {\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tfmt.Print(\"$\")\n\t\tline := scanner.Text()\n\t\targs := strings.Split(line, \" \")\n\t\tfmt.Println(line)\n\n\t\tswitch args[0] {\n\t\tcase \"get_men\":\n\t\t\tprintVec(getMen(str2vet(args[1])))\n\t\tcase \"get_calm_women\":\n\t\t\tprintVec(getCalmWomen(str2vet(args[1])))\n\t\tcase \"sort\":\n\t\t\tprintVec(sortVet(str2vet(args[1])))\n\t\tcase \"sort_stress\":\n\t\t\tprintVec(sortStress(str2vet(args[1])))\n\t\tcase \"reverse\":\n\t\t\tarray := str2vet(args[1])\n\t\t\tother := reverse(array)\n\t\t\tprintVec(array)\n\t\t\tprintVec(other)\n\t\tcase \"unique\":\n\t\t\tprintVec(unique(str2vet(args[1])))\n\t\tcase \"repeated\":\n\t\t\tprintVec(repeated(str2vet(args[1])))\n\t\tcase \"end\":\n\t\t\treturn\n\t\t}\n\t}\n}\n\nfunc printVec(vet []int) {\n\tfmt.Print(\"[\")\n\tfor i, val := range vet {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(val)\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc str2vet(s string) []int {\n\tif s == \"[]\" {\n\t\treturn nil\n\t}\n\ts = s[1 : len(s)-1]\n\tparts := strings.Split(s, \",\")\n\tvar vet []int\n\tfor _, part := range parts {\n\t\tn, _ := strconv.Atoi(part)\n\t\tvet = append(vet, n)\n\t}\n\treturn vet\n}\n\n",
+            "lines": "227"
         }
     ]
 }

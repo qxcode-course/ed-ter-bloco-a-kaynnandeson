@@ -1,0 +1,79 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-28_16-58-38",
+            "content": "@@ -41,72 +41,35 @@\n     \n-var palavra string%0A    fmt.Scan(palavra)%0A    fmt.Println(palavra\n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-28_16-59-43",
+            "content": "@@ -73,9 +73,8 @@\n can(\n-&\n pala\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-04-28_16-59-50",
+            "content": "@@ -23,164 +23,8 @@\n mt%22%0A\n-%0Afunc diagonal(p string) %7B%0A    space := 0%0A    fmt.Println(%22%25c%22, p%5Bspace%5D)%0A    space++%0A    for range space %7B%0A        fmt.Print(%22 %22)%0A    %7D%0A    diagonal(p)%0A%7D%0A%0A\n func\n@@ -83,20 +83,23 @@\n ra)%0A\n-%0A\n     \n-digonal\n+fmt.Println\n (pal\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-04-28_17-02-08",
+            "content": "@@ -77,16 +77,22 @@\n Println(\n+%22%25c%22, \n p%5Bspace%5D\n@@ -238,25 +238,24 @@\n vra)%0A%0A    di\n-a\n gonal(palavr\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-28_17-03-21",
+            "content": "@@ -50,26 +50,8 @@\n ) %7B%0A\n-    tam := len(p)%0A\n     \n@@ -154,53 +154,8 @@\n   %7D%0A\n-    if (space == tam) %7B%0A        return%0A    %7D%0A\n     \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-28_17-03-54",
+            "content": "@@ -46,19 +46,12 @@\n ring\n-, e int\n ) %7B%0A\n+\n     \n@@ -64,16 +64,31 @@\n  len(p)%0A\n+    space := 0%0A\n     fmt.\n@@ -101,16 +101,20 @@\n n(p%5B\n+spac\n e%5D)%0A    \n e++%0A\n@@ -109,16 +109,20 @@\n e%5D)%0A    \n+spac\n e++%0A    \n@@ -129,31 +129,19 @@\n for \n-i := 0; i %3C len(p); i++\n+range space\n  %7B%0A \n@@ -176,16 +176,20 @@\n     if (\n+spac\n e == tam\n@@ -231,11 +231,8 @@\n al(p\n-, e\n )%0A%7D%0A\n@@ -293,16 +293,16 @@\n lavra)%0A%0A\n+\n     diag\n@@ -317,11 +317,8 @@\n avra\n-, 0\n )%0A%7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-28_17-05-46",
+            "content": "@@ -88,18 +88,11 @@\n rint\n-f(%22%25c%5Cn%22, \n+ln(\n p%5Be%5D\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-28_17-07-04",
+            "content": "@@ -61,45 +61,21 @@\n     \n-if\n+tam :=\n  len(p)\n- == 0 %7B%0A        return%0A    %7D\n %0A   \n@@ -171,16 +171,57 @@\n )%0A    %7D%0A\n+    if (e == tam) %7B%0A        return%0A    %7D%0A\n     diag\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-28_17-07-42",
+            "content": "@@ -152,17 +152,22 @@\n  0; i %3C \n-e\n+len(p)\n ; i++ %7B%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-28_17-07-56",
+            "content": "@@ -61,39 +61,22 @@\n     \n-tam :=\n+if\n  len(p)\n-%0A    if (e == tam)\n+ == 0\n  %7B%0A \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-28_17-08-16",
+            "content": "@@ -91,11 +91,8 @@\n  tam\n- -1\n ) %7B%0A\n@@ -112,17 +112,16 @@\n n%0A    %7D%0A\n-%0A\n     fmt.\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-28_17-08-59",
+            "content": "@@ -88,18 +88,17 @@\n  == tam \n-+ \n+-\n 1) %7B%0A   \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-28_17-09-10",
+            "content": "@@ -87,16 +87,20 @@\n e == tam\n+ + 1\n ) %7B%0A    \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-28_17-09-16",
+            "content": "@@ -108,28 +108,61 @@\n eturn%0A    %7D%0A\n+%0A\n     \n+fmt.Printf(%22%25c%5Cn%22, p%5Be%5D)%0A    e++\n %0A    for i :\n@@ -212,47 +212,8 @@\n   %7D%0A\n-    %0A    fmt.Printf(%22%25c%5Cn%22, p%5Be%5D)%0A    %0A\n     \n@@ -229,10 +229,8 @@\n p, e\n-+1\n )%0A%7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-28_17-10-18",
+            "content": "package main\nimport \"fmt\"\n\nfunc diagonal(p string, e int) {\n    tam := len(p)\n    if (e == tam) {\n        return\n    }\n    \n    for i := 0; i < e; i++ {\n        fmt.Print(\" \")\n    }\n    \n    fmt.Printf(\"%c\\n\", p[e])\n    \n    diagonal(p, e+1)\n}\n\nfunc main() {\n    var palavra string\n    fmt.Scan(&palavra)\n\n    diagonal(palavra, 0)\n}\n",
+            "lines": "24"
+        }
+    ]
+}

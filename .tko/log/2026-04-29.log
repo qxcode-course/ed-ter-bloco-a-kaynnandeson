@@ -1,0 +1,42 @@
+2026-04-29 13:16:01, SELF, v:1, k:ed@binomiais, self:1, guided:1
+2026-04-29 13:16:30, MOVE, v:1, k:ed@sufixos, mode:PICK
+2026-04-29 13:16:45, SELF, v:1, k:ed@sufixos, self:1, study:10
+2026-04-29 13:16:47, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:100
+2026-04-29 13:16:52, SELF, v:1, k:ed@sufixos, self:1, rate:100, study:10
+2026-04-29 13:16:56, MOVE, v:1, k:ed@sufixos, mode:BACK
+2026-04-29 13:17:02, MOVE, v:1, k:ed@diagonal, mode:PICK
+2026-04-29 13:17:04, EXEC, v:1, k:ed@diagonal, mode:FULL, rate:100
+2026-04-29 13:17:08, SELF, v:1, k:ed@diagonal, self:1, rate:100
+2026-04-29 13:17:08, EXEC, v:1, k:ed@diagonal, mode:FULL, rate:100
+2026-04-29 13:17:09, MOVE, v:1, k:ed@diagonal, mode:BACK
+2026-04-29 13:17:11, MOVE, v:1, k:ed@binomiais, mode:PICK
+2026-04-29 13:17:12, EXEC, v:1, k:ed@binomiais, mode:FULL, rate:100
+2026-04-29 13:17:22, SELF, v:1, k:ed@binomiais, self:1, rate:100, guided:1
+2026-04-29 13:17:24, MOVE, v:1, k:ed@binomiais, mode:BACK
+2026-04-29 13:17:35, MOVE, v:1, k:ed@enesimo, mode:PICK
+2026-04-29 13:17:39, EXEC, v:1, k:ed@enesimo, mode:FULL, rate:100
+2026-04-29 13:17:39, EXEC, v:1, k:ed@enesimo, mode:FULL, rate:100
+2026-04-29 13:17:51, SELF, v:1, k:ed@enesimo, self:1, rate:100, study:15
+2026-04-29 13:17:52, MOVE, v:1, k:ed@enesimo, mode:BACK
+2026-04-29 13:17:57, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-04-29 13:18:01, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100
+2026-04-29 13:18:01, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100
+2026-04-29 13:18:07, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100
+2026-04-29 13:18:15, SELF, v:1, k:ed@labirinto, self:1, rate:100, guided:1
+2026-04-29 13:18:16, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-04-29 13:18:19, MOVE, v:1, k:ed@resto, mode:PICK
+2026-04-29 13:18:20, EXEC, v:1, k:ed@resto, mode:FULL, rate:100
+2026-04-29 13:18:24, SELF, v:1, k:ed@resto, self:1, rate:100
+2026-04-29 13:18:25, MOVE, v:1, k:ed@resto, mode:BACK
+2026-04-29 13:18:34, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-04-29 13:18:41, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-04-29 13:18:45, SELF, v:1, k:ed@fractais_png, self:1
+2026-04-29 13:18:45, MOVE, v:1, k:ed@fractais_png, mode:BACK
+2026-04-29 13:16:47, MOVE, v:1, k:ed@sufixos, mode:EDIT
+2026-04-29 13:17:08, MOVE, v:1, k:ed@diagonal, mode:EDIT
+2026-04-29 13:17:12, MOVE, v:1, k:ed@binomiais, mode:EDIT
+2026-04-29 13:17:39, MOVE, v:1, k:ed@enesimo, mode:EDIT
+2026-04-29 13:18:07, MOVE, v:1, k:ed@labirinto, mode:EDIT
+2026-04-29 13:18:20, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-04-29 13:18:41, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-29 13:18:41, MOVE, v:1, k:ed@fractais_png, mode:EDIT

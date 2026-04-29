@@ -1,0 +1,94 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-28_14-00-48",
+            "content": "@@ -112,18 +112,16 @@\n return %22\n-%5B%5D\n %22%0A%7D%0A%0Afun\n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-04-28_14-01-54",
+            "content": "@@ -99,241 +99,26 @@\n  %7B%0A%09\n-if len(vet) == 0 %7B%0A%09%09return %22%5B%5D%22%0A%09%7D%0A%0A%09var rec func(v %5B%5Dint) string%0A%09rec = func(v %5B%5Dint) string %7B%0A%09%09if len(v) == 1 %7B%0A%09%09%09return fmt.Sprintf(%22%25d%22, v%5B0%5D)%0A%09%09%7D%0A%09%09return fmt.Sprintf(%22%25d, %25s%22, v%5B0%5D, rec(v%5B1:%5D))%0A%09%7D%0A%0A%09return %22%5B%22 + rec(vet) + %22\n+_ = vet%0A%09return %22%5B\n %5D%22%0A%7D\n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-04-28_14-09-53",
+            "content": "@@ -373,242 +373,25 @@\n  %7B%0A%09\n-if len(vet) == 0 %7B%0A%09%09return %22%5B%5D%22%0A%09%7D%0A%0A%09var rec func(v %5B%5Dint) string%0A%09rec = func(v %5B%5Dint) string %7B%0A%09%09if len(v) == 1 %7B%0A%09%09%09return fmt.Sprintf(%22%25d%22, v%5B0%5D)%0A%09%09%7D%0A%09%09return fmt.Sprintf(%22%25d, %25s%22, v%5B0%5D, rec(v%5B1:%5D))%0A%09%7D%0A%0A%09return %22%5B%22 + rec(vet) + %22%5D\n+_ = vet%0A%09return %22\n %22%0A%7D%0A\n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-04-28_14-12-30",
+            "content": "@@ -580,164 +580,8 @@\n %09%7D%0A%0A\n-%09if len(vet) %3E 1 %7B%0A%09%09for i := 0; i %3C len(vet); i++ %7B%0A%09%09%09for j := i; j %3C len(vet); j++ %7B%0A%09%09%09%09aux := vet%5Bi%5D%0A%09%09%09%09vet%5Bi%5D = vet%5Bj%5D%0A%09%09%09%09vet%5Bj%5D = aux%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A\n %09ret\n",
+            "lines": "106"
+        },
+        {
+            "label": "2026-04-28_14-14-31",
+            "content": "@@ -560,41 +560,179 @@\n , v%5B\n+0%5D, rec(v%5B1:%5D))%0A%09%7D%0A%0A%09if \n len(v\n+et\n ) \n-- 1%5D, rec(v%5B:len(v) - 1%5D))\n+%3E 1 %7B%0A%09%09for i := 0; i %3C len(vet); i++ %7B%0A%09%09%09for j := i; j %3C len(vet); j++ %7B%0A%09%09%09%09aux := vet%5Bi%5D%0A%09%09%09%09vet%5Bi%5D = vet%5Bj%5D%0A%09%09%09%09vet%5Bj%5D = aux%0A%09%09%09%7D%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "116"
+        },
+        {
+            "label": "2026-04-28_14-17-18",
+            "content": "@@ -699,113 +699,15 @@\n  %7B%0A%09\n-vet_r := make(int%5B%5D, len(vet))%0A%09r := 0%0A%09for i := len(vet) - 1; i %3E= 0; i++ %7B%0A%09%09vet_r%5Br%5D = vet%5Bi%5D%0A%09%09r++%0A%09%7D\n+_ = vet\n %0A%7D%0A%0A\n",
+            "lines": "106"
+        },
+        {
+            "label": "2026-04-28_14-19-34",
+            "content": "@@ -709,21 +709,21 @@\n := make(\n-%5B%5D\n int\n+%5B%5D\n , len(ve\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-04-28_14-19-45",
+            "content": "@@ -698,40 +698,8 @@\n ) %7B%0A\n-%09if len(vet) == 1 %7B%0A%09%09return%0A%09%7D%0A\n %09vet\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-04-28_14-20-35",
+            "content": "@@ -803,10 +803,10 @@\n 0; i\n---\n+++\n  %7B%0A%09\n",
+            "lines": "114"
+        },
+        {
+            "label": "2026-04-28_14-21-23",
+            "content": "@@ -694,16 +694,48 @@\n %5Dint) %7B%0A\n+%09if len(vet) == 1 %7B%0A%09%09return%0A%09%7D%0A\n %09vet_r :\n",
+            "lines": "114"
+        },
+        {
+            "label": "2026-04-28_14-21-54",
+            "content": "@@ -805,64 +805,8 @@\n %0A%09%7D%0A\n-%09for i := 0; i %3C len(vet); i++ %7B%0A%09%09vet%5Bi%5D = vet_r%5Bi%5D%0A%09%7D%0A\n %7D%0A%0A/\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-04-28_14-22-38",
+            "content": "@@ -927,55 +927,15 @@\n  %7B%0A%09\n-acc := 0%0A%09for _, v := range vet %7B%0A%09%09acc += v%0A%09%7D\n+_ = vet\n %0A%09re\n@@ -943,11 +943,9 @@\n urn \n-acc\n+0\n %0A%7D%0A%0A\n",
+            "lines": "114"
+        },
+        {
+            "label": "2026-04-28_14-24-49",
+            "content": "@@ -1058,55 +1058,15 @@\n  %7B%0A%09\n-acc := 0%0A%09for _, v := range vet %7B%0A%09%09acc *= v%0A%09%7D\n+_ = vet\n %0A%09re\n@@ -1062,35 +1062,33 @@\n _ = vet%0A%09return \n-acc\n+0\n %0A%7D%0A%0A// min: reto\n",
+            "lines": "117"
+        },
+        {
+            "label": "2026-04-28_14-25-32",
+            "content": "@@ -1061,17 +1061,17 @@\n %09acc := \n-1\n+0\n %0A%09for _,\n",
+            "lines": "120"
+        },
+        {
+            "label": "2026-04-28_14-25-39",
+            "content": "@@ -1333,152 +1333,15 @@\n  %7B%0A%09\n-i_menor := -1%0A%0A%09for i := 0; i %3C 1; i++ %7B%0A%09%09menor := vet%5Bi%5D%0A%09%09for j := 0; j %3C len(vet); j++ %7B%0A%09%09%09if menor %3E vet%5Bj%5D %7B%0A%09%09%09%09i_menor = j%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A\n+_ = vet\n %0A%09re\n@@ -1349,15 +1349,9 @@\n urn \n-i_menor\n+0\n %0A%7D%0A%0A\n",
+            "lines": "120"
+        },
+        {
+            "label": "2026-04-28_14-31-27",
+            "content": "@@ -1332,45 +1332,8 @@\n t %7B%0A\n-%09if len(vet) == 0 %7B%0A%09%09return -1%0A%09%7D%0A%09%0A\n %09i_m\n",
+            "lines": "130"
+        },
+        {
+            "label": "2026-04-28_14-32-19",
+            "content": "@@ -1363,16 +1363,17 @@\n n -1%0A%09%7D%0A\n+%09\n %0A%09i_meno\n@@ -1377,17 +1377,18 @@\n enor := \n-0\n+-1\n %0A%0A%09for i\n",
+            "lines": "134"
+        },
+        {
+            "label": "2026-04-28_14-32-30",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc tostr(vet []int) string {\n\tif len(vet) == 0 {\n\t\treturn \"[]\"\n\t}\n\n\tvar rec func(v []int) string\n\trec = func(v []int) string {\n\t\tif len(v) == 1 {\n\t\t\treturn fmt.Sprintf(\"%d\", v[0])\n\t\t}\n\t\treturn fmt.Sprintf(\"%d, %s\", v[0], rec(v[1:]))\n\t}\n\n\treturn \"[\" + rec(vet) + \"]\"\n}\n\nfunc tostrrev(vet []int) string {\n\tif len(vet) == 0 {\n\t\treturn \"[]\"\n\t}\n\n\tvar rec func(v []int) string\n\trec = func(v []int) string {\n\t\tif len(v) == 1 {\n\t\t\treturn fmt.Sprintf(\"%d\", v[0])\n\t\t}\n\t\treturn fmt.Sprintf(\"%d, %s\", v[len(v) - 1], rec(v[:len(v) - 1]))\n\t}\n\n\treturn \"[\" + rec(vet) + \"]\"\n}\n\n// reverse: inverte os elementos do slice\nfunc reverse(vet []int) {\n\tvet_r := make([]int, len(vet))\n\tr := 0\n\tfor i := len(vet) - 1; i >= 0; i-- {\n\t\tvet_r[r] = vet[i]\n\t\tr++\n\t}\n\tfor i := 0; i < len(vet); i++ {\n\t\tvet[i] = vet_r[i]\n\t}\n}\n\n// sum: soma dos elementos do slice\nfunc sum(vet []int) int {\n\tacc := 0\n\tfor _, v := range vet {\n\t\tacc += v\n\t}\n\treturn acc\n}\n\n// mult: produto dos elementos do slice\nfunc mult(vet []int) int {\n\tacc := 1\n\tfor _, v := range vet {\n\t\tacc *= v\n\t}\n\treturn acc\n}\n\n// min: retorna o \u00edndice e valor do menor valor\n// crie uma fun\u00e7\u00e3o recursiva interna do modelo\n// var rec func(v []int) (int, int)\n// para fazer uma recurs\u00e3o que retorna valor e \u00edndice\nfunc min(vet []int) int {\n\tif len(vet) == 0 {\n\t\treturn -1\n\t}\n\n\ti_menor := 0\n\n\tfor i := 0; i < 1; i++ {\n\t\tmenor := vet[i]\n\t\tfor j := 0; j < len(vet); j++ {\n\t\t\tif menor > vet[j] {\n\t\t\t\ti_menor = j\n\t\t\t}\n\t\t}\n\t}\n\n\treturn i_menor\n}\n\nfunc main() {\n\tvar vet []int\n\tscanner := bufio.NewScanner(os.Stdin)\n\tfor {\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\targs := strings.Fields(line)\n\t\tfmt.Println(\"$\" + line)\n\n\t\tswitch args[0] {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"read\":\n\t\t\tvet = nil\n\t\t\tfor _, arg := range args[1:] {\n\t\t\t\tif val, err := strconv.Atoi(arg); err == nil {\n\t\t\t\t\tvet = append(vet, val)\n\t\t\t\t}\n\t\t\t}\n\t\tcase \"tostr\":\n\t\t\tfmt.Println(tostr(vet))\n\t\tcase \"torev\":\n\t\t\tfmt.Println(tostrrev(vet))\n\t\tcase \"reverse\":\n\t\t\treverse(vet)\n\t\tcase \"sum\":\n\t\t\tfmt.Println(sum(vet))\n\t\tcase \"mult\":\n\t\t\tfmt.Println(mult(vet))\n\t\tcase \"min\":\n\t\t\tfmt.Println(min(vet))\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "134"
+        }
+    ]
+}
