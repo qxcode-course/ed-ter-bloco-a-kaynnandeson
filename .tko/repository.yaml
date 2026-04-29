@@ -23,13 +23,12 @@ sources:
   tasks: null
 expanded:
 - ed@map_set
-- ed@rec
 flags:
-  inbox: inbox
+  inbox: all
   panel: skills
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: eval1@eval1
-selected_index: 22
+selected: ed@map_set
+selected_index: 1

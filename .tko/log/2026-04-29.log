@@ -40,3 +40,31 @@
 2026-04-29 13:18:20, MOVE, v:1, k:ed@resto, mode:EDIT
 2026-04-29 13:18:41, MOVE, v:1, k:ed@fractais_png, mode:EDIT
 2026-04-29 13:18:41, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-29 13:22:41, MOVE, v:1, k:ed@binomiais, mode:PICK
+2026-04-29 13:22:42, EXEC, v:1, k:ed@binomiais, mode:FULL, rate:100
+2026-04-29 13:22:46, SELF, v:1, k:ed@binomiais, self:1, rate:100, guided:1
+2026-04-29 13:22:46, MOVE, v:1, k:ed@binomiais, mode:BACK
+2026-04-29 13:22:52, MOVE, v:1, k:ed@sufixos, mode:PICK
+2026-04-29 13:22:53, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:100
+2026-04-29 13:22:54, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:100
+2026-04-29 13:22:56, SELF, v:1, k:ed@sufixos, self:1, rate:100
+2026-04-29 13:22:58, MOVE, v:1, k:ed@sufixos, mode:BACK
+2026-04-29 13:23:23, MOVE, v:1, k:eval1@apagando, mode:PICK
+2026-04-29 13:23:24, EXEC, v:1, k:eval1@apagando, mode:FULL, rate:100
+2026-04-29 13:23:28, SELF, v:1, k:eval1@apagando, self:1, rate:100
+2026-04-29 13:23:29, MOVE, v:1, k:eval1@apagando, mode:BACK
+2026-04-29 13:23:46, MOVE, v:1, k:eval1@casais, mode:PICK
+2026-04-29 13:23:46, EXEC, v:1, k:eval1@casais, mode:FULL, rate:100
+2026-04-29 13:23:49, SELF, v:1, k:eval1@casais, self:1, rate:100
+2026-04-29 13:23:49, EXEC, v:1, k:eval1@casais, mode:FULL, rate:100
+2026-04-29 13:23:49, EXEC, v:1, k:eval1@casais, mode:FULL, rate:100
+2026-04-29 13:23:50, EXEC, v:1, k:eval1@casais, mode:FULL, rate:100
+2026-04-29 13:23:50, EXEC, v:1, k:eval1@casais, mode:FULL, rate:100
+2026-04-29 13:23:50, EXEC, v:1, k:eval1@casais, mode:FULL, rate:100
+2026-04-29 13:23:51, EXEC, v:1, k:eval1@casais, mode:FULL, rate:100
+2026-04-29 13:23:51, MOVE, v:1, k:eval1@casais, mode:BACK
+2026-04-29 13:24:16, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-04-29 13:24:17, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:100
+2026-04-29 13:24:20, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:100
+2026-04-29 13:24:25, SELF, v:1, k:ed@setbuild, self:1, rate:100, guided:1, concept:1
+2026-04-29 13:24:26, MOVE, v:1, k:ed@setbuild, mode:BACK
