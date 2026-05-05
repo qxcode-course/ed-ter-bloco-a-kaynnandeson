@@ -19,6 +19,10 @@ func (e *Editor) InsertChar(r rune) {
 }
 
 func (e *Editor) KeyLeft() {
+	if e.it_char.Prev() == e.it_line.Value.End() && e.it_line.prev != e.texto.End() {
+		e.it_line = e.it_line.Prev()
+		e.it_char = e.it_line.Value.End()
+	}
 	if e.it_char.Prev() != e.it_line.Value.End() {
 		e.it_char = e.it_char.Prev() 
 	}
@@ -26,24 +30,108 @@ func (e *Editor) KeyLeft() {
 
 func (e *Editor) KeyEnter() {
 	nova := NewList[rune]()
+
+	if e.it_char != e.it_line.Value.End() {
+		curr := e.it_char
+
+		for curr != e.it_line.Value.End() {
+			next := curr.Next()
+
+			val := curr.Value
+			e.it_line.Value.Erase(curr)
+
+			nova.PushBack(val)
+
+			curr = next
+		}
+	}
+
 	e.texto.Insert(e.it_line.Next(), nova)
+	
 	e.it_line = e.it_line.Next()
 	e.it_char = e.it_line.Value.Front()
 }
 
 func (e *Editor) KeyRight() {
-	if e.it_char.Next() != e.it_line.Value.End() {
+	if e.it_char == e.it_line.Value.End() && e.it_line.Next() != e.texto.End() {
+		e.it_line = e.it_line.Next()
+		e.it_char = e.it_line.Value.Front()
+	}
+	if e.it_char != e.it_line.Value.End() {
 		e.it_char = e.it_char.Next() 
 	}
 }
 
+func (e *Editor) getColuna() int {
+	col := 0
+	
+	for c := e.it_line.Value.Front(); c != e.it_char; c = c.Next() {
+		col++
+	}
+	
+	return col
+}
+
+func (e *Editor) goToColuna(col int) *Node[rune] {
+	curr := e.it_line.Value.Front()
+	i := 0
+
+	for curr != e.it_line.Value.End() && i < col {
+		curr = curr.Next()
+		i++
+	}
+
+	return curr
+}
+
 func (e *Editor) KeyUp() {
+	if e.it_line.prev == e.texto.End() {
+		return
+	}
+	
+	col := e.getColuna()
+	e.it_line = e.it_line.Prev()
+	e.it_char = e.goToColuna(col)
 }
 
 func (e *Editor) KeyDown() {
+	if e.it_line.next == e.texto.End() {
+		return
+	}
+
+	col := e.getColuna()
+	e.it_line = e.it_line.Next()
+	e.it_char = e.goToColuna(col)
 }
 
 func (e *Editor) KeyBackspace() {
+	if e.it_char.Prev() == e.it_line.Value.End() {
+		if (e.it_line.Prev() == e.texto.End()) {
+			return
+		}
+
+		linhaAtual := e.it_line
+		linhaAcima := e.it_line.Prev()
+
+		e.it_line = linhaAcima
+		e.it_char = e.it_line.Value.End()
+
+		curr := linhaAtual.Value.Front()
+		for curr != linhaAtual.Value.End() {
+			next := curr.Next()
+
+			val := curr.Value
+			linhaAtual.Value.Erase(curr)
+			e.it_line.Value.PushBack(val)
+
+			curr = next
+		}
+
+		e.texto.Erase(linhaAtual)
+
+		return
+	}
+
 	e.it_char = e.it_line.Value.Erase(e.it_char.prev)
 }
 
