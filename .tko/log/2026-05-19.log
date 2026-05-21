@@ -1,0 +1,37 @@
+2026-05-19 11:43:46, MOVE, v:1, k:ed@ilhas, mode:DOWN
+2026-05-19 11:43:51, MOVE, v:1, k:ed@ilhas, mode:PICK
+2026-05-19 11:43:46, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-05-19 11:43:46, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-05-19 11:47:37, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-05-19 11:48:58, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-05-19 11:57:09, EXEC, v:1, k:ed@ilhas, mode:FULL, size:38, fail:COMP
+2026-05-19 11:58:05, EXEC, v:1, k:ed@ilhas, mode:FULL, fail:COMP
+2026-05-19 11:58:14, EXEC, v:1, k:ed@ilhas, mode:FULL, fail:COMP
+2026-05-19 11:59:53, EXEC, v:1, k:ed@ilhas, mode:FULL, fail:COMP
+2026-05-19 12:01:12, EXEC, v:1, k:ed@ilhas, mode:FULL, fail:COMP
+2026-05-19 12:01:13, EXEC, v:1, k:ed@ilhas, mode:FULL, fail:COMP
+2026-05-19 12:02:34, EXEC, v:1, k:ed@ilhas, mode:FULL, rate:100, size:66
+2026-05-19 12:02:26, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-05-19 12:02:34, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-05-19 12:02:52, SELF, v:1, k:ed@ilhas, self:1, rate:100, study:20
+2026-05-19 12:02:54, MOVE, v:1, k:ed@ilhas, mode:BACK
+2026-05-19 12:10:22, MOVE, v:1, k:ed@distancia, mode:DOWN
+2026-05-19 12:10:23, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-05-19 12:12:39, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:12
+2026-05-19 12:10:22, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-19 12:10:22, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-19 12:12:37, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-19 12:12:39, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-19 12:12:52, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:12
+2026-05-19 12:16:27, EXEC, v:1, k:ed@distancia, mode:FULL, rate:14, size:44
+2026-05-19 12:17:10, EXEC, v:1, k:ed@distancia, mode:FULL, rate:14
+2026-05-19 12:17:27, EXEC, v:1, k:ed@distancia, mode:FULL, rate:57, size:60
+2026-05-19 12:17:26, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-19 12:17:27, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-19 12:26:47, EXEC, v:1, k:ed@distancia, mode:FULL, rate:100, size:79
+2026-05-19 12:26:54, SELF, v:1, k:ed@distancia, self:1, rate:100
+2026-05-19 12:26:54, EXEC, v:1, k:ed@distancia, mode:FULL, rate:100
+2026-05-19 12:26:42, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-19 12:26:54, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-19 12:30:27, SELF, v:1, k:ed@distancia, self:1, rate:100
+2026-05-19 12:30:29, MOVE, v:1, k:ed@distancia, mode:BACK

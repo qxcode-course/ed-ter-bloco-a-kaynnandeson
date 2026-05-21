@@ -1,0 +1,73 @@
+2026-05-21 13:24:53, MOVE, v:1, k:ed@especiais, mode:DOWN
+2026-05-21 13:24:55, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-05-21 13:25:39, EXEC, v:1, k:ed@especiais, mode:FULL, rate:0, size:132
+2026-05-21 13:24:53, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 13:24:53, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 13:29:23, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 13:25:38, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 13:34:26, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 13:36:23, EXEC, v:1, k:ed@especiais, mode:FULL, rate:0, size:155
+2026-05-21 13:36:59, EXEC, v:1, k:ed@especiais, mode:FULL, rate:0, size:155
+2026-05-21 13:37:47, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 13:36:59, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 13:42:38, EXEC, v:1, k:ed@especiais, mode:FULL, rate:0, size:156
+2026-05-21 13:42:50, EXEC, v:1, k:ed@especiais, mode:FULL, rate:0
+2026-05-21 13:43:09, EXEC, v:1, k:ed@especiais, mode:FULL, rate:0, size:156
+2026-05-21 13:43:19, EXEC, v:1, k:ed@especiais, mode:FULL, rate:0, size:156
+2026-05-21 13:43:32, EXEC, v:1, k:ed@especiais, mode:FULL, rate:0, size:156
+2026-05-21 13:43:37, EXEC, v:1, k:ed@especiais, mode:FULL, size:156, fail:COMP
+2026-05-21 13:43:41, EXEC, v:1, k:ed@especiais, mode:FULL, rate:0, size:156
+2026-05-21 13:43:41, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 13:43:41, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 13:45:40, EXEC, v:1, k:ed@especiais, mode:FULL, rate:0, size:156
+2026-05-21 13:48:38, EXEC, v:1, k:ed@especiais, mode:FULL, rate:0, size:156
+2026-05-21 13:48:38, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 13:48:38, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 13:54:18, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 13:58:02, EXEC, v:1, k:ed@especiais, mode:FULL, rate:12, size:168
+2026-05-21 13:58:57, EXEC, v:1, k:ed@especiais, mode:FULL, rate:12, size:185
+2026-05-21 13:58:57, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 13:58:57, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 14:00:22, EXEC, v:1, k:ed@especiais, mode:FULL, rate:12, size:188
+2026-05-21 14:01:06, EXEC, v:1, k:ed@especiais, mode:FULL, rate:12, size:188
+2026-05-21 14:03:26, EXEC, v:1, k:ed@especiais, mode:FULL, rate:12, size:188
+2026-05-21 14:03:42, EXEC, v:1, k:ed@especiais, mode:FULL, rate:12, size:188
+2026-05-21 14:03:41, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 14:03:42, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 14:05:28, EXEC, v:1, k:ed@especiais, mode:FULL, rate:25, size:188
+2026-05-21 14:05:25, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 14:05:28, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 15:42:03, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-05-21 15:42:16, EXEC, v:1, k:ed@especiais, mode:FULL, rate:25
+2026-05-21 15:44:54, EXEC, v:1, k:ed@especiais, mode:FULL, rate:25, size:196
+2026-05-21 15:44:54, EXEC, v:1, k:ed@especiais, mode:FULL, rate:25, size:196
+2026-05-21 15:44:58, EXEC, v:1, k:ed@especiais, mode:FULL, fail:COMP
+2026-05-21 15:45:14, EXEC, v:1, k:ed@especiais, mode:FULL, rate:25, size:196
+2026-05-21 15:45:57, EXEC, v:1, k:ed@especiais, mode:FULL, rate:25, size:196
+2026-05-21 15:45:57, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 15:45:54, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 15:47:29, EXEC, v:1, k:ed@especiais, mode:FULL, rate:25, size:196
+2026-05-21 15:47:53, EXEC, v:1, k:ed@especiais, mode:FULL, size:196, fail:COMP
+2026-05-21 15:48:37, EXEC, v:1, k:ed@especiais, mode:FULL, rate:25, size:196
+2026-05-21 15:51:37, EXEC, v:1, k:ed@especiais, mode:FULL, size:206, fail:COMP
+2026-05-21 15:51:38, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 15:48:36, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 15:52:57, EXEC, v:1, k:ed@especiais, mode:FULL, rate:25, size:206
+2026-05-21 15:53:18, EXEC, v:1, k:ed@especiais, mode:FULL, rate:25, size:206
+2026-05-21 15:53:21, EXEC, v:1, k:ed@especiais, mode:FULL, rate:37
+2026-05-21 15:53:44, EXEC, v:1, k:ed@especiais, mode:FULL, rate:37, size:203
+2026-05-21 15:54:07, EXEC, v:1, k:ed@especiais, mode:FULL, rate:37, size:201
+2026-05-21 15:54:01, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 15:54:07, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 16:00:24, EXEC, v:1, k:ed@especiais, mode:FULL, rate:37, size:197
+2026-05-21 16:01:26, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 16:00:24, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 16:04:27, EXEC, v:1, k:ed@especiais, mode:FULL, rate:50, size:206
+2026-05-21 16:06:59, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 16:04:27, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 16:09:33, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 16:20:46, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-21 16:25:37, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-05-21 16:25:40, EXEC, v:1, k:ed@especiais, mode:FULL, rate:50, size:219
+2026-05-21 16:26:03, EXEC, v:1, k:ed@especiais, mode:FULL, rate:50
+2026-05-21 16:26:08, EXEC, v:1, k:ed@especiais, mode:FULL, rate:50

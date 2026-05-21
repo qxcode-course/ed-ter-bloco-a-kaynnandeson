@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-19_12-12-39",
+            "content": "@@ -135,11 +135,8 @@\n ncia\n-, l\n )%0A%7D%0A\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-05-19_12-12-52",
+            "content": "@@ -23,590 +23,123 @@\n mt%22%0A\n-%0Afunc podeUsar(seq %5B%5Drune, pos int, num rune, l int) bool %7B%0A%0A%09// verifica os %C3%BAltimos L caracteres%0A%09inicio := pos - l%0A%0A%09if inicio %3C 0 %7B%0A%09%09inicio = 0%0A%09%7D%0A%0A%09for i := inicio; i %3C pos; i++ %7B%0A%09%09if seq%5Bi%5D == num %7B%0A%09%09%09return false%0A%09%09%7D%0A%09%7D%0A%0A%09return true%0A%7D%0A%0Afunc main() %7B%0A    var sequencia string%0A    var l int %0A%0A    fmt.Scan(&sequencia, &l)%0A%0A    seq := %5B%5Drune(sequencia)%0A%0A    for i := 0; i %3C len(seq); i++ %7B%0A%09%09if seq%5Bi%5D == '.' %7B%0A%09%09%09for d := 0; d %3C= l; d++ %7B%0A%09%09%09%09num := rune(d + '0')%0A%0A%09%09%09%09if podeUsar(seq, i, num, l) %7B%0A%09%09%09%09%09seq%5Bi%5D = num%0A%09%09%09%09%09break%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A    fmt.Println(string(seq)\n+func main() %7B%0A    var sequencia string%0A    var l int %0A%0A    fmt.Scan(&sequencia, &l)%0A%0A%0A%0A    fmt.Println(sequencia, l\n )%0A%7D%0A\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-05-19_12-16-27",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -97,34 +97,31 @@\n ica \n-da posi%C3%A7%C3%A3o pos-L at%C3%A9 pos+L\n+os %C3%BAltimos L caracteres\n %0A%09in\n@@ -139,24 +139,8 @@\n  - l\n-%0A%09fim := pos + l\n %0A%0A%09i\n@@ -175,55 +175,8 @@\n %09%7D%0A%0A\n-%09if fim %3E= len(seq) %7B%0A%09%09fim = len(seq) - 1%0A%09%7D%0A%0A\n %09for\n@@ -196,21 +196,20 @@\n  i %3C\n-= fim\n+ pos\n ; i++ %7B%0A\n %0A%09%09i\n@@ -208,42 +208,8 @@\n + %7B%0A\n-%0A%09%09if i == pos %7B%0A%09%09%09continue%0A%09%09%7D%0A%0A\n %09%09if\n@@ -279,18 +279,20 @@\n ain() %7B%0A\n-%0A%09\n+    \n var sequ\n@@ -304,17 +304,20 @@\n  string%0A\n-%09\n+    \n var l in\n@@ -317,19 +317,23 @@\n ar l int\n+ \n %0A%0A\n-%09\n+    \n fmt.Scan\n@@ -347,26 +347,19 @@\n ncia\n-)%0A%09fmt.Scan(\n+, \n &l)%0A%0A\n-%09\n+    \n seq \n@@ -380,17 +380,20 @@\n encia)%0A%0A\n-%09\n+    \n for i :=\n@@ -416,17 +416,16 @@\n ; i++ %7B%0A\n-%0A\n %09%09if seq\n@@ -437,17 +437,16 @@\n = '.' %7B%0A\n-%0A\n %09%09%09for d\n@@ -466,17 +466,16 @@\n ; d++ %7B%0A\n-%0A\n %09%09%09%09num \n@@ -574,17 +574,20 @@\n %09%09%7D%0A%09%7D%0A%0A\n-%09\n+    \n fmt.Prin\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-05-19_12-17-27",
+            "content": "@@ -81,16 +81,56 @@\n bool %7B%0A%0A\n+%09// verifica da posi%C3%A7%C3%A3o pos-L at%C3%A9 pos+L%0A\n %09inicio \n@@ -376,212 +376,174 @@\n unc \n-resolver(seq %5B%5Drune, l int, pos int) bool %7B%0A%0A%09// terminou%0A%09if pos == le\n+main() %7B%0A%0A%09var sequencia string%0A%09var l int%0A%0A%09fmt.Sca\n n(\n+&\n seq\n-) %7B%0A%09%09return true%0A%09%7D%0A%0A%09// j%C3%A1 preenchido%0A%09if seq%5Bpos%5D != '.' %7B%0A%09%09return resolver(seq, l, pos+1)%0A%09%7D%0A%0A%09// tenta n%C3%BAmeros de 0 at%C3%A9 L%0A\n+uencia)%0A%09fmt.Scan(&l)%0A%0A%09seq := %5B%5Drune(sequencia)%0A%0A%09for i := 0; i %3C len(seq); i++ %7B%0A%0A%09%09if seq%5Bi%5D == '.' %7B%0A%0A%09%09\n %09for\n@@ -568,16 +568,18 @@\n ++ %7B%0A%0A%09%09\n+%09\n+%09\n num := r\n@@ -592,16 +592,18 @@\n + '0')%0A%0A\n+%09%09\n %09%09if pod\n@@ -613,19 +613,17 @@\n ar(seq, \n-pos\n+i\n , num, l\n@@ -630,27 +630,26 @@\n ) %7B%0A\n-%0A\n+%09%09\n %09%09%09seq%5B\n-pos\n+i\n %5D = num%0A\n %0A%09%09%09\n@@ -648,270 +648,36 @@\n num%0A\n-%0A\n %09%09%09\n-// continua%0A%09%09%09if resolver(seq, l, pos+1) %7B%0A%09%09%09%09return true%0A%09%09%09%7D%0A%0A%09%09%09// backtrack%0A%09%09%09seq%5Bpos%5D = '.'%0A%09%09%7D%0A%09%7D%0A%0A%09return false%0A%7D%0A%0Afunc main() %7B%0A%0A%09var sequencia string%0A%09var l int%0A%0A%09fmt.Scan(&sequencia)%0A%09fmt.Scan(&l)%0A%0A%09seq := %5B%5Drune(sequencia)%0A%0A%09resolver(seq, l, 0)\n+%09%09break%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n %0A%0A%09f\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-05-19_12-26-47",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc podeUsar(seq []rune, pos int, num rune, l int) bool {\n\n\tinicio := pos - l\n\tfim := pos + l\n\n\tif inicio < 0 {\n\t\tinicio = 0\n\t}\n\n\tif fim >= len(seq) {\n\t\tfim = len(seq) - 1\n\t}\n\n\tfor i := inicio; i <= fim; i++ {\n\n\t\tif i == pos {\n\t\t\tcontinue\n\t\t}\n\n\t\tif seq[i] == num {\n\t\t\treturn false\n\t\t}\n\t}\n\n\treturn true\n}\n\nfunc resolver(seq []rune, l int, pos int) bool {\n\n\t// terminou\n\tif pos == len(seq) {\n\t\treturn true\n\t}\n\n\t// j\u00e1 preenchido\n\tif seq[pos] != '.' {\n\t\treturn resolver(seq, l, pos+1)\n\t}\n\n\t// tenta n\u00fameros de 0 at\u00e9 L\n\tfor d := 0; d <= l; d++ {\n\n\t\tnum := rune(d + '0')\n\n\t\tif podeUsar(seq, pos, num, l) {\n\n\t\t\tseq[pos] = num\n\n\t\t\t// continua\n\t\t\tif resolver(seq, l, pos+1) {\n\t\t\t\treturn true\n\t\t\t}\n\n\t\t\t// backtrack\n\t\t\tseq[pos] = '.'\n\t\t}\n\t}\n\n\treturn false\n}\n\nfunc main() {\n\n\tvar sequencia string\n\tvar l int\n\n\tfmt.Scan(&sequencia)\n\tfmt.Scan(&l)\n\n\tseq := []rune(sequencia)\n\n\tresolver(seq, l, 0)\n\n\tfmt.Println(string(seq))\n}\n",
+            "lines": "79"
+        }
+    ]
+}
