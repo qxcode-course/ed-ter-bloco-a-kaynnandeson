@@ -1,0 +1,159 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-26_13-16-26",
+            "content": "@@ -87,17 +87,17 @@\n %25d%5E2 = %25\n-d\n+n\n %22, n, n)\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-05-26_13-16-46",
+            "content": "@@ -92,10 +92,8 @@\n = %25d\n-%5Cn\n %22, n\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-05-26_13-17-00",
+            "content": "@@ -43,16 +43,8 @@\n  int\n-, m bool\n ) %7B%0A\n@@ -61,14 +61,8 @@\n = 1 \n-&& !m \n %7B%0A  \n@@ -124,243 +124,55 @@\n   %7D%0A\n-%0A    fmt.Printf(%22%25d%5E2 = %25d%5E2 + %25d*1 + 1 = ?%22, n, n-1, n)%0A    if n %3E 1 %7B%0A        quadrado(n-1, m)%0A    %7D%0A%7D%0A%0Afunc main() %7B%0A    var n int%0A    fmt.Scan(&n)%0A%0A    var m bool%0A    if n %3E 1 %7B%0A        m = true%0A    %7D else %7B%0A        m = false%0A    %7D\n+%7D%0A%0Afunc main() %7B%0A    var n int%0A    fmt.Scan(&n)\n %0A%0A  \n@@ -187,11 +187,8 @@\n do(n\n-, m\n )%0A%7D%0A\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-05-26_13-23-51",
+            "content": "@@ -177,18 +177,16 @@\n  + 1 = ?\n-%5Cn\n %22, n, n-\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-05-26_13-24-01",
+            "content": "@@ -139,82 +139,8 @@\n  %7D%0A%0A\n-    if n == 1 %7B%0A        fmt.Printf(%22%25d%5E2 = 1%5Cn%22, n)%0A        return%0A    %7D%0A%0A\n     \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-05-26_13-25-10",
+            "content": "@@ -51,21 +51,12 @@\n bool\n-, sqr int\n ) %7B%0A\n+\n     \n@@ -191,24 +191,8 @@\n  n)%0A\n-        sqr = n%0A\n     \n@@ -213,123 +213,8 @@\n  %7D%0A%0A\n-    if n %3E 1 && sqr != 0 %7B%0A        fmt.Printf(%22%25d%5E2 = %25d%5E2 + %25d*1 + 1 = %25d%5Cn%22, n, n-1, n, n*n + (n-1)*1 + 1)%0A    %7D%0A\n     \n@@ -284,20 +284,8 @@\n %3E 1 \n-&& sqr == 0 \n %7B%0A  \n@@ -305,21 +305,16 @@\n o(n-1, m\n-, sqr\n )%0A    %7D%0A\n@@ -451,28 +451,8 @@\n  %7D%0A%0A\n-    var sqr int = 0%0A\n     \n@@ -468,13 +468,8 @@\n n, m\n-, sqr\n )%0A%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-05-26_13-30-09",
+            "content": "@@ -220,35 +220,22 @@\n         \n-quadrado(n, m, sqr)\n+return\n %0A    %7D%0A%0A\n@@ -328,15 +328,21 @@\n  n, \n-sqr + n\n+n*n + (n-1)*1\n  + 1\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-05-26_13-32-30",
+            "content": "@@ -212,38 +212,51 @@\n sqr = n%0A        \n-return\n+quadrado(n, m, sqr)\n %0A    %7D%0A%0A    if n\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-05-26_13-32-42",
+            "content": "@@ -223,11 +223,8 @@\n     \n- //\n  ret\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-05-26_13-32-49",
+            "content": "@@ -44,21 +44,8 @@\n int,\n- inicial int,\n  m b\n@@ -148,51 +148,8 @@\n  %7D%0A%0A\n-    if n %3E inicial %7B%0A        return%0A    %7D%0A%0A\n     \n@@ -224,40 +224,17 @@\n     \n-quadrado(n + 1, inicial, m, sqr)\n+// return\n %0A   \n@@ -268,34 +268,8 @@\n 0 %7B%0A\n-        sqr = sqr + n + 1%0A\n     \n@@ -334,49 +334,16 @@\n  sqr\n-)%0A        quadrado(n + 1, inicial, m, sqr\n+ + n + 1\n )%0A  \n@@ -456,17 +456,8 @@\n n-1,\n- inicial,\n  m, \n@@ -636,19 +636,16 @@\n drado(n,\n- n,\n  m, sqr)\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-05-26_13-36-55",
+            "content": "@@ -478,31 +478,16 @@\n m, sqr)%0A\n-        return%0A\n     %7D%0A  \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-05-26_13-37-15",
+            "content": "@@ -322,16 +322,25 @@\n %0A%0A    if\n+ n %3E 1 &&\n  sqr != \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-26_13-37-49",
+            "content": "@@ -318,33 +318,24 @@\n    %7D%0A%0A    if\n- n %3E 1 &&\n  sqr != 0 %7B%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-26_13-38-08",
+            "content": "@@ -507,44 +507,8 @@\n     \n-%0A    if n %3E 1 && sqr == 0 %7B%0A        \n fmt.\n@@ -553,24 +553,51 @@\n  n, n-1, n)%0A\n+    if n %3E 1 && sqr == 0 %7B%0A\n         quad\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-26_13-39-00",
+            "content": "@@ -24,84 +24,8 @@\n t%22%0A%0A\n-func calcQuadrado(n int) int %7B%0A    return (n-1) * (n-1) + (n-1) * 2 + 1 %0A%7D%0A%0A\n func\n@@ -367,17 +367,9 @@\n r + \n-(n-1 * 2)\n+n\n  + 1\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-26_13-42-12",
+            "content": "@@ -443,14 +443,12 @@\n r + \n-(\n (n-1\n-)\n  * 2\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-26_13-42-26",
+            "content": "@@ -439,16 +439,17 @@\n = sqr + \n+(\n (n-1) * \n@@ -445,24 +445,25 @@\n + ((n-1) * 2\n+)\n  + 1%0A       \n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-26_13-42-38",
+            "content": "@@ -437,23 +437,27 @@\n r = \n-calcQuadrado(n)\n+sqr + (n-1) * 2 + 1\n %0A   \n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-26_13-42-48",
+            "content": "@@ -486,18 +486,17 @@\n %5E2 + %25d*\n-%25d\n+1\n  + 1 = %25\n@@ -508,21 +508,16 @@\n  n, n-1,\n- n-1,\n  n, sqr)\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-26_13-43-21",
+            "content": "@@ -506,16 +506,18 @@\n n%22, n, n\n+-1\n , n-1, n\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-26_13-44-07",
+            "content": "@@ -483,17 +483,18 @@\n  %25d%5E2 + \n-2\n+%25d\n *%25d + 1 \n@@ -500,24 +500,27 @@\n  = %25d%5Cn%22, n,\n+ n,\n  n-1, n, sqr\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-26_13-45-00",
+            "content": "@@ -510,18 +510,16 @@\n , n-1, n\n--1\n , sqr)%0A \n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-26_13-45-07",
+            "content": "@@ -643,28 +643,28 @@\n %5E2 = %25d%5E2 + \n-2*\n %25d\n+*1\n  + 1 = ?%5Cn%22,\n@@ -673,18 +673,16 @@\n , n-1, n\n--1\n )%0A      \n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-26_13-45-57",
+            "content": "@@ -149,16 +149,98 @@\n  int) %7B%0A\n+    if n %3C= 1 && !m %7B%0A        fmt.Printf(%22%25d%5E2 = %25d%5Cn%22, n, n)%0A        return%0A    %7D\n %0A%0A    if\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-26_13-50-30",
+            "content": "@@ -145,24 +145,26 @@\n  sqr int) %7B%0A\n+%0A%0A\n     if n %3E i\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-26_13-50-39",
+            "content": "@@ -109,20 +109,16 @@\n quadrado\n-Void\n (n int, \n@@ -268,36 +268,32 @@\n         quadrado\n-Void\n (n + 1, inicial,\n@@ -451,20 +451,16 @@\n quadrado\n-Void\n (n + 1, \n@@ -609,20 +609,16 @@\n quadrado\n-Void\n (n-1, in\n@@ -645,167 +645,8 @@\n %0A%7D%0A%0A\n-func quadrado(n int) int %7B%0A    if n == 1 %7B%0A        return 1%0A    %7D%0A%0A    result := quadrado(n - 1) + 2 * (n-1) + 1%0A%0A    fmt.Println(result)%0A    return result%0A%7D%0A%0A\n func\n@@ -686,27 +686,24 @@\n can(&n)%0A%0A   \n- //\n  var m bool%0A\n@@ -705,19 +705,16 @@\n bool%0A   \n- //\n  if n %3E \n@@ -716,27 +716,24 @@\n  n %3E 1 %7B%0A   \n- //\n      m = tru\n@@ -737,19 +737,16 @@\n true%0A   \n- //\n  %7D else \n@@ -750,19 +750,16 @@\n se %7B%0A   \n- //\n      m =\n@@ -772,21 +772,15 @@\n %0A   \n- //\n  %7D%0A%0A   \n- //\n  var\n@@ -799,11 +799,8 @@\n %0A   \n- //\n  qua\n@@ -808,12 +808,8 @@\n rado\n-Void\n (n, \n@@ -822,24 +822,7 @@\n sqr)\n-%0A%0A    quadrado(n)\n %0A%7D%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-26_13-54-00",
+            "content": "@@ -704,39 +704,8 @@\n 1 %7B%0A\n-        fmt.Println(%221%5E2 = 1%22)%0A\n     \n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-05-26_13-54-53",
+            "content": "@@ -759,66 +759,8 @@\n  %7D%0A%0A\n-    fmt.Printf(%22%25d%5E2 = %25d%5E2 + 2*%25d + 1 = ?%22, n, n-1, n-1)%0A\n     \n@@ -801,16 +801,17 @@\n -1) + 1%0A\n+%0A\n     fmt.\n@@ -819,62 +819,19 @@\n rint\n-f(%22%25d%5E2 = %25d%5E2 + 2*%25d + 1 = %25d%22, n, n-1, n-1, \n+ln(\n result)%0A\n %0A   \n@@ -826,17 +826,16 @@\n result)%0A\n-%0A\n     retu\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-05-26_13-57-20",
+            "content": "@@ -789,34 +789,32 @@\n 2 + 2*%25d + 1 = ?\n-%5Cn\n %22, n, n-1, n-1)%0A\n@@ -894,34 +894,32 @@\n  + 2*%25d + 1 = %25d\n-%5Cn\n %22, n, n-1, n-1, \n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-05-26_13-57-35",
+            "content": "@@ -815,21 +815,16 @@\n 1, n-1)%0A\n-    %0A\n     resu\n@@ -861,21 +861,16 @@\n -1) + 1%0A\n-    %0A\n     fmt.\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-05-26_13-57-46",
+            "content": "package main\nimport \"fmt\"\n\nfunc calcQuadrado(n int) int {\n    return (n-1) * (n-1) + (n-1) * 2 + 1 \n}\n\nfunc quadradoVoid(n int, inicial int, m bool, sqr int) {\n    if n > inicial {\n        return\n    }\n\n    if n == 1 {\n        fmt.Printf(\"%d^2 = 1\\n\", n)\n        sqr = n\n        quadradoVoid(n + 1, inicial, m, sqr)\n    }\n\n    if n > 1 && sqr != 0 {\n        sqr = calcQuadrado(n)\n        fmt.Printf(\"%d^2 = %d^2 + 2*%d + 1 = %d\\n\", n, n-1, n-1, sqr)\n        quadradoVoid(n + 1, inicial, m, sqr)\n        return\n    }\n    \n    if n > 1 && sqr == 0 {\n        fmt.Printf(\"%d^2 = %d^2 + 2*%d + 1 = ?\\n\", n, n-1, n-1)\n        quadradoVoid(n-1, inicial, m, sqr)\n    }\n}\n\nfunc quadrado(n int) int {\n    if n == 1 {\n        fmt.Println(\"1^2 = 1\")\n        return 1\n    }\n\n    fmt.Printf(\"%d^2 = %d^2 + 2*%d + 1 = ?\\n\", n, n-1, n-1)\n    \n    result := quadrado(n - 1) + 2 * (n-1) + 1\n    \n    fmt.Printf(\"%d^2 = %d^2 + 2*%d + 1 = %d\\n\", n, n-1, n-1, result)\n\n    return result\n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    // var m bool\n    // if n > 1 {\n    //     m = true\n    // } else {\n    //     m = false\n    // }\n\n    // var sqr int = 0\n    // quadradoVoid(n, n, m, sqr)\n\n    quadrado(n)\n}\n",
+            "lines": "62"
+        }
+    ]
+}

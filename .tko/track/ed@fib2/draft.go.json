@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-26_14-16-13",
+            "content": "@@ -95,57 +95,8 @@\n  %7D%0A%0A\n-    if n == 3 %7C%7C n == 4%7B%0A        return 2%0A    %7D%0A%0A\n     \n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-05-26_14-16-51",
+            "content": "@@ -163,9 +163,9 @@\n -1) \n-+\n+-\n  fn(\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-05-26_14-17-21",
+            "content": "@@ -24,32 +24,15 @@\n t%22%0A%0A\n-var memo %5B41%5Dint%0A%0A\n func f\n+n\n (n i\n@@ -45,49 +45,12 @@\n t %7B%0A\n-%09if memo%5Bn%5D != 0 %7B%0A%09%09return memo%5Bn%5D%0A%09%7D%0A%0A%09\n+    \n if n\n@@ -67,18 +67,24 @@\n  == 2 %7B%0A\n-%09%09\n+        \n return 1\n@@ -84,21 +84,27 @@\n eturn 1%0A\n-%09%7D%0A%0A%09\n+    %7D%0A%0A    \n if n == \n@@ -118,13 +118,18 @@\n == 4\n- \n %7B%0A\n-%09%09\n+        \n retu\n@@ -137,55 +137,54 @@\n n 2%0A\n-%09%7D%0A%0A%09memo%5Bn%5D =\n+    %7D%0A%0A    return fn(n-1) +\n  f\n+n\n (n-2) \n-+\n+-\n  f\n+n\n (n-\n-3)%0A%0A%09return memo%5Bn%5D\n+4) \n %0A%7D%0A%0A\n@@ -246,15 +246,16 @@\n rintln(f\n+n\n (n))%0A%7D%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-05-26_14-19-11",
+            "content": "@@ -24,15 +24,32 @@\n t%22%0A%0A\n+var memo %5B41%5Dint%0A%0A\n func f\n-n\n (n i\n@@ -58,20 +58,57 @@\n ) int %7B%0A\n-    \n+%09if memo%5Bn%5D != 0 %7B%0A%09%09return memo%5Bn%5D%0A%09%7D%0A%0A%09\n if n == \n@@ -121,24 +121,18 @@\n  == 2 %7B%0A\n-        \n+%09%09\n return 1\n@@ -132,27 +132,21 @@\n eturn 1%0A\n-    %7D%0A%0A    \n+%09%7D%0A%0A%09\n if n == \n@@ -160,18 +160,13 @@\n == 4\n+ \n %7B%0A\n-        \n+%09%09\n retu\n@@ -174,54 +174,55 @@\n n 2%0A\n-    %7D%0A%0A    return fn(n-1) +\n+%09%7D%0A%0A%09memo%5Bn%5D =\n  f\n-n\n (n-2) \n--\n++\n  f\n-n\n (n-\n-4) \n+3)%0A%0A%09return memo%5Bn%5D\n %0A%7D%0A%0A\n@@ -284,16 +284,15 @@\n rintln(f\n-n\n (n))%0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-05-26_14-20-13",
+            "content": "@@ -24,32 +24,15 @@\n t%22%0A%0A\n-var memo %5B41%5Dint%0A%0A\n func f\n+n\n (n i\n@@ -45,49 +45,12 @@\n t %7B%0A\n-%09if memo%5Bn%5D != 0 %7B%0A%09%09return memo%5Bn%5D%0A%09%7D%0A%0A%09\n+    \n if n\n@@ -67,18 +67,24 @@\n  == 2 %7B%0A\n-%09%09\n+        \n return 1\n@@ -84,21 +84,27 @@\n eturn 1%0A\n-%09%7D%0A%0A%09\n+    %7D%0A%0A    \n if n == \n@@ -118,13 +118,18 @@\n == 4\n- \n %7B%0A\n-%09%09\n+        \n retu\n@@ -137,55 +137,54 @@\n n 2%0A\n-%09%7D%0A%0A%09memo%5Bn%5D =\n+    %7D%0A%0A    return fn(n-1) +\n  f\n+n\n (n-2) \n-+\n+-\n  f\n+n\n (n-\n-3)%0A%0A%09return memo%5Bn%5D\n+4) \n %0A%7D%0A%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-05-26_14-20-19",
+            "content": "@@ -284,15 +284,16 @@\n rintln(f\n+n\n (n))%0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-05-26_14-20-26",
+            "content": "package main\nimport \"fmt\"\n\nvar memo [41]int\n\nfunc f(n int) int {\n\tif memo[n] != 0 {\n\t\treturn memo[n]\n\t}\n\n\tif n == 1 || n == 2 {\n\t\treturn 1\n\t}\n\n\tif n == 3 || n == 4 {\n\t\treturn 2\n\t}\n\n\tmemo[n] = f(n-2) + f(n-3)\n\n\treturn memo[n]\n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    fmt.Println(f(n))\n}\n",
+            "lines": "29"
+        }
+    ]
+}

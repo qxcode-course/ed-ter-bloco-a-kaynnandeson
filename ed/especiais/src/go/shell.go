@@ -25,7 +25,7 @@ func ordenar(vet []Pair) {
 		for j := i + 1; j < len(vet); j++ {
 			if vet[j].One < vet[i].One {
 				vet[i], vet[j] = vet[j], vet[i]
-			}			
+			}
 		}
 	}
 }
@@ -66,7 +66,7 @@ func teams(vet []int) []Pair {
 		count.Two = 1
 		for j := i + 1; j < len(vet); j++ {
 			if vet[j] != vet[i] {
-				break	
+				break
 			}
 			if count.One == abs(vet[j]) {
 				count.Two++
@@ -81,10 +81,10 @@ func teams(vet []int) []Pair {
 
 func mnext(vet []int) []int {
 	mVet := make([]int, len(vet))
-	
+
 	for i := 0; i < len(vet); i++ {
 		if vet[i] > 0 {
-			if (i > 0 && vet[i - 1] < 0) || (i < len(vet) - 1 && vet[i + 1] < 0) {
+			if (i > 0 && vet[i-1] < 0) || (i < len(vet)-1 && vet[i+1] < 0) {
 				mVet[i] = 1
 			}
 		}
@@ -98,7 +98,7 @@ func alone(vet []int) []int {
 
 	for i := 0; i < len(vet); i++ {
 		if vet[i] > 0 {
-			if !((i > 0 && vet[i - 1] < 0) || (i < len(vet) - 1 && vet[i + 1] < 0)) {
+			if !((i > 0 && vet[i-1] < 0) || (i < len(vet)-1 && vet[i+1] < 0)) {
 				aVet[i] = 1
 			}
 		}
@@ -108,16 +108,16 @@ func alone(vet []int) []int {
 }
 
 func couple(vet []int) int {
-	if len(vet) >= 1 {
-		return 0
-	}
-
 	count := 0
 
 	for i := 0; i < len(vet); i++ {
-		if i > 0 {
-			if vet[i] == abs(vet[i + 1]) {
+		for j := i + 1; j < len(vet); j++ {
+			if vet[i] == 0 || vet[j] == 0 {
+				continue
+			}
+			if vet[i] == -vet[j] {
 				count++
+				vet[i], vet[j] = 0, 0
 			}
 		}
 	}
@@ -133,21 +133,57 @@ func hasSubseq(vet []int, seq []int, pos int) bool {
 }
 
 func subseq(vet []int, seq []int) int {
-	_ = vet
-	_ = seq
+	for i := 0; i < len(vet); i++ {
+		subseq := true
+		for j := 0; j < len(seq); j++ {
+			if i > len(vet) - len(seq) {
+				subseq = false
+				break
+				} 
+			if vet[i + j] != seq[j] {
+				subseq = false
+				break
+			}
+		}
+		if subseq {
+			return i
+		}
+	}
 	return -1
 }
 
 func erase(vet []int, posList []int) []int {
-	_ = vet
-	_ = posList
-	return nil
+	var newVet []int
+
+	for i := 0; i < len(vet); i++ {
+		remove := true
+		
+		for j := 0; j < len(posList); j++ {
+			if i == posList[j] {
+				remove = false
+			}
+		}
+
+		if remove {
+			newVet = append(newVet, vet[i])
+		}
+	}
+	
+	return newVet
 }
 
 func clear(vet []int, value int) []int {
-	_ = vet
-	_ = value
-	return nil
+	var newVet []int
+
+	for i := 0; i < len(vet); i++ {
+		if vet[i] == value {
+			continue
+		}
+
+		newVet = append(newVet, vet[i])
+	}
+	
+	return newVet
 }
 
 func main() {
