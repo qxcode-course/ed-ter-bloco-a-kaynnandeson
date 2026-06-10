@@ -27,3 +27,27 @@
 2026-06-10 15:22:36, MOVE, v:1, k:ed@bitcoin, mode:EDIT
 2026-06-10 15:26:48, EXEC, v:1, k:ed@bitcoin, mode:FULL, rate:100, size:20
 2026-06-10 15:27:06, SELF, v:1, k:ed@bitcoin, self:1, rate:100, study:20
+2026-06-10 15:29:28, MOVE, v:1, k:ed@bitcoin, mode:BACK
+2026-06-10 15:27:02, MOVE, v:1, k:ed@bitcoin, mode:EDIT
+2026-06-10 15:26:47, MOVE, v:1, k:ed@bitcoin, mode:EDIT
+2026-06-10 15:30:20, MOVE, v:1, k:ed@editor, mode:DOWN
+2026-06-10 15:30:21, MOVE, v:1, k:ed@editor, mode:PICK
+2026-06-10 15:30:42, MOVE, v:1, k:ed@editor, mode:BACK
+2026-06-10 15:30:54, MOVE, v:1, k:ed@permutacoes, mode:DOWN
+2026-06-10 15:30:55, MOVE, v:1, k:ed@permutacoes, mode:PICK
+2026-06-10 15:30:20, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-06-10 15:30:20, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-06-10 15:30:20, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-06-10 15:30:54, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-10 15:30:54, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-10 15:32:48, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-10 15:39:48, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-10 15:43:57, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-10 15:48:41, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:40, size:34
+2026-06-10 15:48:27, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-10 15:48:41, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-10 15:53:40, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:100, size:43
+2026-06-10 15:54:12, SELF, v:1, k:ed@permutacoes, self:1, rate:100, study:30
+2026-06-10 15:54:23, MOVE, v:1, k:ed@permutacoes, mode:BACK
+2026-06-10 15:53:39, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-10 15:53:40, MOVE, v:1, k:ed@permutacoes, mode:EDIT

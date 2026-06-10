@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-10_15-48-41",
+            "content": "@@ -22,22 +22,8 @@\n fmt%22\n-%0Aimport %22sort%22\n %0A%0Afu\n@@ -367,142 +367,8 @@\n ) %7B%0A\n-    chars := %5B%5Drune(s)%0A%0A    sort.Slice(chars, func(i, j int) bool %7B%0A        return chars%5Bi%5D %3C chars%5Bj%5D%0A    %7D)%0A%0A    s = string(chars)%0A%0A\n     \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-06-10_15-53-40",
+            "content": "package main\nimport \"fmt\"\nimport \"sort\"\n\nfunc gerar(s, atual string, usado []bool) {\n    if len(atual) == len(s) {\n        fmt.Println(atual)\n        return\n    }\n\n    for i := 0; i < len(s); i++ {\n        if usado[i] {\n            continue\n        }\n\n        usado[i] = true\n\n        gerar(s, atual + string(s[i]), usado)\n\n        usado[i] = false\n    }\n}\n\nfunc permutar(s string) {\n    chars := []rune(s)\n\n    sort.Slice(chars, func(i, j int) bool {\n        return chars[i] < chars[j]\n    })\n\n    s = string(chars)\n\n    usado := make([]bool, len(s))\n    gerar(s, \"\", usado)\n}\n\nfunc main() {\n    var s string\n\n    fmt.Scan(&s)\n\n    permutar(s)\n}\n",
+            "lines": "43"
+        }
+    ]
+}
