@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-08_23-50-11",
+            "content": "@@ -353,20 +353,8 @@\n   %7D%0A\n-        n--%0A\n     \n@@ -444,124 +444,7 @@\n s(n)\n-%0A%0A    fmt.Printf(%22%5B %22)%0A    for i := 0; i %3C len(vet); i++ %7B%0A        fmt.Print(vet%5Bi%5D, %22, %22)%0A    %7D%0A    fmt.Println(%22%5D%22)\n %0A%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-06-08_23-51-59",
+            "content": "@@ -471,16 +471,17 @@\n rintf(%22%5B\n+ \n %22)%0A    f\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-06-08_23-52-08",
+            "content": "@@ -514,79 +514,8 @@\n + %7B%0A\n-        if i == len(vet) - 1 %7B%0A            fmt.Print(vet%5Bi%5D)%0A        %7D%0A\n     \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-06-08_23-52-40",
+            "content": "@@ -575,29 +575,8 @@\n i%5D)%0A\n-            continue%0A\n     \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-06-08_23-52-48",
+            "content": "@@ -534,16 +534,20 @@\n len(vet)\n+ - 1\n  %7B%0A     \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-06-08_23-53-05",
+            "content": "@@ -538,12 +538,8 @@\n vet)\n- - 1\n  %7B%0A \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-06-08_23-53-11",
+            "content": "@@ -351,15 +351,9 @@\n     \n-    n--\n+%7D\n %0A   \n@@ -349,33 +349,35 @@\n       %7D%0A        \n-%7D\n+n--\n %0A    %7D%0A%0A    retu\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-06-08_23-54-50",
+            "content": "package main\nimport \"fmt\"\n\nfunc ehPrimo(n int) bool {\n    if n < 2 {\n        return false\n    }\n\n    for i := 2; i*i <= n; i++ {\n        if n % i == 0 {\n            return false\n        }\n    }\n\n    return true\n}\n\nfunc primos(n int) []int {\n    var vet []int\n\n    for i := 2; n > 0; i++ {\n        if ehPrimo(i) {\n            vet = append(vet, i)\n            n--\n        }\n    }\n\n    return vet\n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    vet := primos(n)\n\n    fmt.Printf(\"[\")\n    for i := 0; i < len(vet); i++ {\n        if i == len(vet) - 1 {\n            fmt.Print(vet[i])\n            continue\n        }\n        fmt.Print(vet[i], \", \")\n    }\n    fmt.Println(\"]\")\n}\n",
+            "lines": "46"
+        }
+    ]
+}

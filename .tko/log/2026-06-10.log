@@ -1,0 +1,29 @@
+2026-06-10 14:50:01, MOVE, v:1, k:ed@santo, mode:DOWN
+2026-06-10 14:50:02, MOVE, v:1, k:ed@santo, mode:PICK
+2026-06-10 14:50:01, MOVE, v:1, k:ed@santo, mode:EDIT
+2026-06-10 14:50:01, MOVE, v:1, k:ed@santo, mode:EDIT
+2026-06-10 14:54:08, MOVE, v:1, k:ed@santo, mode:EDIT
+2026-06-10 14:59:47, MOVE, v:1, k:ed@santo, mode:EDIT
+2026-06-10 14:59:58, EXEC, v:1, k:ed@santo, mode:FULL, rate:0, size:20
+2026-06-10 15:01:17, EXEC, v:1, k:ed@santo, mode:FULL, size:20, fail:COMP
+2026-06-10 15:02:02, EXEC, v:1, k:ed@santo, mode:FULL, rate:0, size:20
+2026-06-10 15:02:34, EXEC, v:1, k:ed@santo, mode:FULL, rate:100, size:20
+2026-06-10 15:02:45, SELF, v:1, k:ed@santo, self:1, rate:100, study:10
+2026-06-10 15:02:46, EXEC, v:1, k:ed@santo, mode:FULL, rate:100
+2026-06-10 15:02:47, MOVE, v:1, k:ed@santo, mode:BACK
+2026-06-10 15:02:51, MOVE, v:1, k:ed@bitcoin, mode:DOWN
+2026-06-10 15:02:52, MOVE, v:1, k:ed@bitcoin, mode:PICK
+2026-06-10 15:02:33, MOVE, v:1, k:ed@santo, mode:EDIT
+2026-06-10 15:02:46, MOVE, v:1, k:ed@santo, mode:EDIT
+2026-06-10 15:02:51, MOVE, v:1, k:ed@bitcoin, mode:EDIT
+2026-06-10 15:02:51, MOVE, v:1, k:ed@bitcoin, mode:EDIT
+2026-06-10 15:04:44, MOVE, v:1, k:ed@bitcoin, mode:EDIT
+2026-06-10 15:09:47, MOVE, v:1, k:ed@bitcoin, mode:EDIT
+2026-06-10 15:14:47, MOVE, v:1, k:ed@bitcoin, mode:EDIT
+2026-06-10 15:17:21, MOVE, v:1, k:ed@bitcoin, mode:EDIT
+2026-06-10 15:22:37, EXEC, v:1, k:ed@bitcoin, mode:FULL, rate:0, size:27
+2026-06-10 15:23:40, EXEC, v:1, k:ed@bitcoin, mode:FULL, size:20, fail:COMP
+2026-06-10 15:24:07, MOVE, v:1, k:ed@bitcoin, mode:EDIT
+2026-06-10 15:22:36, MOVE, v:1, k:ed@bitcoin, mode:EDIT
+2026-06-10 15:26:48, EXEC, v:1, k:ed@bitcoin, mode:FULL, rate:100, size:20
+2026-06-10 15:27:06, SELF, v:1, k:ed@bitcoin, self:1, rate:100, study:20

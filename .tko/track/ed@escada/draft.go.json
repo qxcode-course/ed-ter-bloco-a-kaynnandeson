@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-08_23-36-04",
+            "content": "@@ -100,9 +100,9 @@\n urn \n-0\n+n\n %0A%7D%0A%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-06-08_23-36-36",
+            "content": "@@ -93,45 +93,16 @@\n     \n-if n %3C 6 %7B%0A        return n - 1%0A    %7D\n+return 0\n %0A%7D%0A%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-06-08_23-37-24",
+            "content": "@@ -130,22 +130,8 @@\n    %7D\n-%0A%0A    return 0\n %0A%7D%0A%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-08_23-37-33",
+            "content": "@@ -98,12 +98,11 @@\n f n \n-== 3\n+%3C 6\n  %7B%0A \n@@ -115,17 +115,21 @@\n  return \n-2\n+n - 1\n %0A    %7D%0A%0A\n@@ -143,33 +143,9 @@\n urn \n-escada(n-1) + escada(n-3)\n+0\n %0A%7D%0A%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-08_23-41-00",
+            "content": "package main\nimport \"fmt\"\n\nfunc escada(n int) int {\n    if n <= 2 {\n        return 1\n    }\n\n    if n == 3 {\n        return 2\n    }\n\n    return escada(n-1) + escada(n-3)\n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    fmt.Println(escada(n))\n}\n",
+            "lines": "21"
+        }
+    ]
+}

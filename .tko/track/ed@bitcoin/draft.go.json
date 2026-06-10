@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-10_15-22-37",
+            "content": "@@ -110,58 +110,187 @@\n   %7D%0A\n+  \n %0A    \n-return descobrirE\n+var vet %5B%5Dint%0A%0A    if n %3E k %7B%0A        vet = append(vet, int(math.Ceil(float64\n (n\n+)\n /2\n-, k) + descobrirE\n+.0)))%0A        vet = append(vet, int(math.Floor(float64\n (n\n+)\n /2\n-, k\n+.0)))%0A    %7D%0A%0A    return len(vet\n )%0A%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-06-10_15-23-40",
+            "content": "@@ -133,85 +133,32 @@\n irE(\n-int(math.Ceil(float64(n)/2.0)), k) + descobrirE(int(math.Floor(float64(n)/2))\n+n/2, k) + descobrirE(n/2\n , k)\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-06-10_15-26-48",
+            "content": "package main\nimport \"fmt\"\nimport \"math\"\n\n\nfunc descobrirE(n, k int) int {\n    if n <= k {\n        return 1\n    }\n\n    return descobrirE(int(math.Ceil(float64(n)/2.0)), k) + descobrirE(int(math.Floor(float64(n)/2)), k)\n}\n\nfunc main() {\n    var n, k int\n\n    fmt.Scan(&n, &k)\n\n    fmt.Println(descobrirE(n, k))\n}\n",
+            "lines": "20"
+        }
+    ]
+}

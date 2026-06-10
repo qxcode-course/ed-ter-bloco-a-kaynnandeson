@@ -1,0 +1,69 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-08_23-17-41",
+            "content": "@@ -212,10 +212,8 @@\n rint\n-ln\n (seq\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-08_23-17-50",
+            "content": "@@ -117,17 +117,17 @@\n  return \n-n\n+m\n %0A    %7D%0A%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-08_23-18-06",
+            "content": "@@ -140,12 +140,8 @@\n turn\n- n *\n  m%0A%7D\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-08_23-18-51",
+            "content": "@@ -145,15 +145,9 @@\n n * \n-(m - 1)\n+m\n %0A%7D%0A%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-08_23-19-29",
+            "content": "@@ -139,16 +139,25 @@\n eturn n \n+* (m - 1)\n %0A%7D%0A%0Afunc\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-08_23-20-22",
+            "content": "@@ -136,121 +136,15 @@\n   re\n-sult := n%0A    it := 3%0A    for i := 0; i %3C m - 2; i++ %7B%0A        result += it%0A        it++ %0A    %7D%0A    return result\n+turn n \n %0A%7D%0A%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-08_23-23-31",
+            "content": "@@ -148,25 +148,25 @@\n n%0A    it := \n-n\n+3\n %0A    for i :\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-06-08_23-23-56",
+            "content": "@@ -49,29 +49,8 @@\n t %7B%0A\n-    pontos := 1%0A    %0A\n     \n@@ -81,14 +81,9 @@\n urn \n-pontos\n+1\n %0A   \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-06-08_23-30-03",
+            "content": "@@ -121,27 +121,70 @@\n    i\n-ncremento := n - 1%0A\n+f m == 2 %7B%0A        return n%0A    %7D%0A%0A    result := n%0A    it := n\n %0A   \n@@ -225,38 +225,40 @@\n     \n-pontos += incremento%0A    %7D\n+result += it%0A        it++ \n %0A   \n+ %7D\n %0A   \n@@ -265,22 +265,22 @@\n  return \n-pontos\n+result\n %0A%7D%0A%0Afunc\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-06-08_23-30-59",
+            "content": "@@ -154,16 +154,20 @@\n  := \n-2\n+0\n ; i %3C m\n+ - 2\n ; i+\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-06-08_23-31-20",
+            "content": "@@ -199,36 +199,8 @@\n nto%0A\n-        incremento += n - 2%0A\n     \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-06-08_23-31-39",
+            "content": "@@ -156,17 +156,16 @@\n = 2; i %3C\n-=\n  m; i++ \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-06-08_23-32-24",
+            "content": "package main\nimport \"fmt\"\n\nfunc seq(n, m int) int {\n    pontos := 1\n    \n    if m == 1  {\n        return pontos\n    }\n\n    incremento := n - 1\n\n    for i := 2; i <= m; i++ {\n        pontos += incremento\n        incremento += n - 2\n    }\n   \n    return pontos\n}\n\nfunc main() {\n    var n, m int\n    fmt.Scan(&n, &m)\n\n    fmt.Println(seq(n, m))\n}\n",
+            "lines": "26"
+        }
+    ]
+}

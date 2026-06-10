@@ -1,0 +1,169 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-08_11-30-31",
+            "content": "@@ -24,87 +24,8 @@\n t%22%0A%0A\n-func abs(n int) int %7B%0A    if n %3E= 0 %7B%0A        return n%0A    %7D%0A%0A    return -n%0A%7D%0A%0A\n func\n@@ -47,24 +47,24 @@\n e, f int) %7B%0A\n+\n     var n in\n@@ -204,120 +204,22 @@\n    n\n-N := abs(n) + 1%0A        if n %3E 0 %7B%0A            n = nN%0A        %7D%0A        if n %3C 0 %7B%0A            n = -nN%0A        %7D\n+ = n - (2 * n)\n %0A   \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-06-08_11-33-18",
+            "content": "@@ -330,17 +330,16 @@\n     n = \n--\n nN%0A     \n@@ -370,32 +370,33 @@\n             n = \n+-\n nN%0A        %7D%0A   \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-08_11-36-26",
+            "content": "@@ -338,29 +338,8 @@\n -nN%0A\n-            continue%0A\n     \n@@ -483,11 +483,45 @@\n n, e, f)\n+%0A%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-08_11-38-10",
+            "content": "@@ -140,25 +140,24 @@\n   var n int%0A\n-%0A\n     if f == \n@@ -221,30 +221,8 @@\n    %7D\n-%0A%0A    fmt.Printf(%22%5B %22)\n %0A   \n@@ -272,13 +272,8 @@\n nt(n\n-, %22 %22\n )%0A  \n@@ -417,36 +417,14 @@\n   %7D%0A\n+\n     %7D%0A\n-    fmt.Printf(%22%5D%5Cn%22)%0A\n %7D%0A%0Af\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-06-08_11-39-56",
+            "content": "@@ -295,97 +295,12 @@\n nt(n\n-)%0A        if e == i + 1 %7B%0A            fmt.Printf(%22%3E%22)%0A        %7D%0A            fmt.Printf(%22%3E\n+, %22 \n %22)%0A \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-06-08_11-40-49",
+            "content": "@@ -363,21 +363,16 @@\n         \n-%0A    \n     fmt.\n@@ -379,17 +379,17 @@\n Printf(%22\n- \n+%3E\n %22)%0A     \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-06-08_11-41-04",
+            "content": "@@ -293,17 +293,16 @@\n rint(n)%0A\n-%0A\n         \n@@ -351,24 +351,32 @@\n )%0A        %7D%0A\n+        \n %0A        fmt\n@@ -388,25 +388,16 @@\n tf(%22 %22)%0A\n-        %0A\n         \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-06-08_11-41-11",
+            "content": "@@ -228,22 +228,24 @@\n     \n-var vet %5B%5Dint%0A\n+fmt.Printf(%22%5B %22)\n %0A   \n@@ -284,27 +284,107 @@\n     \n-vet = append(vet, n\n+fmt.Print(n)%0A%0A        if e == i + 1 %7B%0A            fmt.Printf(%22%3E%22)%0A        %7D%0A%0A        fmt.Printf(%22 %22\n )%0A  \n@@ -543,102 +543,8 @@\n   %7D%0A\n-    fmt.Printf(%22%5B %22)%0A    for i := 0; i %3C len(vet); i++ %7B%0A        fmt.Print(vet%5Bi%5D, %22 %22)%0A    %7D%0A\n     \n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-06-08_11-48-22",
+            "content": "@@ -542,91 +542,10 @@\n t%5Bi%5D\n-)%0A        if e == i + 1 %7B%0A            fmt.Printf(%22%3E%22)%0A        %7D%0A        fmt.Printf(\n+, \n %22 %22)\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-08_11-48-58",
+            "content": "@@ -103,237 +103,8 @@\n %0A%7D%0A%0A\n-func printar(vet %5B%5Dint, e int) %7B%0A    fmt.Printf(%22%5B %22)%0A    for i := 0; i %3C len(vet); i++ %7B%0A        fmt.Print(vet%5Bi%5D)%0A        if e == i %7B%0A            fmt.Printf(%22%3E%22)%0A        %7D%0A        fmt.Printf(%22 %22)%0A    %7D%0A    fmt.Printf(%22%5D%5Cn%22)%0A%7D%0A%0A\n func\n@@ -461,57 +461,110 @@\n   %7D%0A\n-%0A\n     \n-e-- %0A    printar(vet, e)%0A%0A    for len(vet) %3E\n+fmt.Printf(%22%5B %22)%0A    for i := 0; i %3C len(vet); i++ %7B%0A        fmt.Print(vet%5Bi%5D)%0A        if e == i +\n  1 %7B\n@@ -576,51 +576,89 @@\n     \n+  \n-matar(vet, e)%0A        printar(vet, e)%0A    %7D\n+  fmt.Printf(%22%3E%22)%0A        %7D%0A        fmt.Printf(%22 %22)%0A    %7D%0A    fmt.Printf(%22%5D%5Cn%22)\n %0A%7D%0A%0A\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-06-08_11-54-14",
+            "content": "@@ -332,47 +332,8 @@\n %0A%7D%0A%0A\n-func matar(vet %5B%5Dint, e int) %7B%0A    %0A%7D%0A%0A\n func\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-06-08_11-54-35",
+            "content": "@@ -359,16 +359,20 @@\n  int) %7B%0A\n+    \n %0A%7D%0A%0Afunc\n@@ -759,19 +759,16 @@\n  e)%0A%0A   \n- //\n  for len\n@@ -778,27 +778,24 @@\n t) %3E 1 %7B%0A   \n- //\n      matar(v\n@@ -804,19 +804,16 @@\n , e)%0A   \n- //\n      pri\n@@ -832,11 +832,8 @@\n %0A   \n- //\n  %7D%0A%7D\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-06-08_11-54-46",
+            "content": "@@ -363,77 +363,8 @@\n ) %7B%0A\n-    if vet%5Be%5D %3E 0 %7B%0A        vet = append(vet%5B:e%5D, vet%5Be+1:%5D...)%0A    %7D\n %0A%7D%0A%0A\n@@ -751,24 +751,27 @@\n vet, e)%0A%0A   \n+ //\n  for len(vet\n@@ -777,24 +777,27 @@\n t) %3E 1 %7B%0A   \n+ //\n      matar(v\n@@ -802,24 +802,27 @@\n (vet, e)%0A   \n+ //\n      printar\n@@ -833,16 +833,19 @@\n , e)%0A   \n+ //\n  %7D%0A%7D%0A%0Afu\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-06-08_11-56-13",
+            "content": "@@ -433,78 +433,8 @@\n   %7D%0A\n-    if vet%5Be%5D %3C 0 %7B%0A        vet = append(vet%5Be:%5D, vet%5Be-1:%5D...)%0A    %7D%0A\n %7D%0A%0Af\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-06-08_11-56-53",
+            "content": "@@ -356,22 +356,16 @@\n , e int)\n- %5B%5Dint\n  %7B%0A    i\n@@ -502,24 +502,8 @@\n    %7D\n-%0A%0A    return vet\n %0A%7D%0A%0A\n@@ -921,22 +921,16 @@\n %0A       \n- vet =\n  matar(v\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-06-08_11-58-44",
+            "content": "@@ -416,10 +416,8 @@\n t%5B:e\n-+1\n %5D, v\n@@ -421,17 +421,17 @@\n , vet%5Be+\n-2\n+1\n :%5D...)%0A \n@@ -481,18 +481,16 @@\n nd(vet%5Be\n--1\n :%5D, vet%5B\n@@ -495,9 +495,9 @@\n t%5Be-\n-2\n+1\n :%5D..\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-06-08_12-00-26",
+            "content": "@@ -972,20 +972,8 @@\n  e)%0A\n-        e++%0A\n     \n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-06-08_12-01-04",
+            "content": "@@ -369,40 +369,8 @@\n t %7B%0A\n-    alvo := (e + 1) %25 len(vet)%0A%0A\n     \n@@ -415,27 +415,21 @@\n et%5B:\n-alvo\n+e+1\n %5D, vet%5B\n-alvo + 1\n+e+2\n :%5D..\n@@ -486,20 +486,19 @@\n vet%5B\n-alvo\n+e-1\n :%5D, vet%5B\n alvo\n@@ -497,16 +497,11 @@\n vet%5B\n-alvo - 1\n+e-2\n :%5D..\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-06-08_12-02-41",
+            "content": "@@ -373,139 +373,34 @@\n     \n-var \n alvo \n-int%0A%0A    if vet%5Be%5D %3E 0 %7B%0A        alvo = (e + 1) %25 len(vet)%0A    %7D else %7B%0A        alvo = (e - 1 + len(vet)) %25 len(vet)%0A    %7D\n+:= (e + 1) %25 len(vet)\n %0A%0A  \n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-06-08_12-05-23",
+            "content": "@@ -1113,24 +1113,36 @@\n tar(vet, e)%0A\n+        e++%0A\n         prin\n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-06-08_12-05-56",
+            "content": "@@ -506,22 +506,45 @@\n  %7D%0A%0A    \n-return\n+if vet%5Be%5D %3E 0 %7B%0A        vet =\n  append(\n@@ -567,17 +567,19 @@\n alvo\n-+\n+ + \n 1:%5D...)%0A\n %7D%0A%0Af\n@@ -574,16 +574,116 @@\n 1:%5D...)%0A\n+    %7D%0A    if vet%5Be%5D %3C 0 %7B%0A        vet = append(vet%5Balvo:%5D, vet%5Balvo - 1:%5D...)%0A    %7D%0A%0A    return vet%0A\n %7D%0A%0Afunc \n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-06-08_12-06-28",
+            "content": "@@ -361,20 +361,13 @@\n nt) \n-(\n %5B%5Dint\n-, int)\n  %7B%0A \n@@ -506,67 +506,8 @@\n  %7D%0A%0A\n-    if alvo %3C e %7B%0A        e--%0A    %7D%0A%0A    e = e %25 len(vet)%0A%0A\n     \n@@ -548,19 +548,16 @@\n +1:%5D...)\n-, e\n %0A%7D%0A%0Afunc\n@@ -975,19 +975,16 @@\n      vet\n-, e\n  = matar\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-06-08_12-10-07",
+            "content": "@@ -517,85 +517,49 @@\n     \n-vet = append(vet%5B:alvo%5D, vet%5Balvo+1:%5D...)%0A%0A    if len(vet) %3E 0 %7B\n+if alvo %3C e %7B%0A        e--\n %0A    \n+%7D%0A%0A\n     e = \n alvo\n@@ -554,20 +554,17 @@\n     e = \n-alvo\n+e\n  %25 len(v\n@@ -562,30 +562,24 @@\n e %25 len(vet)\n-%0A    %7D\n %0A%0A    return\n@@ -579,19 +579,51 @@\n  return \n-vet\n+append(vet%5B:alvo%5D, vet%5Balvo+1:%5D...)\n , e%0A%7D%0A%0Af\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-06-08_12-11-40",
+            "content": "@@ -511,30 +511,8 @@\n    %7D\n-%0A    %0A    prox := alvo\n %0A%0A  \n@@ -594,12 +594,12 @@\n e = \n-prox\n+alvo\n  %25 l\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-06-08_12-16-08",
+            "content": "@@ -508,17 +508,22 @@\n )%0A    %7D%0A\n-%0A\n+    %0A \n    prox \n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-06-08_12-16-40",
+            "content": "@@ -201,133 +201,46 @@\n     \n-if e == i %7B%0A            if vet%5Bi%5D %3E 0 %7B%0A                fmt.Print(vet%5Bi%5D, %22%3E%22)%0A            %7D%0A            if vet%5Bi%5D %3C 0 %7B%0A    \n+fmt.Print(vet%5Bi%5D)%0A        if e == i %7B%0A\n     \n@@ -260,81 +260,13 @@\n rint\n+f\n (%22\n-%3C%22, vet%5Bi%5D)%0A            %7D%0A        %7D else %7B%0A            fmt.Print(vet%5Bi%5D\n+%3E%22\n )%0A  \n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-06-08_12-18-52",
+            "content": "@@ -602,88 +602,8 @@\n vet)\n-%0A%0A        vet = append(vet%5B:alvo%5D, vet%5Balvo+1:%5D...)%0A%0A        e = alvo %25 len(vet)\n %0A   \n@@ -657,21 +657,40 @@\n en(vet)%0A\n-%0A\n     \n+%7D%0A%0A   prox := alvo%0A%0A\n     vet \n@@ -736,52 +736,25 @@\n     \n-    if alvo %3C e %7B%0A            e--%0A        %7D%0A\n+if len(vet) %3E 0 %7B\n %0A   \n@@ -762,23 +762,20 @@\n     e = \n-(e + 1)\n+prox\n  %25 len(v\n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-06-08_12-21-01",
+            "content": "@@ -603,97 +603,133 @@\n et)%0A\n+%0A\n     \n-%7D else %7B%0A        alvo = (e - 1 + len(vet)) %25 len(vet)%0A    %7D%0A%0A    proxEspada :\n+    vet = append(vet%5B:alvo%5D, vet%5Balvo+1:%5D...)%0A%0A        e = alvo %25 len(vet)%0A    %7D else %7B%0A        alvo \n = (e \n-+\n+-\n  1\n+ + len(vet)\n ) %25 \n@@ -738,24 +738,28 @@\n n(vet)%0A%0A    \n+ \n+   \n vet = append\n@@ -797,111 +797,57 @@\n     \n-if len(vet) == 0 %7B%0A        return vet, 0%0A\n+    if alvo %3C e %7B%0A        \n     \n-%7D%0A\n+e--\n %0A    \n-if alvo %3C proxEspada %7B%0A        proxEspada--\n+    %7D%0A\n %0A    \n-%7D%0A%0A\n     \n@@ -855,29 +855,13 @@\n  = (\n-proxEspada + len(vet)\n+e + 1\n ) %25 \n@@ -864,24 +864,30 @@\n ) %25 len(vet)\n+%0A    %7D\n %0A%0A    return\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-06-08_12-24-15",
+            "content": "@@ -660,24 +660,62 @@\n vet)%0A    %7D%0A%0A\n+    proxEspada := (e + 1) %25 len(vet)%0A%0A\n     vet = ap\n@@ -815,17 +815,26 @@\n  alvo %3C \n-e\n+proxEspada\n  %7B%0A     \n@@ -836,17 +836,26 @@\n         \n-e\n+proxEspada\n --%0A    %7D\n@@ -861,29 +861,45 @@\n %7D%0A%0A    e = (\n-e + 1\n+proxEspada + len(vet)\n ) %25 len(vet)\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-06-08_12-25-41",
+            "content": "@@ -668,46 +668,8 @@\n  %7D%0A%0A\n-    novaEspada := (e + 2) %25 len(vet)%0A%0A\n     \n@@ -777,26 +777,17 @@\n  alvo %3C \n-novaEspada\n+e\n  %7B%0A     \n@@ -789,26 +789,17 @@\n         \n-novaEspada\n+e\n --%0A    %7D\n@@ -808,43 +808,18 @@\n     \n-novaEspada = (novaEspada + len(vet)\n+e = (e + 1\n ) %25 \n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-06-08_12-30-46",
+            "content": "@@ -925,26 +925,17 @@\n rn vet, \n-novaEspada\n+e\n %0A%7D%0A%0Afunc\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-06-08_12-31-31",
+            "content": "@@ -660,24 +660,62 @@\n vet)%0A    %7D%0A%0A\n+    novaEspada := (e + 2) %25 len(vet)%0A%0A\n     vet = ap\n@@ -815,17 +815,26 @@\n  alvo %3C \n-e\n+novaEspada\n  %7B%0A     \n@@ -836,17 +836,26 @@\n         \n-e\n+novaEspada\n --%0A    %7D\n@@ -864,18 +864,43 @@\n     \n-e = (e + 1\n+novaEspada = (novaEspada + len(vet)\n ) %25 \n@@ -925,17 +925,26 @@\n rn vet, \n-e\n+novaEspada\n %0A%7D%0A%0Afunc\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-06-08_12-32-26",
+            "content": "package main\nimport \"fmt\"\n\nfunc abs(n int) int {\n    if n >= 0 {\n        return n\n    }\n\n    return -n\n}\n\nfunc printar(vet []int, e int) {\n    fmt.Printf(\"[ \")\n    for i := 0; i < len(vet); i++ {\n        if e == i {\n            if vet[i] > 0 {\n                fmt.Print(vet[i], \">\")\n            }\n            if vet[i] < 0 {\n                fmt.Print(\"<\", vet[i])\n            }\n        } else {\n            fmt.Print(vet[i])\n        }\n        fmt.Printf(\" \")\n    }\n    fmt.Printf(\"]\\n\")\n}\n\nfunc matar(vet []int, e int) ([]int, int) {\n    var alvo int\n\n    if vet[e] > 0 {\n        alvo = (e + 1) % len(vet)\n    } else {\n        alvo = (e - 1 + len(vet)) % len(vet)\n    }\n\n    vet = append(vet[:alvo], vet[alvo+1:]...)\n\n    if len(vet) == 0 {\n        return vet, 0\n    }\n\n    if alvo < e {\n        e--\n    }\n\n    e = (e + 1) % len(vet)\n\n    return vet, e\n}\n\nfunc princesa(tam, e, f int) {\n    var n int\n\n    if f == 1 {\n        n = 1\n    }\n    if f == -1 {\n        n = -1\n    }\n\n    var vet []int\n\n    for i := 0; i < tam; i++ {\n        vet = append(vet, n)\n        \n        nN := abs(n) + 1\n        if n > 0 {\n            n = -nN\n            continue\n        }\n        if n < 0 {\n            n = nN\n        }\n    }\n\n    e-- \n    printar(vet, e)\n\n    for len(vet) > 1 {\n        vet, e = matar(vet, e)\n        printar(vet, e)\n    }\n}\n\nfunc main() {\n    var n, e, f int\n\n    fmt.Scan(&n, &e, &f)\n\n    princesa(n, e, f)\n}\n",
+            "lines": "94"
+        }
+    ]
+}
