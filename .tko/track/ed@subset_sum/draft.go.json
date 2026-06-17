@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-11_15-42-38",
+            "content": "package main\nimport \"fmt\"\n\nfunc backtracking(vet []int, i, soma, k int) bool {\n    if soma == k {\n        return true\n    }\n\n    if i == len(vet) || soma > k {\n        return false\n    }\n\n    if backtracking(vet, i+1, soma+vet[i], k) {\n        return true\n    }\n\n    if backtracking(vet, i+1, soma, k) {\n        return true\n    }\n\n    return false\n}\n\nfunc verificarSoma(vet []int, k int) bool {\n    return backtracking(vet, 0, 0, k)\n}\n\nfunc main() {\n    var n, k int\n\n    fmt.Scan(&n, &k)\n\n    vet := make([]int, n)\n\n    for i := 0; i < n; i++ {\n        fmt.Scan(&vet[i])\n    }\n\n    if verificarSoma(vet, k) {\n        fmt.Println(\"true\")\n    } else {\n        fmt.Println(\"false\")\n    }\n}\n",
+            "lines": "44"
+        }
+    ]
+}

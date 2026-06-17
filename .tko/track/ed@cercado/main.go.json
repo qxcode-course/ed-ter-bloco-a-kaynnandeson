@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-17_13-23-17",
+            "content": "@@ -118,40 +118,17 @@\n  %7B%0A%09\n-if len(board) == 0 %7B%0A%09%09return%0A%09%7D\n+_ = board\n %0A%7D%0A%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-06-17_13-27-27",
+            "content": "@@ -151,145 +151,8 @@\n %0A%09%7D%0A\n-%0A%09l := len(board)%0A%09c := len(board%5B0%5D) %0A%0A%09visitado := make(%5B%5D%5B%5Dbool, l)%0A%09for i := range visitado %7B%0A%09%09visitado%5Bi%5D = make(%5B%5Dbool, c)%0A%09%7D%0A%0A%09%0A%0A\n %7D%0A%0A/\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-06-17_13-30-26",
+            "content": "@@ -150,18 +150,16 @@\n n%0A%09%7D%0A%0A%09l\n-in\n  := len(\n@@ -167,18 +167,16 @@\n oard)%0A%09c\n-ol\n  := len(\n@@ -216,18 +216,16 @@\n %5Dbool, l\n-in\n )%0A%09for i\n@@ -279,208 +279,15 @@\n l, c\n-ol\n )%0A%09%7D%0A%0A%09\n-var dfs func(int, int)%0A%0A%09dfs = func(l, c int) %7B%0A%09%09if l %3C 0 %7C%7C l %3E lin %7C%7C c %3C 0 %7C%7C c %3E col %7B%0A%09%09%09return%0A%09%09%7D %0A%0A%09%09visitado%5Bl%5D%5Bc%5D = true%0A%0A%09%09dfs(l+1, c)%0A%09%09dfs(l-1, c)%0A%09%09dfs(l, c+1)%0A%09%09dfs(l, c-1)%0A%09%7D\n %0A%0A%7D%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-06-17_13-34-00",
+            "content": "@@ -487,127 +487,8 @@\n %09%7D%0A%0A\n-%09for l := 0; l %3C lin; l++ %7B%0A%09%09dfs(l, 0)%0A%09%09dfs(l, col-1)%0A%09%7D%0A%0A%09for c := 0; c %3C col; c++ %7B%0A%09%09dfs(0, c)%0A%09%09dfs(lin-1, c)%0A%09%7D%0A\n %7D%0A%0A/\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-06-17_13-35-50",
+            "content": "@@ -402,67 +402,8 @@\n %7D %0A%0A\n-%09%09if board%5Bl%5D%5Bc%5D == 'O' %7C%7C visitado%5Bl%5D%5Bc%5D %7B%0A%09%09%09return%0A%09%09%7D%0A%0A\n %09%09vi\n@@ -602,18 +602,16 @@\n , c)%0A%09%7D%0A\n-%0A%0A\n %7D%0A%0A// N%C3%83\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-06-17_13-36-47",
+            "content": "@@ -666,144 +666,8 @@\n %09%7D%0A%0A\n-%09for l := 0; l %3C lin; l++ %7B%0A%09%09for c := 0; c %3C col; c++ %7B%0A%09%09%09if board%5Bl%5D%5Bc%5D == 'O' && !visitado%5Bl%5D%5Bc%5D %7B%0A%09%09%09%09board%5Bl%5D%5Bc%5D = 'X'%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-06-17_13-38-26",
+            "content": "@@ -355,17 +355,16 @@\n 0 %7C%7C l %3E\n-=\n  lin %7C%7C \n@@ -375,17 +375,16 @@\n 0 %7C%7C c %3E\n-=\n  col %7B%0A%09\n@@ -415,17 +415,17 @@\n d%5Bl%5D%5Bc%5D \n-!\n+=\n = 'O' %7C%7C\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-06-17_13-39-40",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00c3O ALTERE A ASSINATURA DA FUN\u00c7\u00c3O solve\nfunc solve(board [][]byte) {\n\tif len(board) == 0 {\n\t\treturn\n\t}\n\n\tlin := len(board)\n\tcol := len(board[0]) \n\n\tvisitado := make([][]bool, lin)\n\tfor i := range visitado {\n\t\tvisitado[i] = make([]bool, col)\n\t}\n\n\tvar dfs func(int, int)\n\n\tdfs = func(l, c int) {\n\t\tif l < 0 || l >= lin || c < 0 || c >= col {\n\t\t\treturn\n\t\t} \n\n\t\tif board[l][c] != 'O' || visitado[l][c] {\n\t\t\treturn\n\t\t}\n\n\t\tvisitado[l][c] = true\n\n\t\tdfs(l+1, c)\n\t\tdfs(l-1, c)\n\t\tdfs(l, c+1)\n\t\tdfs(l, c-1)\n\t}\n\n\tfor l := 0; l < lin; l++ {\n\t\tdfs(l, 0)\n\t\tdfs(l, col-1)\n\t}\n\n\tfor c := 0; c < col; c++ {\n\t\tdfs(0, c)\n\t\tdfs(lin-1, c)\n\t}\n\n\tfor l := 0; l < lin; l++ {\n\t\tfor c := 0; c < col; c++ {\n\t\t\tif board[l][c] == 'O' && !visitado[l][c] {\n\t\t\t\tboard[l][c] = 'X'\n\t\t\t}\n\t\t}\n\t}\n}\n\n// N\u00c3O ALTERE A MAIN\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar nrows, ncols int\n\tfmt.Sscanf(scanner.Text(), \"%d %d\", &nrows, &ncols)\n\tboard := make([][]byte, nrows)\n\tfor i := 0; i < nrows; i++ {\n\t\tscanner.Scan()\n\t\tboard[i] = []byte(scanner.Text())\n\t}\n\tsolve(board)\n\tfor _, row := range board {\n\t\tfmt.Println(string(row))\n\t}\n}\n",
+            "lines": "76"
+        }
+    ]
+}

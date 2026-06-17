@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-11_19-24-21",
+            "content": "package main\nimport \"fmt\"\n\nfunc resolver(linha, n int, col, dg1, dg2 []bool) int {\n    if linha == n {\n        return 1\n    }\n\n    total := 0\n\n    for c := 0; c < n; c++ {\n        d1 := linha - c + (n - 1)\n        d2 := linha + c\n\n        if col[c] || dg1[d1] || dg2[d2] {\n            continue\n        }\n\n        col[c] = true\n        dg1[d1] = true\n        dg2[d2] = true\n\n        total += resolver(linha + 1, n, col, dg1, dg2)\n\n        col[c] = false\n        dg1[d1] = false\n        dg2[d2] = false\n    }\n    \n    return total\n}\n\nfunc nRainhas(n int, tabuleiro [][]int) int {\n    col := make([]bool, n)\n    dg1 := make([]bool, 2 * n-1)\n    dg2 := make([]bool, 2 * n-1)\n\n    return resolver(0, n, col, dg1, dg2)\n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    tabuleiro := make([][]int, n)\n\n    fmt.Println(nRainhas(n, tabuleiro))\n}\n",
+            "lines": "48"
+        }
+    ]
+}
