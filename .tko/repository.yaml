@@ -20,7 +20,6 @@ sources:
   quests: null
 expanded:
 - ed@dfs
-- ed@tree
 flags:
   inbox: all
   panel: skills
@@ -30,5 +29,5 @@ audit:
   enabled: false
   interval_seconds: null
 lang: go
-selected: ed@cercado
-selected_index: 22
+selected: ed@dfs
+selected_index: 8

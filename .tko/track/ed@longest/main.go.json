@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-17_15-42-04",
+            "content": "@@ -153,767 +153,17 @@\n %0A%09%7D%0A\n-%0A%09lin := len(matrix)%0A%09col := len(matrix%5B0%5D)%0A%0A%09memo := make(%5B%5D%5B%5Dint, lin)%0A%09for i := range memo %7B%0A%09%09memo%5Bi%5D = make(%5B%5Dint, col)%0A%09%7D%0A%0A%09dirs := %5B%5D%5B%5Dint %7B%0A%09%09%7B1, 0%7D,%0A%09%09%7B-1, 0%7D,%0A%09%09%7B0, 1%7D,%0A%09%09%7B0, -1%7D,%0A%09%7D%0A%0A%09var dfs func(int, int) int%0A%0A%09dfs = func(l, c int) int %7B%0A%09%09if memo%5Bl%5D%5Bc%5D != 0 %7B%0A%09%09%09return memo%5Bl%5D%5Bc%5D%0A%09%09%7D%0A%0A%09%09best := 1%0A%0A%09%09for _, d := range dirs %7B%0A%09%09%09nl := l + d%5B0%5D%0A%09%09%09nc := c + d%5B0%5D%0A%0A%09%09%09if nl %3C 0 %7C%7C nl %3E= lin %7C%7C nc %3C 0 %7C%7C nc %3E= col %7B%0A%09%09%09%09continue%0A%09%09%09%7D%0A%0A%09%09%09if matrix%5Bnl%5D%5Bnc%5D %3E matrix%5Bl%5D%5Bc%5D %7B%0A%09%09%09%09length := 1 + dfs(nl, nc)%0A%0A%09%09%09%09if length %3E best %7B%0A%09%09%09%09%09best = length%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%09memo%5Bl%5D%5Bc%5D = best%0A%09%09return best%0A%09%7D%0A%0A%09ans := 0%0A%0A%09for l := 0; l %3C lin; l++ %7B%0A%09%09for c := 0; c %3C col; c++ %7B%0A%09%09%09path := dfs(l, c)%0A%0A%09%09%09if path %3E ans %7B%0A%09%09%09%09ans = path%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09return ans\n+%09return 0\n %0A%7D%0A%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-06-17_15-59-24",
+            "content": "@@ -522,17 +522,17 @@\n = c + d%5B\n-1\n+0\n %5D%0A%0A%09%09%09if\n",
+            "lines": "104"
+        },
+        {
+            "label": "2026-06-17_16-00-05",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc longestIncreasingPath(matrix [][]int) int {\n\tif len(matrix) == 0 {\n\t\treturn 0\n\t}\n\n\tlin := len(matrix)\n\tcol := len(matrix[0])\n\n\tmemo := make([][]int, lin)\n\tfor i := range memo {\n\t\tmemo[i] = make([]int, col)\n\t}\n\n\tdirs := [][]int {\n\t\t{1, 0},\n\t\t{-1, 0},\n\t\t{0, 1},\n\t\t{0, -1},\n\t}\n\n\tvar dfs func(int, int) int\n\n\tdfs = func(l, c int) int {\n\t\tif memo[l][c] != 0 {\n\t\t\treturn memo[l][c]\n\t\t}\n\n\t\tbest := 1\n\n\t\tfor _, d := range dirs {\n\t\t\tnl := l + d[0]\n\t\t\tnc := c + d[1]\n\n\t\t\tif nl < 0 || nl >= lin || nc < 0 || nc >= col {\n\t\t\t\tcontinue\n\t\t\t}\n\n\t\t\tif matrix[nl][nc] > matrix[l][c] {\n\t\t\t\tlength := 1 + dfs(nl, nc)\n\n\t\t\t\tif length > best {\n\t\t\t\t\tbest = length\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\tmemo[l][c] = best\n\t\treturn best\n\t}\n\n\tans := 0\n\n\tfor l := 0; l < lin; l++ {\n\t\tfor c := 0; c < col; c++ {\n\t\t\tpath := dfs(l, c)\n\n\t\t\tif path > ans {\n\t\t\t\tans = path\n\t\t\t}\n\t\t}\n\t}\n\n\treturn ans\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tif !scanner.Scan() {\n\t\treturn\n\t}\n\tparts := strings.Fields(scanner.Text())\n\tif len(parts) < 2 {\n\t\treturn\n\t}\n\tnl, _ := strconv.Atoi(parts[0])\n\tnc, _ := strconv.Atoi(parts[1])\n\n\tmatrix := make([][]int, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tif !scanner.Scan() {\n\t\t\treturn\n\t\t}\n\t\ttokens := strings.Fields(scanner.Text())\n\t\trow := make([]int, nc)\n\t\tfor j := 0; j < nc && j < len(tokens); j++ {\n\t\t\tv, _ := strconv.Atoi(tokens[j])\n\t\t\trow[j] = v\n\t\t}\n\t\tmatrix[i] = row\n\t}\n\n\tfmt.Println(longestIncreasingPath(matrix))\n}\n",
+            "lines": "104"
+        }
+    ]
+}
